@@ -1,0 +1,510 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Asap+Sharp:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/riffic-free');
+@import url('https://fonts.googleapis.com/css2?family=Asap+Sharp:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+     font-family: "Poppins", sans-serif;
+     font-family: 'Riffic Free', sans-serif;
+}
+.hero h1{
+  font-family: 'Riffic Free', sans-serif;
+}
+.hero p {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    color:white;
+    
+}
+:root{--red:#e3202b;--dred:#b3121b;--gold:#f6b81c}
+body{font-family:'Segoe UI',Arial,sans-serif;font-size:13px;color:#222;background:#fff}
+.wrap{margin:auto;padding:0 16px}
+/* top bar */
+.topbar{background:var(--red);color:#fff;font-size:11px;padding:7px 0}
+.topbar .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+/* header */
+.hdr{padding:12px 0}
+.hdr .wrap{display:flex;align-items:center;gap:22px}
+.logo{font-weight:800;font-size:22px;color:var(--red);line-height:1;font-style:italic}
+.logo img{width:100px;}
+.search{flex:1;max-width:463px;display:flex;align-items:center;border:1px solid #eee;border-radius:30px;margin-left:162px;padding:3px 4px 3px 14px;background:#fafafa}
+.search input{border:0;background:none;flex:1;font-size:12px;outline:0}
+.search button,.pill-red{background:var(--red);color:#fff;border:0;border-radius:20px;font-size:11px;padding:6px 16px}
+.hicons{display:flex;gap:16px;font-size:11px;margin-left:auto;align-items:center}
+.hicons i{color:var(--red);margin-right:3px}
+.badge-logo{width:54px;height:54px;border:2px solid var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--red);font-weight:800;font-size:9px}
+/* nav */
+/* .nav2{background:#fdf1f1;padding:8px 0}
+.nav2 .wrap{display:flex;gap:8px;overflow:auto;align-items:center}
+.nav2 a{font-size:11px;color:#333;background:#fff;border-radius:6px;padding:6px 12px;text-decoration:none;white-space:nowrap;box-shadow:0 1px 2px rgba(0,0,0,.08)}
+.nav2 a.on,.nav2 a.track{background:var(--red);color:#fff}
+.nav2 a.track{margin-left:auto} */
+/* hero section Start */
+/* ===== HERO ===== */
+.hero{
+  position:relative;overflow:hidden;color:#fff;
+  min-height:430px;margin:12px;border-radius:6px;
+  /* 1) BACKGROUND IMAGE: apni background image ka path yahan likhein */
+  background:url('../img/banner.png') center/cover no-repeat,
+             linear-gradient(180deg,#d9151b 0%,#ec3a1a 38%,#f77a1b 68%,#fbb21e 100%); /* image na mile to ye gradient dikhega */
+}
+.hero .row{min-height:430px;position:relative;z-index:2}
+ 
+/* logo */
+.hero-logo{height:56px;width:auto}
+ 
+/* heading */
+.hero h1{font-weight:800;font-size:clamp(38px,5.2vw,60px);line-height:1.02;margin:20px 0 14px;text-shadow:0 3px 6px rgba(120,0,0,.35)}
+.hero h1 span{display:block;color:#ffd91f}
+.hero p{font-size:12.5px;font-weight:500;line-height:1.45;max-width:400px;margin-bottom:22px}
+ 
+/* button */
+.btn-shop{background:#fff;color:#c4121a;font-weight:700;font-size:13px;border:0;border-radius:6px;padding:8px 22px;box-shadow:0 3px 8px rgba(0,0,0,.2)}
+.btn-shop:hover{background:#ffe9e9;color:#c4121a}
+ 
+/* 15% OFF badge */
+.offer{
+  position:absolute;left:41%;top:20px;z-index:4;width:190px;height:112px;transform:rotate(-9deg);
+  background:radial-gradient(ellipse at 50% 40%,#c8141c,#8e0a12);border-radius:50%;
+  border:7px dotted #ffd21f;box-shadow:0 0 0 3px #7d0810,0 6px 14px rgba(0,0,0,.35);
+  display:flex;flex-direction:column;align-items:center;justify-content:center}
+.offer i{font-style:italic;font-weight:700;color:#ffd21f;font-size:15px;line-height:1}
+.offer b{font-size:40px;font-weight:800;line-height:1;color:#fff;
+  text-shadow:2px 2px 0 #f6b81c,-1px -1px 0 #f6b81c,1px -1px 0 #f6b81c,-1px 1px 0 #f6b81c,0 4px 6px rgba(0,0,0,.4)}
+ 
+/* 2) RIGHT SIDE IMAGE (products + podium) */
+.hero-products{
+  position:absolute;right:2%;top:35%;bottom:0;z-index:3;
+  width:42%;max-width:600px;height:auto}
+ 
+@media(max-width:991px){
+  .hero{padding-bottom:280px}
+  .hero .row{min-height:0}
+  .hero-products{width:92%;right:4%}
+  .offer{left:auto;right:12px;top:12px;transform:rotate(-9deg) scale(.7);transform-origin:top right}
+}
+/* Hero Section Start */
+/* hero */
+/* .hero{min-height:600px;color:#fff;
+ background:radial-gradient(circle at 25% 100%,#ffcf3a 0,transparent 55%),linear-gradient(180deg,#e0231f 0%,#f2561a 45%,#f9a81d 100%);
+ border:3px dotted #f6c244;padding:40px 50px} */
+.hero .hl{font-size:46px;font-weight:800;line-height:1.05;margin-top:10px}
+.hero .hl span{color:#ffd21f;display:block}
+.hero p{font-size:10px;max-width:420px;margin:14px 0;opacity:.9}
+.hero .off img{
+    width: 150px;
+    min-height: 112px;
+}
+.shop{background:#fff;color:var(--dred);font-weight:700;font-size:12px;border:0;border-radius:6px;padding:8px 20px}
+.hlogo{display:inline-block;background:#fff;color:var(--red);border-radius:20px;padding:4px 12px;font-weight:800;font-size:11px}
+.off{position:absolute;left:40%;top:30px;width:130px;height:90px;display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(-8deg);font-size:10px;font-weight:700;z-index:3}
+.off b{}
+.podium{position:absolute;right:30px;bottom:18px;width:48%;height:210px}
+
+.podium .base{position:absolute;bottom:0;left:0;right:0;height:34px;border-radius:50%;background:linear-gradient(#ffe27a,#d89a1c);box-shadow:0 8px 14px rgba(0,0,0,.3)}
+.pk{position:absolute;bottom:22px;border-radius:5px;box-shadow:0 4px 8px rgba(0,0,0,.3)}
+.pk1{left:7%;width:64px;height:130px;background:linear-gradient(#e03a2c,#f5c987 40%,#c2261f)}
+.pk2{left:24%;width:92px;height:170px;background:linear-gradient(#b3262c,#e9c27e 30%,#b3262c)}
+.pk3{left:50%;width:84px;height:120px;background:#f3d542;border-top:12px solid #3f8a3a}
+.pk4{left:76%;width:40px;height:150px;background:linear-gradient(#a50f12,#e8383a);border-radius:8px 8px 4px 4px}
+.pk4::before{content:"";position:absolute;top:-22px;left:12px;width:16px;height:22px;background:#e8383a;border-radius:4px 4px 0 0}
+/* features */
+.feat b {
+color:#EE2931;
+
+}
+.feat img{
+    width:50px;
+    height:50px;
+}
+.feat{background:#fdeeee;margin-top:-12px}
+.feat .wrap{display:flex;flex-wrap:wrap}
+.feat div.f{flex:1 1 220px;display:flex;align-items:center;gap:10px;padding:16px 12px;border-right:1px solid #f3cfcf}
+.feat div.f:last-child{border:0}
+.feat i{font-size:26px;color:#EE2931}
+.feat b{display:block;font-size:12px}.feat small{font-size:10px;color:#EE2931}
+/* titles */
+.h{display:flex;justify-content:space-between;align-items:center;margin:30px 0 12px}
+.h h2{font-size:15px;font-weight:700;margin:0}
+.va{background:#e6e6e6;font-size:9px;padding:3px 10px;border-radius:3px;color:#555;text-decoration:none}
+/* range */
+.rg{border-radius:8px;overflow:hidden;box-shadow:0 1px 5px rgba(0,0,0,.12);text-align:center;background:#fff}
+.rg .im{height:62px;background:linear-gradient(135deg,#f2a62a,#d83b2b 55%,#7bb552)}
+.rg span{display:block;font-size:10px;font-weight:600;margin:6px 0 4px}
+.rg button{background:var(--red);color:#fff;border:0;border-radius:3px;font-size:9px;padding:2px 12px;margin-bottom:7px}
+/* product card */
+.pc{background:#fff;border-radius:4px;box-shadow:0 1px 6px rgba(0,0,0,.18);overflow:hidden;height:100%}
+.pi{height:170px;position:relative;display:flex;align-items:center;justify-content:center}
+.veg{position:absolute;left:6px;top:6px;width:10px;height:10px;border:1px solid #2a8a2a;background:#fff;border-radius:2px}
+.veg::after{content:"";position:absolute;inset:2px;background:#2a8a2a;border-radius:50%}
+.tag{position:absolute;right:6px;top:6px;background:var(--red);color:#fff;font-size:8px;padding:1px 8px;border-radius:2px}
+.heart{position:absolute;right:8px;top:26px;font-size:10px;color:#444}
+.bt{width:34px;height:112px;background:linear-gradient(90deg,#d97a14,#f3a53a,#d97a14);border-radius:10px 10px 6px 6px;position:relative;margin-top:16px}
+.bt::before{content:"";position:absolute;top:-18px;left:9px;width:16px;height:20px;background:#fff;border-radius:4px 4px 0 0}
+.bt::after{content:"";position:absolute;top:40px;left:0;right:0;height:26px;background:#fff7d8}
+.bt.pink{background:linear-gradient(90deg,#a50f12,#e8383a,#a50f12)}
+.bt.green{background:linear-gradient(90deg,#4b1a5c,#8c3ba8,#4b1a5c)}
+.bx{display:flex;gap:0}
+.bx i{width:50px;height:88px;background:linear-gradient(#a3142d 55%,#f7e7c8 55%);border-radius:3px;border:1px solid #fff;margin-left:-14px;box-shadow:0 2px 5px rgba(0,0,0,.3)}
+.bx i:first-child{margin-left:0}
+.bx.big i{width:76px;height:100px;margin:0;border-radius:4px;background:linear-gradient(#7a2b12 50%,#f4d58f 50%)}
+.pb{padding:8px 8px 8px}
+.pm{display:flex;justify-content:space-between;font-size:8px;color:#888}
+.pn{font-size:10px;font-weight:600;line-height:1.3;margin:3px 0 5px;height:26px;overflow:hidden}
+.pp{display:flex;justify-content:space-between;align-items:center;gap:6px;font-size:10px;font-weight:700}
+.pp s{font-size:8px;color:#999;font-weight:400}
+.pp .sel{border:1px solid #ddd;border-radius:3px;font-size:8px;padding:2px 14px;font-weight:400}
+.pbt{display:flex;gap:6px;margin-top:6px}
+.pbt button{flex:1;background:var(--red);color:#fff;border:0;border-radius:3px;font-size:9px;padding:5px 0}
+/* khaalis banner */
+.kh{text-align:center;position:relative;padding:50px 0 14px;margin-top:20px;overflow:hidden}
+.kh::before,.kh::after{content:"";position:absolute;top:10px;width:30%;height:60px;background:radial-gradient(circle at 20% 50%,#8a4b1f 0 6px,transparent 7px),radial-gradient(circle at 55% 40%,#c0392b 0 5px,transparent 6px),radial-gradient(circle at 80% 60%,#3b6d2c 0 7px,transparent 8px);opacity:.7}
+.kh::before{left:0}.kh::after{right:0}
+.kh small{font-size:10px;color:#777;display:block}
+.kh .lg{display:inline-block;border:2px solid #b1862a;color:#7a1118;background:#fff;padding:10px 32px;border-radius:50% / 45%;font-weight:800;font-size:15px;position:relative;z-index:2;box-shadow:0 3px 8px rgba(0,0,0,.2)}
+.seals{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin:16px 0}
+.seals span{width:50px;height:50px;border-radius:50%;border:3px solid #c9a24a;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:700;color:#6b4a0a;background:#fff8e1}
+.seals span:nth-child(even){border-color:#1d7aa6;color:#1d7aa6;background:#eaf6fc}
+/* quality */
+.q{text-align:center;margin-top:40px;padding:22px 0 24px;box-shadow:0 -1px 0 #eee}
+.q h5{font-size:15px;font-weight:700}
+.q p{font-size:10px;color:#777;max-width:520px;margin:4px auto 12px}
+.q .seals span{border-color:#2d6b38;color:#2d6b38;background:#fff}
+
+
+
+.card .product-top-bg {
+    background-color:#FAC229;
+}
+.combo  .product-top-bg {
+    background-color:#FAC229;
+}
+.roof .product-top-bg {
+    background-color: #FFE1E3;
+}
+.beaverage .product-top-bg{
+      background-color:#ABEDA8;   
+}
+.spices .product-top-bg{
+    background-color: #ECD48E;
+}
+.powdered .product-top-bg{
+    background-color: #ECD48E;
+}
+.whole .product-top-bg{
+    background-color:#DA8B4C;
+}
+.our .product-card {
+            border: none;
+            background: transparent;
+        }
+        .product-img-container {
+            border-radius: 1rem;
+            overflow: visible; /* Zaroori hai taki white box card se thoda bahar neeche aa sake */
+            position: relative;
+            margin-bottom: 25px;
+        }
+        .product-img-container img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .product-badge {
+            position: absolute;
+            bottom: -20px; /* Isse white box image ke neeche overlap karega */
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ffffff;
+            padding: 8px 12px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            width: 85%;
+            text-align: center;
+            z-index: 2;
+        }
+        .product-title {
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: #000;
+        }
+        .btn-view-more {
+            background-color: #ff2a2a;
+            color: white;
+            font-size: 10px;
+            padding: 2px 14px;
+            border-radius: 50px;
+            border: none;
+        }
+        .btn-view-more:hover {
+            background-color: #e02020;
+            color: white;
+        }
+
+
+/* Card */
+.product-card {
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            background: #fff;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .product-top-bg {
+            background-color: #ffcc33;
+            position: relative;
+            padding: 25px 15px 15px 15px;
+            text-align: center;
+        }
+        .product-img {
+            height: 180px;
+            object-fit: contain;
+        }
+        .badge-veg {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 14px;
+            height: 14px;
+            border: 2px solid #009933;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+        }
+        .badge-veg::after {
+            content: "";
+            width: 6px;
+            height: 6px;
+            background: #009933;
+            border-radius: 50%;
+        }
+        .badge-discount {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #ff3333;
+            color: #fff;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+        .wishlist-icon {
+            position: absolute;
+            top: 40px;
+            right: 12px;
+            background: #fff;
+            border-radius: 50%;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            cursor: pointer;
+            font-size: 13px;
+            color: #555;
+        }
+        .product-details {
+            padding: 12px;
+        }
+        .category-text {
+            font-size: 11px;
+            color: #6c757d;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .rating-text {
+            font-size: 11px;
+            color: #495057;
+        }
+        .product-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 8px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .current-price {
+            font-size: 15px;
+            font-weight: 700;
+            color: #000;
+        }
+        .old-price {
+            font-size: 11px;
+            color: #868e96;
+            text-decoration: line-through;
+        }
+        .form-select-sm {
+            font-size: 12px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+        }
+        .btn-custom-red {
+            background-color: #ff2a2a;
+            color: white;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 6px 0;
+            border: none;
+            border-radius: 4px;
+        }
+        .btn-custom-red:hover {
+            background-color: #e02020;
+            color: white;
+        }    
+
+
+        /*  */
+        .spice-header {
+  background-image: url('../img/prime.png'); /* Apne image ka path lagao */
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% auto; /* Frame fix karne ke liye */
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 80px;
+  position: relative;
+  min-height: 429px;
+}
+      
+    .brand-badge-bg {
+      background-color: #6a1b29; /* Deep maroon matching Hamdard branding */
+      color: #fff;
+      border-radius: 20px / 10px;
+      padding: 15px 30px;
+      display: inline-block;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+    .attribute-badge {
+      max-width: 100px;
+      height: auto;
+      transition: transform 0.2s;
+    }
+    .attribute-badge:hover {
+      transform: scale(1.05);
+    }
+
+
+    .quality-section {
+      background-color: #f9f9f9; /* Light neutral section background */
+      padding: 60px 20px;
+    }
+
+    .quality-heading {
+      font-size: 24px;
+      font-weight: 700;
+      color: #000000;
+      margin-bottom: 16px;
+    }
+
+    .quality-description {
+      font-size: 15px;
+      color: #333333;
+      max-width: 850px;
+      margin: 0 auto 40px auto;
+      line-height: 1.6;
+    }
+
+    .cert-logo {
+      max-height: 132px;
+      width: auto;
+      object-fit: contain;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .cert-logo:hover {
+      transform: scale(1.05);
+    }
+
+
+
+
+    
+    .product-card {
+      border: 1px solid #ced4da;
+      border-radius: 6px;
+      background-color: #fff;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .product-top-bg {
+      background-color: #f3dfb0; /* Light yellow card background */
+      position: relative;
+      padding: 20px 10px;
+      text-align: center;
+    }
+    .badge-discount {
+      background-color: #dc3545;
+      color: white;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+    .veg-icon {
+      width: 14px;
+      height: 14px;
+      border: 2px solid #198754;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1px;
+    }
+    .veg-dot {
+      width: 6px;
+      height: 6px;
+      background-color: #198754;
+      border-radius: 50%;
+    }
+    .wishlist-icon {
+      position: absolute;
+      /* top: 12px; */
+      right: 12px;
+      background: #fff;
+      border-radius: 50%;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      cursor: pointer;
+      font-size: 13px;
+    }
+    .product-img {
+      max-height: 160px;
+      object-fit: contain;
+    }
+    .product-body {
+      padding: 12px;
+    }
+    .category-text {
+      font-size: 10px;
+      letter-spacing: 0.5px;
+      color: #6c757d;
+      font-weight: 700;
+    }
+    .product-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #212529;
+      margin-bottom: 6px;
+    }
+    .price-section {
+      font-size: 13px;
+    }
+    .original-price {
+      text-decoration: line-through;
+      color: #6c757d;
+      font-size: 11px;
+      margin-left: 4px;
+    }
+  

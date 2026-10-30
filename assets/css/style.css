@@ -20,7 +20,7 @@
 }
 :root{--red:#e3202b;--dred:#b3121b;--gold:#f6b81c}
 /* body{font-family:'Segoe UI',Arial,sans-serif;font-size:13px;color:#222;background:#fff} */
-.wrap{margin:auto;padding:0 16px}
+.wrap{margin:auto;padding:10px 16px}
 /* top bar */
 .topbar{background:var(--red);color:#fff;font-size:11px;padding:7px 0}
 .topbar .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
@@ -29,12 +29,12 @@
 .hdr .wrap{display:flex;align-items:center;gap:22px}
 .logo{font-weight:800;font-size:22px;color:var(--red);line-height:1;font-style:italic}
 .logo img{width:100px;}
-.search{flex:1;max-width:463px;display:flex;align-items:center;border:1px solid #eee;border-radius:30px;margin-left:162px;padding:3px 4px 3px 14px;background:#fafafa}
+.search{flex:1;max-width:553px;display:flex;align-items:center;border:1px solid #eee;border-radius:30px;margin-left:162px;padding:3px 4px 3px 14px;background:#fafafa}
 .search input{border:0;background:none;flex:1;font-size:12px;outline:0}
 .search button,.pill-red{background:var(--red);color:#fff;border:0;border-radius:20px;font-size:11px;padding:6px 16px}
 .hicons{display:flex;gap:16px;font-size:11px;margin-left:auto;align-items:center}
 .hicons i{color:var(--red);margin-right:3px}
-.badge-logo{width:54px;height:54px;border:2px solid var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--red);font-weight:800;font-size:9px}
+.badge-logo{width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--red);font-weight:800;font-size:9px}
 /* nav */
 /* .nav2{background:#fdf1f1;padding:8px 0}
 .nav2 .wrap{display:flex;gap:8px;overflow:auto;align-items:center}

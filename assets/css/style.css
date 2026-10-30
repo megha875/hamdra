@@ -6,8 +6,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-     font-family: "Poppins", sans-serif;
-     font-family: 'Riffic Free', sans-serif;
+     /* font-family: "Poppins", sans-serif;
+     font-family: 'Riffic Free', sans-serif; */
 }
 .hero h1{
   font-family: 'Riffic Free', sans-serif;
@@ -19,7 +19,7 @@
     
 }
 :root{--red:#e3202b;--dred:#b3121b;--gold:#f6b81c}
-body{font-family:'Segoe UI',Arial,sans-serif;font-size:13px;color:#222;background:#fff}
+/* body{font-family:'Segoe UI',Arial,sans-serif;font-size:13px;color:#222;background:#fff} */
 .wrap{margin:auto;padding:0 16px}
 /* top bar */
 .topbar{background:var(--red);color:#fff;font-size:11px;padding:7px 0}
@@ -173,9 +173,13 @@ color:#EE2931;
 .q p{font-size:10px;color:#777;max-width:520px;margin:4px auto 12px}
 .q .seals span{border-color:#2d6b38;color:#2d6b38;background:#fff}
 
-
-
-.card .product-top-bg {
+.navbaer .container-fluid{
+  background-color: #FAEFEF !important;
+}
+.nav {
+  font-size:10px;
+}
+.sellers .product-top-bg {
     background-color:#FAC229;
 }
 .combo  .product-top-bg {

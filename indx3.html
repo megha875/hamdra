@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Hamdard Store Responsive Header</title>
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+ 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+  <style>
+    :root {
+      --primary-red: #e31e25;
+      --text-dark: #222222;
+      --border-color: #e0e0e0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+    }
+
+    /* ================= TOP ANNOUNCEMENT BAR ================= */
+    .top-bar {
+      background-color: var(--primary-red);
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 8px 0;
+    }
+
+    .top-bar-divider {
+      border-right: 1px solid rgba(255, 255, 255, 0.4);
+      height: 16px;
+      display: inline-block;
+    }
+
+    /* ================= MAIN HEADER ================= */
+    .main-header {
+      padding: 10px 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .brand-logo {
+      height: 48px;
+      object-fit: contain;
+    }
+
+    .hamdard-seal-logo {
+      height: 52px;
+      object-fit: contain;
+    }
+
+    /* Search Box */
+    .search-container {
+      position: relative;
+      border: 1px solid var(--border-color);
+      border-radius: 30px;
+      padding: 3px 4px 3px 18px;
+      background-color: #fff;
+    }
+
+    .search-input {
+      border: none;
+      outline: none;
+      box-shadow: none !important;
+      font-size: 14px;
+      width: 100%;
+      color: var(--text-dark);
+    }
+
+    .search-input::placeholder {
+      color: #888888;
+    }
+
+    .search-btn {
+      background-color: var(--primary-red);
+      color: #fff;
+      border-radius: 20px;
+      padding: 6px 24px;
+      font-size: 14px;
+      font-weight: 600;
+      border: none;
+    }
+
+    /* Header Action Links */
+    .header-action-item {
+      font-size: 13px;
+      color: var(--text-dark);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+    }
+
+    .cart-badge {
+      position: absolute;
+      top: -6px;
+      right: -8px;
+      background-color: var(--primary-red);
+      color: white;
+      border-radius: 50%;
+      font-size: 10px;
+      width: 17px;
+      height: 17px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    .header-vertical-line {
+      width: 1px;
+      height: 35px;
+      background-color: #e0e0e0;
+    }
+
+    /* ================= DESKTOP NAVIGATION BAR ================= */
+    .nav-bar-container {
+      background-color: #fafafa;
+      border-bottom: 1px solid #eeeeee;
+      padding: 6px 0;
+    }
+
+    .btn-all-categories {
+      background-color: var(--primary-red);
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 6px;
+      padding: 8px 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .category-nav-link {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-dark);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 8px;
+      white-space: nowrap;
+    }
+
+    .nav-divider {
+      width: 1px;
+      height: 18px;
+      background-color: #ddd;
+    }
+
+    .offers-badge-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .tag-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: var(--primary-red);
+      color: #fff;
+      font-size: 9px;
+      font-weight: 700;
+      padding: 1px 6px;
+      border-radius: 10px;
+      white-space: nowrap;
+    }
+
+    .btn-track-order {
+      background-color: var(--primary-red);
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 6px;
+      padding: 8px 18px;
+      border: none;
+      text-decoration: none;
+    }
+
+    /* Custom Dropdown Boxes */
+    .custom-dropdown-wrap {
+      position: relative;
+      display: inline-block;
+    }
+
+    .custom-dropdown-menu {
+      position: absolute;
+      top: 110%;
+      left: 0;
+      background: #ffffff;
+      min-width: 210px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+      border-radius: 8px;
+      border: 1px solid #e0e0e0;
+      display: none;
+      z-index: 1000;
+      padding: 8px 0;
+    }
+
+    .custom-dropdown-menu.show {
+      display: block;
+    }
+
+    .custom-dropdown-item {
+      display: block;
+      padding: 8px 16px;
+      color: var(--text-dark);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+
+    .custom-dropdown-item:hover {
+      background-color: #f8f9fa;
+      color: var(--primary-red);
+    }
+
+    /* Pincode Dropdown Form Styling */
+    .pincode-dropdown-box {
+      width: 260px;
+      padding: 15px;
+    }
+
+    .pincode-dropdown-box label {
+      font-size: 12px;
+      font-weight: 600;
+      color: #555;
+      margin-bottom: 4px;
+    }
+
+    .pincode-dropdown-box input {
+      font-size: 13px;
+      border-radius: 6px;
+    }
+
+    .pincode-dropdown-box button {
+      background-color: var(--primary-red);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 6px;
+      border: none;
+      padding: 6px 0;
+    }
+
+    /* ================= MOBILE / TABLET STYLES ================= */
+    .mobile-header-icon-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-dark);
+      text-decoration: none;
+      line-height: 1.1;
+      cursor: pointer;
+    }
+
+    .mobile-header-icon-box i {
+      font-size: 20px;
+      margin-bottom: 3px;
+    }
+
+    .hamburger-btn {
+      background: none;
+      border: none;
+      padding: 4px 8px;
+      color: #333333;
+      font-size: 26px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 991.98px) {
+      .brand-logo-mobile {
+        height: 34px;
+        object-fit: contain;
+      }
+    }
+
+    /* CUSTOM MOBILE DRAWER */
+    .custom-mobile-drawer {
+      position: fixed;
+      top: 0;
+      left: -300px;
+      width: 290px;
+      height: 100vh;
+      background-color: #ffffff;
+      z-index: 1055;
+      box-shadow: 2px 0 12px rgba(0,0,0,0.2);
+      transition: left 0.3s ease-in-out;
+      overflow-y: auto;
+    }
+
+    .custom-mobile-drawer.active {
+      left: 0;
+    }
+
+    .drawer-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1050;
+      display: none;
+    }
+
+    .drawer-overlay.active {
+      display: block;
+    }
+
+    .drawer-header {
+      background-color: var(--primary-red);
+      color: white;
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .mobile-menu-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 13px 18px;
+      color: #333;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      border-bottom: 1px solid #f0f0f0;
+      cursor: pointer;
+    }
+
+    .mobile-menu-item:hover {
+      background-color: #f8f9fa;
+      color: var(--primary-red);
+    }
+
+    .mobile-submenu {
+      background-color: #fcfcfc;
+      padding-left: 15px;
+      display: none;
+    }
+
+    .mobile-submenu.show {
+      display: block;
+    }
+
+
+
+    /* Feature Section  Start */
+
+    .features-section {
+      background-color: #fff9f9;
+      padding: 16px 0;
+      border-top: 2px solid #e31e25;
+      border-bottom: 1px solid #f2dede;
+    }
+
+    .feature-box {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 8px 12px;
+    }
+
+    /* Image Icon Style */
+    .feature-img-icon {
+      width: 36px;
+      height: 36px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .feature-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #e31e25;
+      margin: 0 0 2px 0;
+      line-height: 1.2;
+    }
+
+    .feature-desc {
+      font-size: 12px;
+      color: #e31e25;
+      margin: 0;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    /* DESKTOP LAYOUT (>= 992px): 4 columns in 1 row with 3 vertical dividers */
+    @media (min-width: 992px) {
+      .desktop-divider {
+        border-right: 1.5px solid #f3c2c2;
+      }
+      .feature-img-icon {
+        width: 40px;
+        height: 40px;
+      }
+      .feature-title {
+        font-size: 15px;
+      }
+      .feature-desc {
+        font-size: 13px;
+        color: #444444;
+      }
+    }
+
+    /* MOBILE & TABLET LAYOUT (< 992px): 2x2 grid with center vertical line only */
+    @media (max-width: 991.98px) {
+      .features-section {
+        padding: 12px 0;
+      }
+
+      .feature-box {
+        padding: 6px 8px;
+        gap: 8px;
+      }
+
+      /* Vertical line between left column and right column only */
+      .mobile-center-line {
+        border-right: 1.5px solid #f3c2c2;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .feature-title {
+        font-size: 12px;
+      }
+      .feature-desc {
+        font-size: 10px;
+      }
+      .feature-img-icon {
+        width: 30px;
+        height: 30px;
+      }
+    }
+    /* Feature Section  End*/
+    /* Our Product Section  Start*/
+     .product-range-section {
+      padding: 20px 0 50px;
+    }
+
+    .product-range-section .section-heading {
+      font-size: 24px;
+      font-weight: 700;
+      color: #111111;
+      margin-bottom: 30px;
+    }
+
+    /* Swiper Container Padding */
+    .product-range-section .productRangeSwiper {
+      padding-bottom: 45px !important;
+    }
+
+    .product-range-section .swiper-slide {
+      height: auto;
+    }
+
+    /* Card Box Styling */
+    .product-range-section .product-card {
+      position: relative;
+      border-radius: 16px;
+      overflow: visible;
+      margin-bottom: 25px;
+      background: transparent;
+    }
+
+    .product-range-section .product-img-box {
+      width: 100%;
+      height: 190px;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .product-range-section .product-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .product-range-section .product-card:hover .product-img-box img {
+      transform: scale(1.04);
+    }
+
+    /* Overlay Info Box */
+    .product-range-section .product-info-box {
+      position: absolute;
+      bottom: -22px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 88%;
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 10px 8px 18px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    }
+
+    .product-range-section .product-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #222222;
+      margin: 0;
+    }
+
+    /* Red Action Button */
+    .product-range-section .btn-view-more {
+      position: absolute;
+      bottom: -13px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #e31e25;
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 600;
+      border: none;
+      border-radius: 20px;
+      padding: 4px 18px;
+      white-space: nowrap;
+      text-decoration: none;
+      box-shadow: 0 2px 6px rgba(227, 30, 37, 0.3);
+      transition: background-color 0.2s ease;
+    }
+
+    .product-range-section .btn-view-more:hover {
+      background-color: #c9181e;
+      color: #ffffff;
+    }
+
+    /* Fixed 5 Pagination Dots Container */
+    .product-range-section .custom-dots-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      margin-top: 10px;
+    }
+
+    .product-range-section .custom-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: #d1d1d1;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .product-range-section .custom-dot.active {
+      background-color: #e31e25;
+      width: 9px;
+      height: 9px;
+    }
+     /* Our Product Section  */
+    
+  </style>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container-fluid px-3 px-lg-5">
+      <div class="d-none d-lg-flex justify-content-between align-items-center text-center">
+        <div class="flex-fill"><i class="fa-solid fa-truck-fast me-2"></i> Free Shipping for orders above ₹499 across India</div>
+        <div class="top-bar-divider"></div>
+        <div class="flex-fill"><i class="fa-solid fa-leaf me-2"></i> Free Hamdard Khaalis Biriyani Masala 10g with every order</div>
+        <div class="top-bar-divider"></div>
+        <div class="flex-fill"><i class="fa-solid fa-tag me-2"></i> Authentic Hamdard Products</div>
+        <div class="top-bar-divider"></div>
+        <div class="flex-fill">Trusted Since 1906</div>
+      </div>
+      <div class="d-flex d-lg-none justify-content-between align-items-center">
+        <div class="d-flex align-items-center me-2 overflow-hidden text-nowrap">
+          <i class="fa-solid fa-truck-fast me-2 fs-6"></i>
+          <span style="font-size: 12px;">Free Shipping for orders above ₹499 across India</span>
+        </div>
+        <i class="fa-solid fa-chevron-right fs-6"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Header -->
+  <header class="main-header">
+    <div class="container-fluid px-3 px-lg-5">
+      
+      <!-- DESKTOP HEADER -->
+      <div class="d-none d-lg-flex align-items-center justify-content-between gap-3">
+        <a href="#"><img src="./assets/img/logo.png" alt="My Hamdard Store" class="brand-logo" onerror="this.src='https://via.placeholder.com/200x50?text=MyHamdardStore.com'"></a>
+
+        <div class="flex-grow-1 mx-3" style="max-width: 620px;">
+          <form action="/search" method="GET" class="search-container d-flex align-items-center">
+            <i class="fa-solid fa-magnifying-glass text-muted me-2 ms-1 fs-5"></i>
+            <input type="text" class="search-input" placeholder="Search for products, categories or brands...">
+            <div style="width: 1px; height: 24px; background-color: #ddd; margin: 0 8px;"></div>
+            <button type="submit" class="search-btn">Search</button>
+          </form>
+        </div>
+
+        <!-- Pincode & City Dropdown (Desktop) -->
+        <div class="custom-dropdown-wrap">
+          <div class="header-action-item" id="desktopPinBtn">
+            <i class="fa-solid fa-location-dot fs-5"></i>
+            <div class="lh-sm">
+              <span class="d-block text-muted fw-normal" style="font-size: 10px;">Hello</span>
+              <span>Check your Pincode <i class="fa-solid fa-chevron-down" style="font-size: 10px;"></i></span>
+            </div>
+          </div>
+          <div class="custom-dropdown-menu pincode-dropdown-box" id="desktopPinDropdown">
+            <form onsubmit="event.preventDefault();">
+              <div class="mb-2">
+                <label for="desktopCityInput">City Name</label>
+                <input type="text" class="form-control" id="desktopCityInput" placeholder="e.g. Delhi, Mumbai">
+              </div>
+              <div class="mb-3">
+                <label for="desktopPincodeInput">Pincode</label>
+                <input type="text" class="form-control" id="desktopPincodeInput" placeholder="Enter 6 digit pincode" maxlength="6">
+              </div>
+              <button type="submit" class="w-100">Apply Location</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Account Dropdown (Desktop) -->
+        <div class="custom-dropdown-wrap">
+          <a href="#" class="header-action-item" id="desktopAccountBtn">
+            <i class="fa-regular fa-user fs-5"></i>
+            <span>Account <i class="fa-solid fa-chevron-down" style="font-size: 10px;"></i></span>
+          </a>
+          <div class="custom-dropdown-menu" id="desktopAccountDropdown">
+            <a href="#" class="custom-dropdown-item"><i class="fa-regular fa-user me-2"></i> My Profile</a>
+            <a href="#" class="custom-dropdown-item"><i class="fa-solid fa-box me-2"></i> My Orders</a>
+            <a href="#" class="custom-dropdown-item"><i class="fa-regular fa-heart me-2"></i> Wishlist</a>
+            <a href="#" class="custom-dropdown-item text-danger"><i class="fa-solid fa-right-from-bracket me-2"></i> Login / Register</a>
+          </div>
+        </div>
+
+        <!-- Cart -->
+        <a href="#" class="header-action-item position-relative">
+          <div class="position-relative">
+            <i class="fa-solid fa-cart-shopping fs-5"></i>
+            <span class="cart-badge">0</span>
+          </div>
+          <span>Cart</span>
+        </a>
+
+        <div class="header-vertical-line"></div>
+        <div>
+          <img src="./assets/img/logo.png" alt="Hamdard Seal" class="hamdard-seal-logo" onerror="this.src='https://via.placeholder.com/100x50?text=Hamdard+1906'">
+        </div>
+      </div>
+
+      <!-- MOBILE / TABLET HEADER -->
+      <div class="d-flex d-lg-none flex-column gap-2">
+        <div class="d-flex align-items-center justify-content-between">
+          <button class="hamburger-btn" id="openMobileMenuBtn" type="button">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+
+          <a href="#" class="mx-auto">
+            <img src="./assets/img/logo.png" alt="My Hamdard Store" class="brand-logo-mobile" onerror="this.src='https://via.placeholder.com/150x35?text=MyHamdardStore'">
+          </a>
+
+          <div class="d-flex align-items-center gap-3">
+            <div class="mobile-header-icon-box" id="mobilePinHeaderBtn">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Pincode</span>
+            </div>
+            <a href="#" class="mobile-header-icon-box">
+              <i class="fa-regular fa-user"></i>
+              <span>Account</span>
+            </a>
+            <a href="#" class="mobile-header-icon-box position-relative">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span class="cart-badge" style="top: -4px; right: -4px;">0</span>
+              <span>Cart</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="mt-1">
+          <form action="/search" method="GET" class="search-container d-flex align-items-center" style="padding: 2px 3px 2px 14px;">
+            <i class="fa-solid fa-magnifying-glass text-muted me-2 fs-5"></i>
+            <input type="text" class="search-input" placeholder="Search for products, categories or brands...">
+            <button type="submit" class="search-btn py-1 px-3" style="border-radius: 18px;">Search</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- DESKTOP CATEGORIES NAVBAR -->
+  <nav class="nav-bar-container d-none d-lg-block">
+    <div class="container-fluid px-3 px-lg-5">
+      <div class="d-flex align-items-center justify-content-between">
+        
+        <!-- All Categories Dropdown -->
+        <div class="custom-dropdown-wrap">
+          <button class="btn-all-categories d-flex align-items-center gap-2" id="desktopCatBtn">
+            <i class="fa-solid fa-border-all"></i>
+            <span>All Categories</span>
+            <i class="fa-solid fa-chevron-down ms-1" style="font-size: 11px;"></i>
+          </button>
+          <div class="custom-dropdown-menu" id="desktopCatDropdown">
+            <a href="#" class="custom-dropdown-item"><i class="fa-solid fa-glass-water me-2 text-danger"></i> Beverages</a>
+            <a href="#" class="custom-dropdown-item"><i class="fa-solid fa-leaf me-2 text-danger"></i> Spices</a>
+            <a href="#" class="custom-dropdown-item"><i class="fa-solid fa-bottle-droplet me-2 text-danger"></i> Edible Oil</a>
+            <a href="#" class="custom-dropdown-item"><i class="fa-solid fa-jar me-2 text-danger"></i> Honey</a>
+            <a href="#" class="custom-dropdown-item"><i class="fa-solid fa-utensils me-2 text-danger"></i> Ready to cook</a>
+            <a href="#" class="custom-dropdown-item"><i class="fa-solid fa-heart-pulse me-2 text-danger"></i> Health Care</a>
+            <a href="#" class="custom-dropdown-item"><i class="fa-solid fa-bag-shopping me-2 text-danger"></i> Combos</a>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center gap-1">
+          <div class="offers-badge-container ms-2">
+            <span class="tag-badge">Upto 30%</span>
+            <a href="#" class="category-nav-link"><i class="fa-solid fa-fire text-dark"></i> Offers</a>
+          </div>
+          <div class="nav-divider"></div>
+          <a href="#" class="category-nav-link"><i class="fa-solid fa-glass-water"></i> Beverages</a>
+          <div class="nav-divider"></div>
+          <a href="#" class="category-nav-link"><i class="fa-solid fa-leaf"></i> Spices</a>
+          <div class="nav-divider"></div>
+          <a href="#" class="category-nav-link"><i class="fa-solid fa-bottle-droplet"></i> Edible Oil</a>
+          <div class="nav-divider"></div>
+          <a href="#" class="category-nav-link"><i class="fa-solid fa-jar"></i> Honey</a>
+          <div class="nav-divider"></div>
+          <a href="#" class="category-nav-link"><i class="fa-solid fa-utensils"></i> Ready to cook</a>
+          <div class="nav-divider"></div>
+          <a href="#" class="category-nav-link"><i class="fa-solid fa-heart-pulse"></i> Health Care</a>
+          <div class="nav-divider"></div>
+          <a href="#" class="category-nav-link"><i class="fa-solid fa-bag-shopping"></i> Combos</a>
+          <div class="nav-divider"></div>
+          <a href="#" class="category-nav-link"><i class="fa-solid fa-phone"></i> Contact</a>
+        </div>
+
+        <a href="#" class="btn-track-order d-flex align-items-center gap-2">
+          <i class="fa-solid fa-box-archive"></i>
+          <span>Track Order</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE SIDEBAR OVERLAY & DRAWER -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+
+  <div class="custom-mobile-drawer" id="mobileDrawer">
+    <div class="drawer-header">
+      <h6 class="mb-0 fw-bold"><i class="fa-solid fa-bars me-2"></i> Menu</h6>
+      <i class="fa-solid fa-xmark fs-4 cursor-pointer" id="closeMobileMenuBtn" style="cursor: pointer;"></i>
+    </div>
+    <div class="drawer-content">
+      
+      <!-- Mobile All Categories Toggle -->
+      <div class="mobile-menu-item text-danger bg-light" id="mobileCatToggle">
+        <span><i class="fa-solid fa-border-all me-3"></i> All Categories</span>
+        <i class="fa-solid fa-chevron-down text-muted" id="mobileCatChevron" style="font-size: 11px;"></i>
+      </div>
+      <div class="mobile-submenu" id="mobileCatSubmenu">
+        <a href="#" class="mobile-menu-item py-2">Beverages</a>
+        <a href="#" class="mobile-menu-item py-2">Spices</a>
+        <a href="#" class="mobile-menu-item py-2">Edible Oil</a>
+        <a href="#" class="mobile-menu-item py-2">Honey</a>
+        <a href="#" class="mobile-menu-item py-2">Ready to cook</a>
+        <a href="#" class="mobile-menu-item py-2">Health Care</a>
+        <a href="#" class="mobile-menu-item py-2">Combos</a>
+      </div>
+
+      <!-- Mobile City & Pincode Dropdown -->
+      <div class="mobile-menu-item" id="mobilePinToggle">
+        <span><i class="fa-solid fa-location-dot me-3"></i> Check Pincode & City</span>
+        <i class="fa-solid fa-chevron-down text-muted" id="mobilePinChevron" style="font-size: 11px;"></i>
+      </div>
+      <div class="mobile-submenu p-3" id="mobilePinSubmenu">
+        <form onsubmit="event.preventDefault();">
+          <div class="mb-2">
+            <label class="form-label" style="font-size: 12px; font-weight: 600;">City Name</label>
+            <input type="text" class="form-control form-control-sm" placeholder="e.g. Delhi, Mumbai">
+          </div>
+          <div class="mb-2">
+            <label class="form-label" style="font-size: 12px; font-weight: 600;">Pincode</label>
+            <input type="text" class="form-control form-control-sm" placeholder="Enter 6 digit pincode" maxlength="6">
+          </div>
+          <button type="submit" class="btn btn-danger btn-sm w-100 fw-bold mt-1">Submit</button>
+        </form>
+      </div>
+
+      <a href="#" class="mobile-menu-item text-danger">
+        <span><i class="fa-solid fa-box-archive me-3"></i> Track Order</span>
+        <i class="fa-solid fa-chevron-right text-muted" style="font-size: 11px;"></i>
+      </a>
+
+      <!-- Mobile Account Toggle -->
+      <div class="mobile-menu-item" id="mobileAccountToggle">
+        <span><i class="fa-regular fa-user me-3"></i> Account</span>
+        <i class="fa-solid fa-chevron-down text-muted" id="mobileAccountChevron" style="font-size: 11px;"></i>
+      </div>
+      <div class="mobile-submenu" id="mobileAccountSubmenu">
+        <a href="#" class="mobile-menu-item py-2">My Profile</a>
+        <a href="#" class="mobile-menu-item py-2">My Orders</a>
+        <a href="#" class="mobile-menu-item py-2">Wishlist</a>
+        <a href="#" class="mobile-menu-item py-2 text-danger">Login / Register</a>
+      </div>
+
+      <a href="#" class="mobile-menu-item">
+        <span><i class="fa-solid fa-fire me-3 text-danger"></i> Offers (Upto 30%)</span>
+        <i class="fa-solid fa-chevron-right text-muted" style="font-size: 11px;"></i>
+      </a>
+      <a href="#" class="mobile-menu-item">
+        <span><i class="fa-solid fa-glass-water me-3"></i> Beverages</span>
+        <i class="fa-solid fa-chevron-right text-muted" style="font-size: 11px;"></i>
+      </a>
+      <a href="#" class="mobile-menu-item">
+        <span><i class="fa-solid fa-leaf me-3"></i> Spices</span>
+        <i class="fa-solid fa-chevron-right text-muted" style="font-size: 11px;"></i>
+      </a>
+      <a href="#" class="mobile-menu-item">
+        <span><i class="fa-solid fa-bottle-droplet me-3"></i> Edible Oil</span>
+        <i class="fa-solid fa-chevron-right text-muted" style="font-size: 11px;"></i>
+      </a>
+      <a href="#" class="mobile-menu-item">
+        <span><i class="fa-solid fa-jar me-3"></i> Honey</span>
+        <i class="fa-solid fa-chevron-right text-muted" style="font-size: 11px;"></i>
+      </a>
+      <a href="#" class="mobile-menu-item">
+        <span><i class="fa-solid fa-utensils me-3"></i> Ready to cook</span>
+        <i class="fa-solid fa-chevron-right text-muted" style="font-size: 11px;"></i>
+      </a>
+      <a href="#" class="mobile-menu-item">
+        <span><i class="fa-solid fa-heart-pulse me-3"></i> Health Care</span>
+        <i class="fa-solid fa-chevron-right text-muted" style="font-size: 11px;"></i>
+      </a>
+      <a href="#" class="mobile-menu-item">
+        <span><i class="fa-solid fa-bag-shopping me-3"></i> Combos</span>
+        <i class="fa-solid fa-chevron-right text-muted" style="font-size: 11px;"></i>
+      </a>
+      <a href="#" class="mobile-menu-item">
+        <span><i class="fa-solid fa-phone me-3"></i> Contact</span>
+        <i class="fa-solid fa-chevron-right text-muted" style="font-size: 11px;"></i>
+      </a>
+    </div>
+  </div>
+
+
+
+  <!--Features Section Start-->
+
+  <section class="features-section">
+    <div class="container-fluid px-2 px-lg-5">
+      <div class="row g-2 align-items-center">
+        
+        <!-- Feature 1 (Top-Left in Mobile / 1st in Desktop) -->
+        <div class="col-6 col-lg-3 mobile-center-line">
+          <div class="feature-box desktop-divider">
+            <img src="https://cdn-icons-png.flaticon.com/512/2838/2838838.png" alt="Free Shipping" class="feature-img-icon">
+            <div>
+              <h6 class="feature-title">Free Shipping</h6>
+              <p class="feature-desc">an order above ₹499</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 2 (Top-Right in Mobile / 2nd in Desktop) -->
+        <div class="col-6 col-lg-3">
+          <div class="feature-box desktop-divider">
+            <img src="https://cdn-icons-png.flaticon.com/512/2913/2913133.png" alt="Over 100 Years" class="feature-img-icon">
+            <div>
+              <h6 class="feature-title">Over 100 Years</h6>
+              <p class="feature-desc">Of Trust</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 3 (Bottom-Left in Mobile / 3rd in Desktop) -->
+        <div class="col-6 col-lg-3 mobile-center-line">
+          <div class="feature-box desktop-divider">
+            <img src="https://cdn-icons-png.flaticon.com/512/1067/1067566.png" alt="Secure Payments" class="feature-img-icon">
+            <div>
+              <h6 class="feature-title">Secure Payments</h6>
+              <p class="feature-desc">Shop with confidence</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 4 (Bottom-Right in Mobile / 4th in Desktop) -->
+        <div class="col-6 col-lg-3">
+          <div class="feature-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/709/709790.png" alt="Pan India Delivery" class="feature-img-icon">
+            <div>
+              <h6 class="feature-title">Pan India Delivery</h6>
+              <p class="feature-desc">Fast & Reliable</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+    <!--Features Section End-->
+    <!--Our Product Section Start-->
+     <section class="product-range-section">
+    <div class="container-fluid px-3 px-lg-5">
+      
+      <h2 class="section-heading">Our Product Range</h2>
+
+      <div class="swiper productRangeSwiper">
+        <div class="swiper-wrapper">
+
+          <!-- Card 1 -->
+          <div class="swiper-slide">
+            <div class="product-card">
+              <div class="product-img-box">
+                <img src="https://myhamdardstore.com/cdn/shop/files/Beverages_banner.png" alt="Beverages" onerror="this.src='https://via.placeholder.com/250x200/e85d56/ffffff?text=Beverages'">
+              </div>
+              <div class="product-info-box">
+                <h6 class="product-title">Beverages</h6>
+                <a href="#" class="btn-view-more">View More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="swiper-slide">
+            <div class="product-card">
+              <div class="product-img-box">
+                <img src="https://myhamdardstore.com/cdn/shop/files/Spices_banner.png" alt="Spices" onerror="this.src='https://via.placeholder.com/250x200/dfa837/ffffff?text=Spices'">
+              </div>
+              <div class="product-info-box">
+                <h6 class="product-title">Spices</h6>
+                <a href="#" class="btn-view-more">View More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="swiper-slide">
+            <div class="product-card">
+              <div class="product-img-box">
+                <img src="https://myhamdardstore.com/cdn/shop/files/Edible_Oil_banner.png" alt="Edible Oil" onerror="this.src='https://via.placeholder.com/250x200/69a744/ffffff?text=Edible+Oil'">
+              </div>
+              <div class="product-info-box">
+                <h6 class="product-title">Edible Oil</h6>
+                <a href="#" class="btn-view-more">View More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="swiper-slide">
+            <div class="product-card">
+              <div class="product-img-box">
+                <img src="https://myhamdardstore.com/cdn/shop/files/Honey_banner.png" alt="Honey" onerror="this.src='https://via.placeholder.com/250x200/f3b431/ffffff?text=Honey'">
+              </div>
+              <div class="product-info-box">
+                <h6 class="product-title">Honey</h6>
+                <a href="#" class="btn-view-more">View More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="swiper-slide">
+            <div class="product-card">
+              <div class="product-img-box">
+                <img src="https://myhamdardstore.com/cdn/shop/files/Ready_to_cook_banner.png" alt="Ready to cook" onerror="this.src='https://via.placeholder.com/250x200/e66e33/ffffff?text=Ready+to+cook'">
+              </div>
+              <div class="product-info-box">
+                <h6 class="product-title">Ready to cook</h6>
+                <a href="#" class="btn-view-more">View More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="swiper-slide">
+            <div class="product-card">
+              <div class="product-img-box">
+                <img src="https://myhamdardstore.com/cdn/shop/files/Health_Care_banner.png" alt="Health Care" onerror="this.src='https://via.placeholder.com/250x200/52a878/ffffff?text=Health+Care'">
+              </div>
+              <div class="product-info-box">
+                <h6 class="product-title">Health Care</h6>
+                <a href="#" class="btn-view-more">View More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Duplicated Clones for Continuous Infinite Loop -->
+          <div class="swiper-slide">
+            <div class="product-card">
+              <div class="product-img-box">
+                <img src="https://myhamdardstore.com/cdn/shop/files/Beverages_banner.png" alt="Beverages" onerror="this.src='https://via.placeholder.com/250x200/e85d56/ffffff?text=Beverages'">
+              </div>
+              <div class="product-info-box">
+                <h6 class="product-title">Beverages</h6>
+                <a href="#" class="btn-view-more">View More</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="product-card">
+              <div class="product-img-box">
+                <img src="https://myhamdardstore.com/cdn/shop/files/Spices_banner.png" alt="Spices" onerror="this.src='https://via.placeholder.com/250x200/dfa837/ffffff?text=Spices'">
+              </div>
+              <div class="product-info-box">
+                <h6 class="product-title">Spices</h6>
+                <a href="#" class="btn-view-more">View More</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="product-card">
+              <div class="product-img-box">
+                <img src="https://myhamdardstore.com/cdn/shop/files/Edible_Oil_banner.png" alt="Edible Oil" onerror="this.src='https://via.placeholder.com/250x200/69a744/ffffff?text=Edible+Oil'">
+              </div>
+              <div class="product-info-box">
+                <h6 class="product-title">Edible Oil</h6>
+                <a href="#" class="btn-view-more">View More</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="product-card">
+              <div class="product-img-box">
+                <img src="https://myhamdardstore.com/cdn/shop/files/Honey_banner.png" alt="Honey" onerror="this.src='https://via.placeholder.com/250x200/f3b431/ffffff?text=Honey'">
+              </div>
+              <div class="product-info-box">
+                <h6 class="product-title">Honey</h6>
+                <a href="#" class="btn-view-more">View More</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="product-card">
+              <div class="product-img-box">
+                <img src="https://myhamdardstore.com/cdn/shop/files/Ready_to_cook_banner.png" alt="Ready to cook" onerror="this.src='https://via.placeholder.com/250x200/e66e33/ffffff?text=Ready+to+cook'">
+              </div>
+              <div class="product-info-box">
+                <h6 class="product-title">Ready to cook</h6>
+                <a href="#" class="btn-view-more">View More</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="product-card">
+              <div class="product-img-box">
+                <img src="https://myhamdardstore.com/cdn/shop/files/Health_Care_banner.png" alt="Health Care" onerror="this.src='https://via.placeholder.com/250x200/52a878/ffffff?text=Health+Care'">
+              </div>
+              <div class="product-info-box">
+                <h6 class="product-title">Health Care</h6>
+                <a href="#" class="btn-view-more">View More</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Custom Fixed 5 Dots Wrap -->
+        <div class="custom-dots-wrapper" id="customDots">
+          <span class="custom-dot active" data-index="0"></span>
+          <span class="custom-dot" data-index="1"></span>
+          <span class="custom-dot" data-index="2"></span>
+          <span class="custom-dot" data-index="3"></span>
+          <span class="custom-dot" data-index="4"></span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+    <!--Our Product Section End-->
+
+  <!-- JAVASCRIPT FOR TOGGLING DROPDOWNS & DRAWER -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    // Mobile Drawer Elements
+    const openBtn = document.getElementById('openMobileMenuBtn');
+    const closeBtn = document.getElementById('closeMobileMenuBtn');
+    const drawer = document.getElementById('mobileDrawer');
+    const overlay = document.getElementById('drawerOverlay');
+
+    function openMenu() {
+      drawer.classList.add('active');
+      overlay.classList.add('active');
+    }
+
+    function closeMenu() {
+      drawer.classList.remove('active');
+      overlay.classList.remove('active');
+    }
+
+    if(openBtn) openBtn.addEventListener('click', openMenu);
+    if(closeBtn) closeBtn.addEventListener('click', closeMenu);
+    if(overlay) overlay.addEventListener('click', closeMenu);
+
+    // Desktop Dropdown Elements
+    const desktopCatBtn = document.getElementById('desktopCatBtn');
+    const desktopCatDropdown = document.getElementById('desktopCatDropdown');
+    const desktopAccountBtn = document.getElementById('desktopAccountBtn');
+    const desktopAccountDropdown = document.getElementById('desktopAccountDropdown');
+    const desktopPinBtn = document.getElementById('desktopPinBtn');
+    const desktopPinDropdown = document.getElementById('desktopPinDropdown');
+
+    // Toggle Desktop Categories
+    desktopCatBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      desktopCatDropdown.classList.toggle('show');
+      desktopAccountDropdown.classList.remove('show');
+      desktopPinDropdown.classList.remove('show');
+    });
+
+    // Toggle Desktop Account
+    desktopAccountBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      desktopAccountDropdown.classList.toggle('show');
+      desktopCatDropdown.classList.remove('show');
+      desktopPinDropdown.classList.remove('show');
+    });
+
+    // Toggle Desktop Pincode
+    desktopPinBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      desktopPinDropdown.classList.toggle('show');
+      desktopCatDropdown.classList.remove('show');
+      desktopAccountDropdown.classList.remove('show');
+    });
+
+    // Prevent closing when clicking inside Pincode Dropdown Form
+    desktopPinDropdown.addEventListener('click', function(e) {
+      e.stopPropagation();
+    });
+
+    // Close all desktop dropdowns on click outside
+    window.addEventListener('click', function() {
+      desktopCatDropdown.classList.remove('show');
+      desktopAccountDropdown.classList.remove('show');
+      desktopPinDropdown.classList.remove('show');
+    });
+
+    // Mobile Accordion Submenus
+    const mobileCatToggle = document.getElementById('mobileCatToggle');
+    const mobileCatSubmenu = document.getElementById('mobileCatSubmenu');
+    const mobileCatChevron = document.getElementById('mobileCatChevron');
+
+    mobileCatToggle.addEventListener('click', function() {
+      mobileCatSubmenu.classList.toggle('show');
+      mobileCatChevron.classList.toggle('fa-chevron-up');
+      mobileCatChevron.classList.toggle('fa-chevron-down');
+    });
+
+    const mobileAccountToggle = document.getElementById('mobileAccountToggle');
+    const mobileAccountSubmenu = document.getElementById('mobileAccountSubmenu');
+    const mobileAccountChevron = document.getElementById('mobileAccountChevron');
+
+    mobileAccountToggle.addEventListener('click', function() {
+      mobileAccountSubmenu.classList.toggle('show');
+      mobileAccountChevron.classList.toggle('fa-chevron-up');
+      mobileAccountChevron.classList.toggle('fa-chevron-down');
+    });
+
+    const mobilePinToggle = document.getElementById('mobilePinToggle');
+    const mobilePinSubmenu = document.getElementById('mobilePinSubmenu');
+    const mobilePinChevron = document.getElementById('mobilePinChevron');
+    const mobilePinHeaderBtn = document.getElementById('mobilePinHeaderBtn');
+
+    if(mobilePinToggle) {
+      mobilePinToggle.addEventListener('click', function() {
+        mobilePinSubmenu.classList.toggle('show');
+        mobilePinChevron.classList.toggle('fa-chevron-up');
+        mobilePinChevron.classList.toggle('fa-chevron-down');
+      });
+    }
+
+    if(mobilePinHeaderBtn) {
+      mobilePinHeaderBtn.addEventListener('click', function() {
+        openMenu();
+        mobilePinSubmenu.classList.add('show');
+      });
+    }
+    // our product
+     document.addEventListener("DOMContentLoaded", function () {
+      const dots = document.querySelectorAll("#customDots .custom-dot");
+
+      var swiper = new Swiper(".productRangeSwiper", {
+        slidesPerView: 2,
+        spaceBetween: 16,
+        loop: true,
+        speed: 700,
+        autoplay: {
+          delay: 1800,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+          576: { slidesPerView: 3, spaceBetween: 16 },
+          768: { slidesPerView: 4, spaceBetween: 18 },
+          992: { slidesPerView: 6, spaceBetween: 18 }
+        },
+        on: {
+          slideChange: function () {
+            // Calculate active index inside 0 to 4 range so red dot never disappears
+            let activeIndex = this.realIndex % 5;
+            dots.forEach((dot, idx) => {
+              if (idx === activeIndex) {
+                dot.classList.add("active");
+              } else {
+                dot.classList.remove("active");
+              }
+            });
+          }
+        }
+      });
+
+      // Click event for dots
+      dots.forEach((dot, index) => {
+        dot.addEventListener("click", function () {
+          swiper.slideToLoop(index);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

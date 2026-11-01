@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Best Sellers Slider</title>
+  
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #fff;
+      padding: 12px;
+    }
+
+    .best-sellers-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    /* Bottom Pagination Dots */
+    .bottom-pagination {
+      display: none;
+    }
+
+    .swiper-pagination-bullet {
+      width: 10px;
+      height: 6px;
+      border-radius: 4px;
+      background: #ccc;
+      opacity: 1;
+      transition: all 0.3s ease;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: #e53935;
+      width: 22px;
+    }
+
+    /* Section Header */
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: #222;
+    }
+
+    .view-all-btn {
+      background: #e0e0e0;
+      color: #333;
+      border: none;
+      padding: 4px 10px;
+      border-radius: 3px;
+      font-size: 9px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    /* Slider Container */
+    .slider-wrapper {
+      position: relative;
+    }
+
+    .swiper {
+      padding-bottom: 8px;
+    }
+
+    /* Product Card Styling */
+    .product-card {
+      background: #ffc107;
+      border: 1px solid #d99f00;
+      border-radius: 3px;
+      padding: 5px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .card-top-tags {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3px;
+    }
+
+    .card-top-tags-right {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+    }
+
+    .veg-icon {
+      width: 11px;
+      height: 11px;
+      border: 1px solid #2e7d32;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1px;
+    }
+
+    .veg-icon::after {
+      content: '';
+      width: 5px;
+      height: 5px;
+      background-color: #2e7d32;
+      border-radius: 50%;
+    }
+
+    .discount-badge {
+      background-color: #e53935;
+      color: #fff;
+      font-size: 7px;
+      font-weight: bold;
+      padding: 2px 4px;
+      border-radius: 2px;
+    }
+
+    .wishlist-btn {
+      width: 15px;
+      height: 15px;
+      padding: 0;
+      border: 0;
+      border-radius: 50%;
+      background: #fff;
+      color: #e53935;
+      font-size: 11px;
+      line-height: 15px;
+      cursor: pointer;
+    }
+
+    .wishlist-btn.active {
+      background: #e53935;
+      color: #fff;
+    }
+
+    .product-img-container {
+      text-align: center;
+      padding: 2px 0;
+    }
+
+    .product-img {
+      max-height: 72px;
+      max-width: 100%;
+      object-fit: contain;
+    }
+
+    .product-details {
+      background: #fff;
+      border-top: 1px solid #e5e5e5;
+      padding: 4px;
+      margin-top: 2px;
+    }
+
+    .weight-rating {
+      display: flex;
+      justify-content: space-between;
+      font-size: 7px;
+      color: #777;
+      margin-bottom: 2px;
+    }
+
+    .rating {
+      color: #ffa000;
+      font-weight: bold;
+    }
+
+    .product-title {
+      font-size: 8px;
+      font-weight: 700;
+      color: #222;
+      line-height: 1.3;
+      margin-bottom: 4px;
+      height: 21px;
+      overflow: hidden;
+    }
+
+    .price-select-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 5px;
+    }
+
+    .price {
+      font-size: 9px;
+      font-weight: 700;
+      color: #111;
+    }
+
+    .price span {
+      font-size: 6px;
+      color: #777;
+      font-weight: normal;
+    }
+
+    .unit-select {
+      border: 1px solid #ccc;
+      border-radius: 2px;
+      padding: 2px 3px;
+      font-size: 7px;
+      background: #fff;
+    }
+
+    .card-actions {
+      display: flex;
+      gap: 3px;
+      margin-top: auto;
+    }
+
+    .btn-add, .btn-buy {
+      flex: 1;
+      padding: 4px 0;
+      border: none;
+      border-radius: 2px;
+      font-size: 7px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .btn-add::before {
+      content: '🛒';
+      margin-right: 2px;
+    }
+
+    .btn-buy::before {
+      content: '⚡';
+      margin-right: 2px;
+    }
+
+    .btn-add {
+      background-color: #e53935;
+      color: white;
+    }
+
+    .btn-buy {
+      background-color: #e53935;
+      color: white;
+    }
+
+    /* Side Navigation Arrows (Overlay on Slider) */
+    .swiper-button-prev,
+    .swiper-button-next {
+      width: 28px;
+      height: 48px;
+      background-color: rgba(0, 0, 0, 0.85);
+      color: #fff;
+      border-radius: 3px;
+      margin-top: -24px;
+      z-index: 10;
+    }
+
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .swiper-button-prev {
+      left: 0;
+    }
+
+    .swiper-button-next {
+      right: 0;
+    }
+
+    /* Responsive Adjustments */
+    @media (min-width: 1024px) {
+      .swiper-button-prev,
+      .swiper-button-next {
+        display: none; /* Desktop par side buttons hide karne ke liye agar bas swipe/auto-slide chahiye */
+      }
+
+      .bottom-pagination {
+        position: relative;
+        margin-top: 8px;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="best-sellers-section">
+    <!-- Header -->
+    <div class="section-header">
+      <h2 class="section-title">Best Sellers</h2>
+      <button class="view-all-btn">View All</button>
+    </div>
+
+    <!-- Swiper Container -->
+    <div class="slider-wrapper">
+      <div class="swiper bestSellersSwiper">
+        <div class="swiper-wrapper">
+          
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+            <div class="product-card">
+              <div class="card-top-tags">
+                <div class="veg-icon"></div>
+                <div class="card-top-tags-right">
+                  <span class="discount-badge">10% Off</span>
+                  <button type="button" class="wishlist-btn" aria-label="Add to wishlist" aria-pressed="false">♡</button>
+                </div>
+              </div>
+              <div class="product-img-container">
+                <img src="https://via.placeholder.com/100x150?text=Oil+Bottle" alt="Product" class="product-img" />
+              </div>
+              <div class="product-details">
+                <div class="weight-rating">
+                  <span>500ml / 1L</span>
+                  <span class="rating">★ 4.5/5</span>
+                </div>
+                <h3 class="product-title">WOOD PRESSED MUSTARD OIL</h3>
+                <div class="price-select-row">
+                  <div class="price">Rs. 450.00 <span>Inc. TAX</span></div>
+                  <select class="unit-select">
+                    <option>250mg</option>
+                    <option selected>500ml</option>
+                    <option>1 Litre</option>
+                  </select>
+                </div>
+                <div class="card-actions">
+                  <button type="button" class="btn-add">Add to Cart</button>
+                  <button type="button" class="btn-buy">Buy Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <div class="product-card">
+              <div class="card-top-tags">
+                <div class="veg-icon"></div>
+                <div class="card-top-tags-right">
+                  <span class="discount-badge">10% Off</span>
+                  <button type="button" class="wishlist-btn" aria-label="Add to wishlist" aria-pressed="false">♡</button>
+                </div>
+              </div>
+              <div class="product-img-container">
+                <img src="https://via.placeholder.com/100x150?text=Oil+Bottle" alt="Product" class="product-img" />
+              </div>
+              <div class="product-details">
+                <div class="weight-rating">
+                  <span>500ml / 1L</span>
+                  <span class="rating">★ 4.5/5</span>
+                </div>
+                <h3 class="product-title">WOOD PRESSED MUSTARD OIL</h3>
+                <div class="price-select-row">
+                  <div class="price">Rs. 450.00 <span>Inc. TAX</span></div>
+                  <select class="unit-select">
+                    <option>250mg</option>
+                    <option selected>500ml</option>
+                    <option>1 Litre</option>
+                  </select>
+                </div>
+                <div class="card-actions">
+                  <button type="button" class="btn-add">Add to Cart</button>
+                  <button type="button" class="btn-buy">Buy Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="swiper-slide">
+            <div class="product-card">
+              <div class="card-top-tags">
+                <div class="veg-icon"></div>
+                <div class="card-top-tags-right">
+                  <span class="discount-badge">10% Off</span>
+                  <button type="button" class="wishlist-btn" aria-label="Add to wishlist" aria-pressed="false">♡</button>
+                </div>
+              </div>
+              <div class="product-img-container">
+                <img src="https://via.placeholder.com/100x150?text=Oil+Bottle" alt="Product" class="product-img" />
+              </div>
+              <div class="product-details">
+                <div class="weight-rating">
+                  <span>500ml / 1L</span>
+                  <span class="rating">★ 4.5/5</span>
+                </div>
+                <h3 class="product-title">WOOD PRESSED MUSTARD OIL</h3>
+                <div class="price-select-row">
+                  <div class="price">Rs. 450.00 <span>Inc. TAX</span></div>
+                  <select class="unit-select">
+                    <option>250mg</option>
+                    <option selected>500ml</option>
+                    <option>1 Litre</option>
+                  </select>
+                </div>
+                <div class="card-actions">
+                  <button type="button" class="btn-add">Add to Cart</button>
+                  <button type="button" class="btn-buy">Buy Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="swiper-slide">
+            <div class="product-card">
+              <div class="card-top-tags">
+                <div class="veg-icon"></div>
+                <div class="card-top-tags-right">
+                  <span class="discount-badge">10% Off</span>
+                  <button type="button" class="wishlist-btn" aria-label="Add to wishlist" aria-pressed="false">♡</button>
+                </div>
+              </div>
+              <div class="product-img-container">
+                <img src="https://via.placeholder.com/100x150?text=Oil+Bottle" alt="Product" class="product-img" />
+              </div>
+              <div class="product-details">
+                <div class="weight-rating">
+                  <span>500ml / 1L</span>
+                  <span class="rating">★ 4.5/5</span>
+                </div>
+                <h3 class="product-title">WOOD PRESSED MUSTARD OIL</h3>
+                <div class="price-select-row">
+                  <div class="price">Rs. 450.00 <span>Inc. TAX</span></div>
+                  <select class="unit-select">
+                    <option>250mg</option>
+                    <option selected>500ml</option>
+                    <option>1 Litre</option>
+                  </select>
+                </div>
+                <div class="card-actions">
+                  <button type="button" class="btn-add">Add to Cart</button>
+                  <button type="button" class="btn-buy">Buy Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 5 -->
+          <div class="swiper-slide">
+            <div class="product-card">
+              <div class="card-top-tags">
+                <div class="veg-icon"></div>
+                <div class="card-top-tags-right">
+                  <span class="discount-badge">10% Off</span>
+                  <button type="button" class="wishlist-btn" aria-label="Add to wishlist" aria-pressed="false">♡</button>
+                </div>
+              </div>
+              <div class="product-img-container">
+                <img src="https://via.placeholder.com/100x150?text=Oil+Bottle" alt="Product" class="product-img" />
+              </div>
+              <div class="product-details">
+                <div class="weight-rating">
+                  <span>500ml / 1L</span>
+                  <span class="rating">★ 4.5/5</span>
+                </div>
+                <h3 class="product-title">WOOD PRESSED MUSTARD OIL</h3>
+                <div class="price-select-row">
+                  <div class="price">Rs. 450.00 <span>Inc. TAX</span></div>
+                  <select class="unit-select">
+                    <option>250mg</option>
+                    <option selected>500ml</option>
+                    <option>1 Litre</option>
+                  </select>
+                </div>
+                <div class="card-actions">
+                  <button type="button" class="btn-add">Add to Cart</button>
+                  <button type="button" class="btn-buy">Buy Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Navigation Arrows (Mobile/Tablet View Ke Liye Inside Buttons) -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+
+      <!-- Bottom Pagination Dots -->
+      <div class="swiper-pagination bottom-pagination"></div>
+    </div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialization Script -->
+  <script>
+    const swiper = new Swiper('.bestSellersSwiper', {
+      slidesPerView: 2,
+      spaceBetween: 15,
+      loop: true,
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.bottom-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        // Mobile / Small screens
+        0: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        // Tablet screens
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 15,
+        },
+        // Laptop/Desktop screens
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        }
+      }
+    });
+
+    document.querySelectorAll('.wishlist-btn').forEach((button) => {
+      button.addEventListener('click', () => {
+        const isActive = button.classList.toggle('active');
+        button.textContent = isActive ? '♥' : '♡';
+        button.setAttribute('aria-pressed', String(isActive));
+      });
+    });
+  </script>
+</body>
+</html>

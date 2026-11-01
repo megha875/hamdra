@@ -6,240 +6,569 @@
 <title>Hamdard Store</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 <!-- Riffic Free Font Link -->
 <link href="https://fonts.cdnfonts.com/css/riffic-free" rel="stylesheet">
 
 <link rel="stylesheet" href="./assets/css/style.css">
+
+
 </head>
 
 <body>
 
-<!-- <div class="topbar"><div class="wrap">
- <span><i class="bi bi-truck"></i> Free Shipping on orders above Rs. 999</span>
- <span><i class="bi bi-patch-check"></i> Pure Home of Hamdard Products Online</span>
- <span><i class="bi bi-shield-check"></i> Authentic Products</span>
- <span>Hamdard Store | Help</span>
-</div></div> -->
-<div class="nav_top">
-    <!-- Red Announcement Bar -->
-    <div class="container-fluid py-2 text-white" style="background-color: #dc3545;">
-        <div class="d-flex align-items-center justify-content-around overflow-auto px-3" style="white-space: nowrap; font-size: 14px;">
-            
-            <!-- Item 1 -->
-            <div class="d-flex align-items-center gap-2">
-                <i class="bi bi-truck fs-5"></i>
-                <span>Free Shipping for orders above ₹499 across India</span>
-            </div>
-            <div class="vr text-white opacity-50 d-none d-md-block"></div>
 
-            <!-- Item 2 -->
-            <div class="d-flex align-items-center gap-2">
-                <i class="bi bi-flower1 fs-5"></i>
-                <span>Free Hamdard Khaalis Biryani Masala 10g with every order</span>
-            </div>
-            <div class="vr text-white opacity-50 d-none d-md-block"></div>
-
-            <!-- Item 3 -->
-            <div class="d-flex align-items-center gap-2">
-                <i class="bi bi-tag fs-5"></i>
-                <span>Authentic Hamdard Products</span>
-            </div>
-            <div class="vr text-white opacity-50 d-none d-md-block"></div>
-
-            <!-- Item 4 -->
-            <div class="d-flex align-items-center gap-2">
-                <i class="bi bi-shield-check fs-5"></i>
-                <span>Trusted Since 1906</span>
-            </div>
-
+ <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container-fluid px-3 px-lg-5">
+      <div class="d-none d-lg-flex justify-content-between align-items-center text-center">
+        <div class="flex-fill"><i class="fa-solid fa-truck-fast me-2"></i> Free Shipping for orders above ₹499 across India</div>
+        <div class="top-bar-divider"></div>
+        <div class="flex-fill"><i class="fa-solid fa-leaf me-2"></i> Free Hamdard Khaalis Biriyani Masala 10g with every order</div>
+        <div class="top-bar-divider"></div>
+        <div class="flex-fill"><i class="fa-solid fa-tag me-2"></i> Authentic Hamdard Products</div>
+        <div class="top-bar-divider"></div>
+        <div class="flex-fill">Trusted Since 1906</div>
+      </div>
+      <div class="d-flex d-lg-none justify-content-between align-items-center">
+        <div class="d-flex align-items-center me-2 overflow-hidden text-nowrap">
+          <i class="fa-solid fa-truck-fast me-2 fs-6"></i>
+          <span style="font-size: 12px;">Free Shipping for orders above ₹499 across India</span>
         </div>
-    </div>
-</div>
-<div class="hdr">
-  <div class="container-fluid"><div class="wrap">
- <div class="logo"><img src="./assets/img/7ffc80199d8f6e92ee69c98c4fc4ca1739e7fc83.png" alt="logo" ></div>
- <div class="search"><i class="bi bi-search me-2 text-muted"></i><input placeholder="Search for products, brands &amp; more..."><button>Search</button></div>
- <div class="hicons">
-  <span><i class="bi bi-geo-alt"></i>Select Location</span>
-  <span><i class="bi bi-person"></i>My Account</span>
-  <span><i class="bi bi-heart"></i>Wishlist</span>
-  <span><i class="bi bi-cart3"></i>Cart</span>
- </div>
- <div class="badge-logo d-none d-md-flex">
-    <!-- <img src="./assets/img/Group 42 (1).png"  alt="log"/> -->
-    <img class="hero-logo" src="./assets/img/Group 43.png" alt="Hamdard">
- </div>
-</div></div>
-</div>
-
-<!-- <div class="nav2"><div class="wrap">
- <a class="on" href="#">All Categories</a><a href="#">New</a><a href="#">Beverages</a><a href="#">Spices</a><a href="#">Roof Afza</a><a href="#">Combos</a><a href="#">Khaalis</a><a href="#">Wellness</a><a href="#">Offers</a><a href="#">Blog</a><a class="track" href="#">Track Order</a>
-</div></div> -->
-<!--Navbaer-->
-<div class="navbaer">
-    <div class="container-fluid py-2 bg-white">
-        <div class="d-flex align-items-center  justify-content-around  overflow-auto px-3" style="white-space: nowrap;">
-            
-            <!-- Left: All Categories Button -->
-            <div class="d-flex align-items-center gap-2">
-                <button class="btn btn-danger text-white d-flex align-items-center gap-2 px-3 py-2 fw-semibold rounded-2" style="background-color: #dc3545;">
-                    <i class="bi bi-grid-3x3-gap-fill"></i> All Categories <i class="bi bi-chevron-down small"></i>
-                </button>
-
-                <!-- Nav Items -->
-                <ul class="nav align-items-center gap-3 mb-0 px-4">
-                    <li class="nav-item position-relative">
-                        <a href="#" class="nav-link text-dark p-0 d-flex align-items-center gap-1 fw-semibold">
-                            <i class="bi bi-fire text-danger"></i> Offers 
-                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 8px;">
-                                Upto 50%
-                            </span>
-                        </a>
-                    </li>
-                    <li class="vr text-secondary opacity-25"></li>
-                    
-                    <li class="nav-item">
-                        <a href="#" class="nav-link text-dark p-0 d-flex align-items-center gap-1">
-                            <i class="bi bi-cup-straw"></i> Beverages
-                        </a>
-                    </li>
-                    <li class="vr text-secondary opacity-25"></li>
-
-                    <li class="nav-item">
-                        <a href="#" class="nav-link text-dark p-0 d-flex align-items-center gap-1">
-                            <i class="bi bi-tsunami"></i> Spices
-                        </a>
-                    </li>
-                    <li class="vr text-secondary opacity-25"></li>
-
-                    <li class="nav-item">
-                        <a href="#" class="nav-link text-dark p-0 d-flex align-items-center gap-1">
-                            <i class="bi bi-droplet"></i> Edible Oil
-                        </a>
-                    </li>
-                    <li class="vr text-secondary opacity-25"></li>
-
-                    <li class="nav-item">
-                        <a href="#" class="nav-link text-dark p-0 d-flex align-items-center gap-1">
-                            <i class="bi bi-heart"></i> Honey
-                        </a>
-                    </li>
-                    <li class="vr text-secondary opacity-25"></li>
-
-                    <li class="nav-item">
-                        <a href="#" class="nav-link text-dark p-0 d-flex align-items-center gap-1">
-                            <i class="bi bi-egg-fried"></i> Ready to cook
-                        </a>
-                    </li>
-                    <li class="vr text-secondary opacity-25"></li>
-
-                    <li class="nav-item">
-                        <a href="#" class="nav-link text-dark p-0 d-flex align-items-center gap-1">
-                            <i class="bi bi-heart-pulse"></i> Health Care
-                        </a>
-                    </li>
-                    <li class="vr text-secondary opacity-25"></li>
-
-                    <li class="nav-item">
-                        <a href="#" class="nav-link text-dark p-0 d-flex align-items-center gap-1">
-                            <i class="bi bi-bag"></i> Combos
-                        </a>
-                    </li>
-                    <li class="vr text-secondary opacity-25"></li>
-
-                    <li class="nav-item">
-                        <a href="#" class="nav-link text-dark p-0 d-flex align-items-center gap-1">
-                            <i class="bi bi-headset"></i> Contact
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Right: Track Order Button -->
-            <div>
-                <button class="btn btn-danger text-white d-flex align-items-center gap-2 px-3 py-2 fw-semibold rounded-2" style="background-color: #dc3545;">
-                    <i class="bi bi-box-seam"></i> Track Order
-                </button>
-            </div>
-
-        </div>
-    </div>
-</div>
-
-<div class="wrap">
-<section class="hero">
-  <div class="container-fluid px-4 px-lg-5">
-    <div class="row align-items-center">
-      <div class="col-lg-6 pt-4 pt-lg-0">
- 
-        <!-- logo image (apna logo path lagayein) -->
-        <img class="hero-logo" src="./assets/img/Group 42 (1).png" alt="Hamdard">
- 
-        <h1>Festival<span>Dhamaka Offer</span></h1>
- 
-        <p>Lorem ipsum dolor sit amet consectetur. Integer pretium id non quis et mattis morbi Lorem ipsum dolor sit amet consectetur. Integer pretium id non quis et mattis morbi</p>
- 
-        <button class="btn btn-shop">Shop Now</button>
+        <i class="fa-solid fa-chevron-right fs-6"></i>
       </div>
     </div>
   </div>
- 
-  <!-- 15% OFF badge (agar badge aapki product image me already hai to ye div delete kar dein) -->
-  <div class="offer"><i>Get up to</i><b>15% OFF</b></div>
- 
-  <!-- right side image: products + podium -->
-  <img class="hero-products" src="./assets/img/heroleft.png" alt="Hamdard products">
-</section>
- 
-</div>
 
-
-<div class="feat">
-  <div class="container">
-    <div class="wrap">
+  <!-- Main Header -->
+  <header class="main-header">
+    <div class="container-fluid px-3 px-lg-5">
       
-      <div class="f">
-        <img src="./assets/img/first.png" alt="Free Shipping" class="feat-icon">
+      <!-- DESKTOP HEADER -->
+      <div class="d-none d-lg-flex align-items-center justify-content-between gap-3">
+        <a href="#"><img src="./assets/img/logo.png" alt="My Hamdard Store" class="brand-logo" onerror="this.src='https://via.placeholder.com/200x50?text=MyHamdardStore.com'"></a>
+
+        <div class="flex-grow-1 mx-3" style="max-width: 620px;">
+          <form action="/search" method="GET" class="search-container d-flex align-items-center">
+            <i class="fa-solid fa-magnifying-glass text-muted me-2 ms-1 fs-5"></i>
+            <input type="text" class="search-input" placeholder="Search for products, categories or brands...">
+            <div style="width: 1px; height: 24px; background-color: #ddd; margin: 0 8px;"></div>
+            <button type="submit" class="search-btn">Search</button>
+          </form>
+        </div>
+
+        <!-- Pincode & City Dropdown (Desktop) -->
+        <div class="custom-dropdown-wrap">
+          <div class="header-action-item" id="desktopPinBtn">
+            <i class="fa-solid fa-location-dot fs-5"></i>
+            <div class="lh-sm">
+              <span class="d-block text-muted fw-normal" style="font-size: 10px;">Hello</span>
+              <span>Check your Pincode <i class="fa-solid fa-chevron-down" style="font-size: 10px;"></i></span>
+            </div>
+          </div>
+          <div class="custom-dropdown-menu pincode-dropdown-box" id="desktopPinDropdown">
+            <form onsubmit="event.preventDefault();">
+              <div class="mb-2">
+                <label for="desktopCityInput">City Name</label>
+                <input type="text" class="form-control" id="desktopCityInput" placeholder="e.g. Delhi, Mumbai">
+              </div>
+              <div class="mb-3">
+                <label for="desktopPincodeInput">Pincode</label>
+                <input type="text" class="form-control" id="desktopPincodeInput" placeholder="Enter 6 digit pincode" maxlength="6">
+              </div>
+              <button type="submit" class="w-100">Apply Location</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Account Dropdown (Desktop) -->
+        <div class="custom-dropdown-wrap">
+          <a href="#" class="header-action-item" id="desktopAccountBtn">
+            <i class="fa-regular fa-user fs-5"></i>
+            <span>Account <i class="fa-solid fa-chevron-down" style="font-size: 10px;"></i></span>
+          </a>
+          <div class="custom-dropdown-menu" id="desktopAccountDropdown">
+            <a href="#" class="custom-dropdown-item"><i class="fa-regular fa-user me-2"></i> My Profile</a>
+            <a href="#" class="custom-dropdown-item"><i class="fa-solid fa-box me-2"></i> My Orders</a>
+            <a href="#" class="custom-dropdown-item"><i class="fa-regular fa-heart me-2"></i> Wishlist</a>
+            <div class="account-pincode-section">
+              <div class="account-pincode-title">
+                <i class="fa-solid fa-location-dot me-2 text-danger"></i> Check your Pincode
+              </div>
+              <div class="input-group input-group-sm mb-2">
+                <span class="input-group-text"><i class="fa-solid fa-location-dot text-danger"></i></span>
+                <input type="text" class="form-control" placeholder="Enter pincode" maxlength="6">
+              </div>
+              <button type="button" class="btn btn-danger btn-sm w-100">
+                <i class="fa-solid fa-check me-1"></i> Apply
+              </button>
+            </div>
+            <a href="#" class="custom-dropdown-item text-danger"><i class="fa-solid fa-right-from-bracket me-2"></i> Login / Register</a>
+          </div>
+        </div>
+
+        <!-- Cart -->
+        <a href="#" class="header-action-item position-relative">
+          <div class="position-relative">
+            <i class="fa-solid fa-cart-shopping fs-5"></i>
+            <span class="cart-badge">0</span>
+          </div>
+          <span>Cart</span>
+        </a>
+
+        <div class="header-vertical-line"></div>
         <div>
-          <b>Free Shipping</b>
-          <small>On orders above Rs. 999</small>
+          <img src="./assets/img/logo.png" alt="Hamdard Seal" class="hamdard-seal-logo" onerror="this.src='https://via.placeholder.com/100x50?text=Hamdard+1906'">
         </div>
       </div>
 
-      <div class="f">
-        <img src="./assets/img/wrap2-removebg-preview.png" alt="100% Authentic" class="feat-icon">
-        <div>
-          <b>100% Authentic</b>
-          <small>Made by Hamdard</small>
-        </div>
-      </div>
+      <!-- MOBILE / TABLET HEADER -->
+      <div class="d-flex d-lg-none flex-column gap-2">
+        <div class="d-flex align-items-center justify-content-between">
+          <button class="hamburger-btn" id="openMobileMenuBtn" type="button">
+            <i class="fa-solid fa-bars"></i>
+          </button>
 
-      <div class="f">
-        <img src="./assets/img/third.png" alt="Secure Payments" class="feat-icon">
-        <div>
-          <b>Secure Payments</b>
-          <small>100% safe checkout</small>
-        </div>
-      </div>
+          <a href="#" class="mx-auto">
+            <img src="./assets/img/logo.png" alt="My Hamdard Store" class="brand-logo-mobile" onerror="this.src='https://via.placeholder.com/150x35?text=MyHamdardStore'">
+          </a>
 
-      <div class="f">
-        <img src="./assets/img/four-removebg-preview.png" alt="Pan India Delivery" class="feat-icon">
-        <div>
-          <b>Pan India Delivery</b>
-          <small>All across India</small>
+          <div class="d-flex align-items-center gap-3">
+            <div class="mobile-header-icon-box" id="mobilePinHeaderBtn">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Pincode</span>
+            </div>
+            <a href="#" class="mobile-header-icon-box">
+              <i class="fa-regular fa-user"></i>
+              <span>Account</span>
+            </a>
+            <a href="#" class="mobile-header-icon-box position-relative">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span class="cart-badge" style="top: -4px; right: -4px;">0</span>
+              <span>Cart</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="mt-1">
+          <form action="/search" method="GET" class="search-container d-flex align-items-center" style="padding: 2px 3px 2px 14px;">
+            <i class="fa-solid fa-magnifying-glass text-muted me-2 fs-5"></i>
+            <input type="text" class="search-input" placeholder="Search for products, categories or brands...">
+            <button type="submit" class="search-btn py-1 px-3" style="border-radius: 18px;">Search</button>
+          </form>
         </div>
       </div>
 
     </div>
+  </header>
+
+  <!-- DESKTOP CATEGORIES NAVBAR -->
+  <nav class="nav-bar-container d-none d-lg-block">
+    <div class="container-fluid px-3 px-lg-5">
+      <div class="d-flex align-items-center justify-content-between">
+        
+        <!-- All Categories Dropdown -->
+        <div class="custom-dropdown-wrap">
+          <button class="btn-all-categories d-flex align-items-center gap-2" id="desktopCatBtn">
+            <i class="fa-solid fa-border-all"></i>
+            <span>All Categories</span>
+            <i class="fa-solid fa-chevron-down ms-1" style="font-size: 11px;"></i>
+          </button>
+          <div class="custom-dropdown-menu" id="desktopCatDropdown">
+            <a href="#" class="custom-dropdown-item"><i class="fa-solid fa-glass-water me-2 text-danger"></i> Beverages</a>
+            <a href="#" class="custom-dropdown-item"><i class="fa-solid fa-leaf me-2 text-danger"></i> Spices</a>
+            <a href="#" class="custom-dropdown-item"><i class="fa-solid fa-bottle-droplet me-2 text-danger"></i> Edible Oil</a>
+            <a href="#" class="custom-dropdown-item"><i class="fa-solid fa-jar me-2 text-danger"></i> Honey</a>
+            <a href="#" class="custom-dropdown-item"><i class="fa-solid fa-utensils me-2 text-danger"></i> Ready to cook</a>
+            <a href="#" class="custom-dropdown-item"><i class="fa-solid fa-heart-pulse me-2 text-danger"></i> Health Care</a>
+            <a href="#" class="custom-dropdown-item"><i class="fa-solid fa-bag-shopping me-2 text-danger"></i> Combos</a>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center gap-1">
+          <div class="offers-badge-container ms-2">
+            <span class="tag-badge">Upto 30%</span>
+            <a href="#" class="category-nav-link"><i class="fa-solid fa-fire text-dark"></i> Offers</a>
+          </div>
+          <div class="nav-divider"></div>
+          <a href="#" class="category-nav-link"><i class="fa-solid fa-glass-water"></i> Beverages</a>
+          <div class="nav-divider"></div>
+          <a href="#" class="category-nav-link"><i class="fa-solid fa-leaf"></i> Spices</a>
+          <div class="nav-divider"></div>
+          <a href="#" class="category-nav-link"><i class="fa-solid fa-bottle-droplet"></i> Edible Oil</a>
+          <div class="nav-divider"></div>
+          <a href="#" class="category-nav-link"><i class="fa-solid fa-jar"></i> Honey</a>
+          <div class="nav-divider"></div>
+          <a href="#" class="category-nav-link"><i class="fa-solid fa-utensils"></i> Ready to cook</a>
+          <div class="nav-divider"></div>
+          <a href="#" class="category-nav-link"><i class="fa-solid fa-heart-pulse"></i> Health Care</a>
+          <div class="nav-divider"></div>
+          <a href="#" class="category-nav-link"><i class="fa-solid fa-bag-shopping"></i> Combos</a>
+          <div class="nav-divider"></div>
+          <a href="#" class="category-nav-link"><i class="fa-solid fa-phone"></i> Contact</a>
+        </div>
+
+        <a href="#" class="btn-track-order d-flex align-items-center gap-2">
+          <i class="fa-solid fa-box-archive"></i>
+          <span>Track Order</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE SIDEBAR OVERLAY & DRAWER -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+
+  <div class="custom-mobile-drawer" id="mobileDrawer">
+    <div class="drawer-header">
+      <h6 class="mb-0 fw-bold"><i class="fa-solid fa-bars me-2"></i> Menu</h6>
+      <i class="fa-solid fa-xmark fs-4 cursor-pointer" id="closeMobileMenuBtn" style="cursor: pointer;"></i>
+    </div>
+    <div class="drawer-content">
+      
+      <!-- Mobile All Categories Toggle -->
+      <div class="mobile-menu-item text-danger bg-light" id="mobileCatToggle">
+        <span><i class="fa-solid fa-border-all me-3"></i> All Categories</span>
+        <i class="fa-solid fa-chevron-down text-muted" id="mobileCatChevron" style="font-size: 11px;"></i>
+      </div>
+      <div class="mobile-submenu mobile-category-mega" id="mobileCatSubmenu">
+        <a href="#" class="mobile-menu-item py-2"><i class="fa-solid fa-glass-water me-3 text-danger"></i> Beverages</a>
+        <a href="#" class="mobile-menu-item py-2"><i class="fa-solid fa-leaf me-3 text-danger"></i> Spices</a>
+        <a href="#" class="mobile-menu-item py-2"><i class="fa-solid fa-bottle-droplet me-3 text-danger"></i> Edible Oil</a>
+        <a href="#" class="mobile-menu-item py-2"><i class="fa-solid fa-jar me-3 text-danger"></i> Honey</a>
+        <a href="#" class="mobile-menu-item py-2"><i class="fa-solid fa-utensils me-3 text-danger"></i> Ready to cook</a>
+        <a href="#" class="mobile-menu-item py-2"><i class="fa-solid fa-heart-pulse me-3 text-danger"></i> Health Care</a>
+        <a href="#" class="mobile-menu-item py-2"><i class="fa-solid fa-bag-shopping me-3 text-danger"></i> Combos</a>
+      </div>
+
+      <!-- Mobile City & Pincode Dropdown -->
+      <div class="mobile-menu-item" id="mobilePinToggle">
+        <span><i class="fa-solid fa-location-dot me-3"></i> Check Pincode & City</span>
+        <i class="fa-solid fa-chevron-down text-muted" id="mobilePinChevron" style="font-size: 11px;"></i>
+      </div>
+      <div class="mobile-submenu p-3" id="mobilePinSubmenu">
+        <form onsubmit="event.preventDefault();">
+          <div class="mb-2">
+            <label class="form-label" style="font-size: 12px; font-weight: 600;">City Name</label>
+            <input type="text" class="form-control form-control-sm" placeholder="e.g. Delhi, Mumbai">
+          </div>
+          <div class="mb-2">
+            <label class="form-label" style="font-size: 12px; font-weight: 600;">Pincode</label>
+            <input type="text" class="form-control form-control-sm" placeholder="Enter 6 digit pincode" maxlength="6">
+          </div>
+          <button type="submit" class="btn btn-danger btn-sm w-100 fw-bold mt-1">Submit</button>
+        </form>
+      </div>
+
+      <a href="#" class="mobile-menu-item text-danger">
+        <span><i class="fa-solid fa-box-archive me-3"></i> Track Order</span>
+        <i class="fa-solid fa-chevron-right text-muted" style="font-size: 11px;"></i>
+      </a>
+
+      <!-- Mobile Account Toggle -->
+      <div class="mobile-menu-item" id="mobileAccountToggle">
+        <span><i class="fa-regular fa-user me-3"></i> Account</span>
+        <i class="fa-solid fa-chevron-down text-muted" id="mobileAccountChevron" style="font-size: 11px;"></i>
+      </div>
+      <div class="mobile-submenu" id="mobileAccountSubmenu">
+        <a href="#" class="mobile-menu-item py-2"><i class="fa-regular fa-user me-3"></i> My Profile</a>
+        <a href="#" class="mobile-menu-item py-2"><i class="fa-solid fa-box me-3"></i> My Orders</a>
+        <a href="#" class="mobile-menu-item py-2"><i class="fa-regular fa-heart me-3"></i> Wishlist</a>
+        <div class="mobile-account-pincode p-3">
+          <div class="fw-semibold mb-2">
+            <i class="fa-solid fa-location-dot me-2 text-danger"></i> Check your Pincode
+          </div>
+          <div class="input-group input-group-sm mb-2">
+            <span class="input-group-text"><i class="fa-solid fa-location-dot text-danger"></i></span>
+            <input type="text" class="form-control" placeholder="Enter pincode" maxlength="6">
+          </div>
+          <button type="button" class="btn btn-danger btn-sm w-100">
+            <i class="fa-solid fa-check me-1"></i> Apply
+          </button>
+        </div>
+        <a href="#" class="mobile-menu-item py-2 text-danger">Login / Register</a>
+      </div>
+
+      <a href="#" class="mobile-menu-item">
+        <span><i class="fa-solid fa-fire me-3 text-danger"></i> Offers (Upto 30%)</span>
+        <i class="fa-solid fa-chevron-right text-muted" style="font-size: 11px;"></i>
+      </a>
+      <a href="#" class="mobile-menu-item">
+        <span><i class="fa-solid fa-glass-water me-3"></i> Beverages</span>
+        <i class="fa-solid fa-chevron-right text-muted" style="font-size: 11px;"></i>
+      </a>
+      <a href="#" class="mobile-menu-item">
+        <span><i class="fa-solid fa-leaf me-3"></i> Spices</span>
+        <i class="fa-solid fa-chevron-right text-muted" style="font-size: 11px;"></i>
+      </a>
+      <a href="#" class="mobile-menu-item">
+        <span><i class="fa-solid fa-bottle-droplet me-3"></i> Edible Oil</span>
+        <i class="fa-solid fa-chevron-right text-muted" style="font-size: 11px;"></i>
+      </a>
+      <a href="#" class="mobile-menu-item">
+        <span><i class="fa-solid fa-jar me-3"></i> Honey</span>
+        <i class="fa-solid fa-chevron-right text-muted" style="font-size: 11px;"></i>
+      </a>
+      <a href="#" class="mobile-menu-item">
+        <span><i class="fa-solid fa-utensils me-3"></i> Ready to cook</span>
+        <i class="fa-solid fa-chevron-right text-muted" style="font-size: 11px;"></i>
+      </a>
+      <a href="#" class="mobile-menu-item">
+        <span><i class="fa-solid fa-heart-pulse me-3"></i> Health Care</span>
+        <i class="fa-solid fa-chevron-right text-muted" style="font-size: 11px;"></i>
+      </a>
+      <a href="#" class="mobile-menu-item">
+        <span><i class="fa-solid fa-bag-shopping me-3"></i> Combos</span>
+        <i class="fa-solid fa-chevron-right text-muted" style="font-size: 11px;"></i>
+      </a>
+      <a href="#" class="mobile-menu-item">
+        <span><i class="fa-solid fa-phone me-3"></i> Contact</span>
+        <i class="fa-solid fa-chevron-right text-muted" style="font-size: 11px;"></i>
+      </a>
+    </div>
+  </div>
+
+
+
+ 
+
+
+ <!-- Banner Slider Section -->
+  <section class="banner-slider-section">
+    <!-- data-bs-ride="carousel" aur data-bs-interval="3000" automatic slide chalane ke liye hain -->
+    <div id="autoFestivalCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+      <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="banner-card">
+            
+            <div class="discount-badge-oval">
+              <span class="small-lbl">Get up to</span>
+              <span class="big-lbl">15% OFF</span>
+            </div>
+
+            <div class="container-fluid p-0">
+              <div class="row align-items-center">
+                <div class="col-lg-6 col-md-7">
+                  <div class="banner-text-content">
+                    <img src="./assets/img/Group 43.png" alt="Logo" class="brand-mini-logo">
+                    <h1 class="banner-main-title">Festival <br><span>Dhamaka Offer</span></h1>
+                    <p class="banner-description">
+                      Lorem ipsum dolor sit amet consectetur. Integer pretium id non quis et mattis morbi Lorem ipsum dolor sit amet consectetur.
+                    </p>
+                    <a href="#" class="btn-shop-custom">Shop Now</a>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-5 text-end d-none d-md-block">
+                  <!-- <img src="./assets/img/banner slider.png" alt="Products" class="img-fluid"> -->
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="banner-card">
+            
+            <div class="discount-badge-oval">
+              <span class="small-lbl">Get up to</span>
+              <span class="big-lbl">15% OFF</span>
+            </div>
+
+            <div class="container-fluid p-0">
+              <div class="row align-items-center">
+                <div class="col-lg-6 col-md-7">
+                  <div class="banner-text-content">
+                    <img src="./assets/img/Group 43.png" alt="Logo" class="brand-mini-logo">
+                    <h1 class="banner-main-title">Festival <br><span>Dhamaka Offer</span></h1>
+                    <p class="banner-description">
+                      Lorem ipsum dolor sit amet consectetur. Integer pretium id non quis et mattis morbi Lorem ipsum dolor sit amet consectetur.
+                    </p>
+                    <a href="#" class="btn-shop-custom">Shop Now</a>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-5 text-end d-none d-md-block">
+                  <!-- <img src="" alt="Products" class="img-fluid"> -->
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Dots -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#autoFestivalCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#autoFestivalCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      </div>
+    </div>
+  </section>
+
+ <!--Features Section Start-->
+
+  <section class="features-section">
+    <div class="container-fluid px-2 px-lg-5">
+      <div class="row g-2 align-items-center">
+        
+        <!-- Feature 1 (Top-Left in Mobile / 1st in Desktop) -->
+        <div class="col-6 col-lg-3 mobile-center-line">
+          <div class="feature-box desktop-divider">
+            <img src="https://cdn-icons-png.flaticon.com/512/2838/2838838.png" alt="Free Shipping" class="feature-img-icon">
+            <div>
+              <h6 class="feature-title">Free Shipping</h6>
+              <p class="feature-desc">an order above ₹499</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 2 (Top-Right in Mobile / 2nd in Desktop) -->
+        <div class="col-6 col-lg-3">
+          <div class="feature-box desktop-divider">
+            <img src="https://cdn-icons-png.flaticon.com/512/2913/2913133.png" alt="Over 100 Years" class="feature-img-icon">
+            <div>
+              <h6 class="feature-title">Over 100 Years</h6>
+              <p class="feature-desc">Of Trust</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 3 (Bottom-Left in Mobile / 3rd in Desktop) -->
+        <div class="col-6 col-lg-3 mobile-center-line">
+          <div class="feature-box desktop-divider">
+            <img src="https://cdn-icons-png.flaticon.com/512/1067/1067566.png" alt="Secure Payments" class="feature-img-icon">
+            <div>
+              <h6 class="feature-title">Secure Payments</h6>
+              <p class="feature-desc">Shop with confidence</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 4 (Bottom-Right in Mobile / 4th in Desktop) -->
+        <div class="col-6 col-lg-3">
+          <div class="feature-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/709/709790.png" alt="Pan India Delivery" class="feature-img-icon">
+            <div>
+              <h6 class="feature-title">Pan India Delivery</h6>
+              <p class="feature-desc">Fast & Reliable</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+    <!--Features Section End-->
+   
+
+
+<div class="our">
+  <div class="container my-5">
+    <h2 class="fw-bold mb-4" style="font-size: 24px;">Our Product Range</h2>
+    
+    <!-- Outer Box -->
+    <div class="slider-box" id="sliderBox">
+      <div class="slider-container" id="sliderContainer">
+        
+        <!-- Item 1 -->
+        <div class="slider-card-item">
+          <div class="card product-card">
+            <div class="product-img-container">
+              <img src="./assets/img/product.png" alt="Beverages">
+              <div class="product-badge">
+                <div class="product-title">Beverages</div>
+                <button class="btn btn-view-more">View More</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="slider-card-item">
+          <div class="card product-card">
+            <div class="product-img-container">
+              <img src="./assets/img/1.png" alt="Spices">
+              <div class="product-badge">
+                <div class="product-title">Spices</div>
+                <button class="btn btn-view-more">View More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="slider-card-item">
+          <div class="card product-card">
+            <div class="product-img-container">
+              <img src="./assets/img/3.png" alt="Edible Oil">
+              <div class="product-badge">
+                <div class="product-title">Edible Oil</div>
+                <button class="btn btn-view-more">View More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="slider-card-item">
+          <div class="card product-card">
+            <div class="product-img-container">
+              <img src="./assets/img/4.png" alt="Honey">
+              <div class="product-badge">
+                <div class="product-title">Honey</div>
+                <button class="btn btn-view-more">View More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="slider-card-item">
+          <div class="card product-card">
+            <div class="product-img-container">
+              <img src="./assets/img/5.png" alt="Ready to cook">
+              <div class="product-badge">
+                <div class="product-title">Ready to cook</div>
+                <button class="btn btn-view-more">View More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="slider-card-item">
+          <div class="card product-card">
+            <div class="product-img-container">
+              <img src="./assets/img/6.png" alt="Health Care">
+              <div class="product-badge">
+                <div class="product-title">Health Care</div>
+                <button class="btn btn-view-more">View More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- 4 Dots Container -->
+    <div class="dots-wrapper" id="dotsWrapper"></div>
   </div>
 </div>
-<div class="our">
+
+<!-- <div class="our">
 <div class="container my-5">
         <h2 class="fw-bold mb-4" style="font-size: 24px;">Our Product Range</h2>
         
         <div class="row g-3">
-            <!-- Item 1: Beverages -->
+           
             <div class="col-6 col-md-4 col-lg-2">
                 <div class="card product-card">
                     <div class="product-img-container">
@@ -252,7 +581,7 @@
                 </div>
             </div>
 
-            <!-- Item 2: Spices -->
+           
             <div class="col-6 col-md-4 col-lg-2">
                 <div class="card product-card">
                     <div class="product-img-container">
@@ -265,7 +594,7 @@
                 </div>
             </div>
 
-            <!-- Item 3: Edible Oil -->
+            
             <div class="col-6 col-md-4 col-lg-2">
                 <div class="card product-card">
                     <div class="product-img-container">
@@ -278,7 +607,7 @@
                 </div>
             </div>
 
-            <!-- Item 4: Honey -->
+            
             <div class="col-6 col-md-4 col-lg-2">
                 <div class="card product-card">
                     <div class="product-img-container">
@@ -291,7 +620,7 @@
                 </div>
             </div>
 
-            <!-- Item 5: Ready to cook -->
+           
             <div class="col-6 col-md-4 col-lg-2">
                 <div class="card product-card">
                     <div class="product-img-container">
@@ -304,7 +633,7 @@
                 </div>
             </div>
 
-            <!-- Item 6: Health Care -->
+           
             <div class="col-6 col-md-4 col-lg-2">
                 <div class="card product-card">
                     <div class="product-img-container">
@@ -318,7 +647,216 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
+
+
+
+<!-- Best Sellers Slider Section -->
+  <!-- <div class="sellers">
+      <div class="container my-5 position-relative">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+              <h3 class="fw-bold m-0" style="font-size: 22px;">Best Sellers</h3>
+              <button class="btn btn-light border btn-sm px-3" style="font-size: 12px; font-weight: 500;">View All ></button>
+          </div>
+          
+        
+          <button class="slider-btn prev-btn" id="bestSellersPrev" aria-label="Previous"><i class="bi bi-chevron-left"></i></button>
+          <button class="slider-btn next-btn" id="bestSellersNext" aria-label="Next"><i class="bi bi-chevron-right"></i></button>
+
+          <div class="product-slider-wrapper">
+              <div class="product-slider" id="bestSellersSlider">
+                  
+                
+                  <div class="product-card-item">
+                      <div class="product-card">
+                          <div class="product-top-bg">
+                              <div class="badge-veg"></div>
+                              <span class="badge-discount">20% OFF</span>
+                              <div class="wishlist-icon"><i class="bi bi-heart"></i></div>
+                              <img src="assets/img/sellers1.png" alt="Product" class="product-img">
+                          </div>
+                          <div class="product-details">
+                              <div class="d-flex justify-content-between align-items-center mb-1">
+                                  <span class="category-text">EDIBLE OIL</span>
+                                  <span class="rating-text"><span class="text-warning">★</span> 4.9 <span class="text-muted">(102)</span></span>
+                              </div>
+                              <div class="product-title" title="Hamdard Kachi Ghani Mustard Oil">Hamdard Kachi Ghani Mustard Oil</div>
+                              <div class="d-flex justify-content-between align-items-center mb-2">
+                                  <div>
+                                      <span class="current-price">Rs. 420.00</span>
+                                      <span class="old-price ms-1">Rs. 520.00</span>
+                                  </div>
+                                  <div style="width: 70px;">
+                                      <select class="form-select form-select-sm px-1 py-0" style="font-size: 10px;">
+                                          <option selected>750 ml</option>
+                                          <option value="1">1 Ltr</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              <div class="row g-1 mt-2">
+                                  <div class="col-6"><button class="btn btn-danger btn-sm w-100 py-1" style="font-size: 9px; background-color: #ef233c; border-color: #ef233c;"><i class="bi bi-cart-fill me-1"></i> Add to Cart</button></div>
+                                  <div class="col-6"><button class="btn btn-danger btn-sm w-100 py-1" style="font-size: 9px; background-color: #ef233c; border-color: #ef233c;"><i class="bi bi-lightning-fill me-1"></i> Buy now</button></div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                 
+                  <div class="product-card-item">
+                      <div class="product-card">
+                          <div class="product-top-bg">
+                              <div class="badge-veg"></div>
+                              <span class="badge-discount">20% OFF</span>
+                              <div class="wishlist-icon"><i class="bi bi-heart"></i></div>
+                              <img src="assets/img/sellers1.png" alt="Product" class="product-img">
+                          </div>
+                          <div class="product-details">
+                              <div class="d-flex justify-content-between align-items-center mb-1">
+                                  <span class="category-text">EDIBLE OIL</span>
+                                  <span class="rating-text"><span class="text-warning">★</span> 4.9 <span class="text-muted">(102)</span></span>
+                              </div>
+                              <div class="product-title" title="Hamdard Kachi Ghani Mustard Oil">Hamdard Kachi Ghani Mustard Oil</div>
+                              <div class="d-flex justify-content-between align-items-center mb-2">
+                                  <div>
+                                      <span class="current-price">Rs. 420.00</span>
+                                      <span class="old-price ms-1">Rs. 520.00</span>
+                                  </div>
+                                  <div style="width: 70px;">
+                                      <select class="form-select form-select-sm px-1 py-0" style="font-size: 10px;">
+                                          <option selected>750 ml</option>
+                                          <option value="1">1 Ltr</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              <div class="row g-1 mt-2">
+                                  <div class="col-6"><button class="btn btn-danger btn-sm w-100 py-1" style="font-size: 9px; background-color: #ef233c; border-color: #ef233c;"><i class="bi bi-cart-fill me-1"></i> Add to Cart</button></div>
+                                  <div class="col-6"><button class="btn btn-danger btn-sm w-100 py-1" style="font-size: 9px; background-color: #ef233c; border-color: #ef233c;"><i class="bi bi-lightning-fill me-1"></i> Buy now</button></div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                 
+                  <div class="product-card-item">
+                      <div class="product-card">
+                          <div class="product-top-bg">
+                              <div class="badge-veg"></div>
+                              <span class="badge-discount">20% OFF</span>
+                              <div class="wishlist-icon"><i class="bi bi-heart"></i></div>
+                              <img src="./assets/img/sellers1.png" alt="Product" class="product-img">
+                          </div>
+                          <div class="product-details">
+                              <div class="d-flex justify-content-between align-items-center mb-1">
+                                  <span class="category-text">EDIBLE OIL</span>
+                                  <span class="rating-text"><span class="text-warning">★</span> 4.9 <span class="text-muted">(102)</span></span>
+                              </div>
+                              <div class="product-title" title="Hamdard Kachi Ghani Mustard Oil">Hamdard Kachi Ghani Mustard Oil</div>
+                              <div class="d-flex justify-content-between align-items-center mb-2">
+                                  <div>
+                                      <span class="current-price">Rs. 420.00</span>
+                                      <span class="old-price ms-1">Rs. 520.00</span>
+                                  </div>
+                                  <div style="width: 70px;">
+                                      <select class="form-select form-select-sm px-1 py-0" style="font-size: 10px;">
+                                          <option selected>750 ml</option>
+                                          <option value="1">1 Ltr</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              <div class="row g-1 mt-2">
+                                  <div class="col-6"><button class="btn btn-danger btn-sm w-100 py-1" style="font-size: 9px; background-color: #ef233c; border-color: #ef233c;"><i class="bi bi-cart-fill me-1"></i> Add to Cart</button></div>
+                                  <div class="col-6"><button class="btn btn-danger btn-sm w-100 py-1" style="font-size: 9px; background-color: #ef233c; border-color: #ef233c;"><i class="bi bi-lightning-fill me-1"></i> Buy now</button></div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                
+                  <div class="product-card-item">
+                      <div class="product-card">
+                          <div class="product-top-bg">
+                              <div class="badge-veg"></div>
+                              <span class="badge-discount">20% OFF</span>
+                              <div class="wishlist-icon"><i class="bi bi-heart"></i></div>
+                              <img src="./assets/img/sellers1.png" alt="Product" class="product-img">
+                          </div>
+                          <div class="product-details">
+                              <div class="d-flex justify-content-between align-items-center mb-1">
+                                  <span class="category-text">EDIBLE OIL</span>
+                                  <span class="rating-text"><span class="text-warning">★</span> 4.9 <span class="text-muted">(102)</span></span>
+                              </div>
+                              <div class="product-title" title="Hamdard Kachi Ghani Mustard Oil">Hamdard Kachi Ghani Mustard Oil</div>
+                              <div class="d-flex justify-content-between align-items-center mb-2">
+                                  <div>
+                                      <span class="current-price">Rs. 420.00</span>
+                                      <span class="old-price ms-1">Rs. 520.00</span>
+                                  </div>
+                                  <div style="width: 70px;">
+                                      <select class="form-select form-select-sm px-1 py-0" style="font-size: 10px;">
+                                          <option selected>750 ml</option>
+                                          <option value="1">1 Ltr</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              <div class="row g-1 mt-2">
+                                  <div class="col-6"><button class="btn btn-danger btn-sm w-100 py-1" style="font-size: 9px; background-color: #ef233c; border-color: #ef233c;"><i class="bi bi-cart-fill me-1"></i> Add to Cart</button></div>
+                                  <div class="col-6"><button class="btn btn-danger btn-sm w-100 py-1" style="font-size: 9px; background-color: #ef233c; border-color: #ef233c;"><i class="bi bi-lightning-fill me-1"></i> Buy now</button></div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                
+                  <div class="product-card-item">
+                      <div class="product-card">
+                          <div class="product-top-bg">
+                              <div class="badge-veg"></div>
+                              <span class="badge-discount">20% OFF</span>
+                              <div class="wishlist-icon"><i class="bi bi-heart"></i></div>
+                              <img src="./assets/img/sellers1.png" alt="Product" class="product-img">
+                          </div>
+                          <div class="product-details">
+                              <div class="d-flex justify-content-between align-items-center mb-1">
+                                  <span class="category-text">EDIBLE OIL</span>
+                                  <span class="rating-text"><span class="text-warning">★</span> 4.9 <span class="text-muted">(102)</span></span>
+                              </div>
+                              <div class="product-title" title="Hamdard Kachi Ghani Mustard Oil">Hamdard Kachi Ghani Mustard Oil</div>
+                              <div class="d-flex justify-content-between align-items-center mb-2">
+                                  <div>
+                                      <span class="current-price">Rs. 420.00</span>
+                                      <span class="old-price ms-1">Rs. 520.00</span>
+                                  </div>
+                                  <div style="width: 70px;">
+                                      <select class="form-select form-select-sm px-1 py-0" style="font-size: 10px;">
+                                          <option selected>750 ml</option>
+                                          <option value="1">1 Ltr</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              <div class="row g-1 mt-2">
+                                  <div class="col-6"><button class="btn btn-danger btn-sm w-100 py-1" style="font-size: 9px; background-color: #ef233c; border-color: #ef233c;"><i class="bi bi-cart-fill me-1"></i> Add to Cart</button></div>
+                                  <div class="col-6"><button class="btn btn-danger btn-sm w-100 py-1" style="font-size: 9px; background-color: #ef233c; border-color: #ef233c;"><i class="bi bi-lightning-fill me-1"></i> Buy now</button></div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+              </div>
+          </div>
+
+         
+          <div class="dots-wrapper d-none d-lg-flex" id="dotsWrapper">
+              <button class="slider-dot active" data-index="0" aria-label="Slide 1"></button>
+              <button class="slider-dot" data-index="1" aria-label="Slide 2"></button>
+              <button class="slider-dot" data-index="2" aria-label="Slide 3"></button>
+              <button class="slider-dot" data-index="3" aria-label="Slide 4"></button>
+          </div>
+      </div>
+  </div> -->
+
+<!-- next -->
+ 
+  
 <div class="sellers">
     <div class="container my-5">
         <!-- Header Row with Title and View All -->
@@ -328,7 +866,53 @@
         </div>
         
         <div class="row g-3">
-            <!-- Card 1 -->
+        
+            <div class="col-12 col-sm-6 col-md-3  ">
+                <div class="product-card">
+                    <div class="product-top-bg">
+                        <div class="badge-veg"></div>
+                        <span class="badge-discount">20% OFF</span>
+                        <div class="wishlist-icon"><i class="bi bi-heart"></i></div>
+                        <img src="assets/img/sellers1.png" alt="Product" class="product-img">
+                    </div>
+                    <div class="product-details">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="category-text">EDIBLE OIL</span>
+                            <span class="rating-text"><span class="text-warning">★</span> 4.9 <span class="text-muted">(102)</span></span>
+                        </div>
+                        <div class="product-title" title="Hamdard Kachi Ghani Mustard Oil">Hamdard Kachi Ghani Mustard Oil</div>
+                        
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <div>
+                                <span class="current-price">Rs. 420.00</span>
+                                <span class="old-price ms-1">Rs. 520.00</span>
+                            </div>
+                            <div style="width: 75px;">
+                                <select class="form-select form-select-sm">
+                                    <option selected>750 ml</option>
+                                    <option value="1">1 Ltr</option>
+                                </select>
+                            </div>
+                        </div>
+
+                       
+                        <div class="row g-1 mt-2">
+              <div class="col-6">
+                <button class="btn btn-danger btn-sm w-100 py-1" style="font-size: 11px; background-color: #ef233c; border-color: #ef233c;">
+                  <i class="bi bi-cart-fill me-1"></i> Add to Cart
+                </button>
+              </div>
+              <div class="col-6">
+                <button class="btn btn-danger btn-sm w-100 py-1" style="font-size: 11px; background-color: #ef233c; border-color: #ef233c;">
+                  <i class="bi bi-lightning-fill me-1"></i> Buy now
+                </button>
+              </div>
+            </div>
+                    </div>
+                </div>
+            </div>
+
+ 
             <div class="col-12 col-sm-6 col-md-3">
                 <div class="product-card">
                     <div class="product-top-bg">
@@ -357,14 +941,7 @@
                             </div>
                         </div>
 
-                        <!-- <div class="row g-1">
-                            <div class="col-6">
-                                <button class="btn btn-custom-red w-100"><i class="bi bi-cart-plus me-1"></i> Add to Cart</button>
-                            </div>
-                            <div class="col-6">
-                                <button class="btn btn-custom-red w-100"><i class="bi bi-lightning-fill me-1"></i> Buy now</button>
-                            </div>
-                        </div> -->
+                       
                         <div class="row g-1 mt-2">
               <div class="col-6">
                 <button class="btn btn-danger btn-sm w-100 py-1" style="font-size: 11px; background-color: #ef233c; border-color: #ef233c;">
@@ -381,60 +958,7 @@
                 </div>
             </div>
 
-            <!-- Card 2 -->
-            <div class="col-12 col-sm-6 col-md-3">
-                <div class="product-card">
-                    <div class="product-top-bg">
-                        <div class="badge-veg"></div>
-                        <span class="badge-discount">20% OFF</span>
-                        <div class="wishlist-icon"><i class="bi bi-heart"></i></div>
-                        <img src="assets/img/sellers1.png" alt="Product" class="product-img">
-                    </div>
-                    <div class="product-details">
-                        <div class="d-flex justify-content-between align-items-center mb-1">
-                            <span class="category-text">EDIBLE OIL</span>
-                            <span class="rating-text"><span class="text-warning">★</span> 4.9 <span class="text-muted">(102)</span></span>
-                        </div>
-                        <div class="product-title" title="Hamdard Kachi Ghani Mustard Oil">Hamdard Kachi Ghani Mustard Oil</div>
-                        
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <div>
-                                <span class="current-price">Rs. 420.00</span>
-                                <span class="old-price ms-1">Rs. 520.00</span>
-                            </div>
-                            <div style="width: 75px;">
-                                <select class="form-select form-select-sm">
-                                    <option selected>750 ml</option>
-                                    <option value="1">1 Ltr</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <!-- <div class="row g-1">
-                            <div class="col-6">
-                                <button class="btn btn-custom-red w-100"><i class="bi bi-cart-plus me-1"></i> Add to Cart</button>
-                            </div>
-                            <div class="col-6">
-                                <button class="btn btn-custom-red w-100"><i class="bi bi-lightning-fill me-1"></i> Buy now</button>
-                            </div>
-                        </div> -->
-                        <div class="row g-1 mt-2">
-              <div class="col-6">
-                <button class="btn btn-danger btn-sm w-100 py-1" style="font-size: 11px; background-color: #ef233c; border-color: #ef233c;">
-                  <i class="bi bi-cart-fill me-1"></i> Add to Cart
-                </button>
-              </div>
-              <div class="col-6">
-                <button class="btn btn-danger btn-sm w-100 py-1" style="font-size: 11px; background-color: #ef233c; border-color: #ef233c;">
-                  <i class="bi bi-lightning-fill me-1"></i> Buy now
-                </button>
-              </div>
-            </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 3 -->
+     
             <div class="col-12 col-sm-6 col-md-3">
                 <div class="product-card">
                     <div class="product-top-bg">
@@ -463,14 +987,7 @@
                             </div>
                         </div>
 
-                        <!-- <div class="row g-1">
-                            <div class="col-6">
-                                <button class="btn btn-custom-red w-100"><i class="bi bi-cart-plus me-1"></i> Add to Cart</button>
-                            </div>
-                            <div class="col-6">
-                                <button class="btn btn-custom-red w-100"><i class="bi bi-lightning-fill me-1"></i> Buy now</button>
-                            </div>
-                        </div> -->
+                       
                         <div class="row g-1 mt-2">
               <div class="col-6">
                 <button class="btn btn-danger btn-sm w-100 py-1" style="font-size: 11px; background-color: #ef233c; border-color: #ef233c;">
@@ -487,8 +1004,7 @@
                 </div>
             </div>
 
-            <!-- Card 4 -->
-            <div class="col-12 col-sm-6 col-md-3">
+               <div class="col-12 col-sm-6 col-md-3">
                 <div class="product-card">
                     <div class="product-top-bg">
                         <div class="badge-veg"></div>
@@ -516,14 +1032,11 @@
                             </div>
                         </div>
 
-                        <!-- <div class="row g-1">
-                            <div class="col-6">
-                                <button class="btn btn-custom-red w-100"><i class="bi bi-cart-plus me-1"></i> Add to Cart</button>
-                            </div>
-                            <div class="col-6">
-                                <button class="btn btn-custom-red w-100"><i class="bi bi-lightning-fill me-1"></i> Buy now</button>
-                            </div>
-                        </div> -->
+                       
+
+
+
+
                         <div class="row g-1 mt-2">
               <div class="col-6">
                 <button class="btn btn-danger btn-sm w-100 py-1" style="font-size: 11px; background-color: #ef233c; border-color: #ef233c;">
@@ -575,7 +1088,7 @@
                             </div>
                             <div style="width: 75px;">
                                 <select class="form-select form-select-sm">
-                                    <option selected>Pack of 3</option>
+                                    <option selected>Pack of3</option>
                                     <option value="1">1 Ltr</option>
                                 </select>
                             </div>
@@ -628,7 +1141,7 @@
                             </div>
                             <div style="width: 75px;">
                                 <select class="form-select form-select-sm">
-                                    <option selected>Pack of </option>
+                                    <option selected>Pack of 3 </option>
                                     <option value="1">1 Ltr</option>
                                 </select>
                             </div>
@@ -681,7 +1194,7 @@
                             </div>
                             <div style="width: 75px;">
                                 <select class="form-select form-select-sm">
-                                    <option selected>Pack of  </option>
+                                    <option selected>Pack of 3  </option>
                                     <option value="1">1 Ltr</option>
                                 </select>
                             </div>
@@ -1218,18 +1731,7 @@
 <section class="spice-header text-center py-5">
     <div class="container">
       
-      <!-- Subtitle -->
-      <!-- <p class="text-muted text-uppercase fw-semibold mb-2" style="font-size: 0.9rem; letter-spacing: 1px;">
-        Prime Attributes of
-      </p> -->
-
-      <!-- Brand Logo / Title Box -->
-      <!-- <div class="mb-4">
-        <div class="brand-badge-bg px-4 py-3 border border-warning border-2">
-          <h2 class="h4 mb-0 fw-bold font-monospace">Hamdard</h2>
-          <h1 class="h3 mb-0 fw-bold tracking-wide text-warning">KHAALIS</h1>
-        </div>
-      </div> -->
+     
 
       <!-- Attributes Badges Row -->
       <div class="row justify-content-center align-items-center g-4 mt-3">
@@ -1241,8 +1743,7 @@
         
 
         <div class="col-6 col-sm-4 col-md-2 text-center">
-          <!-- <img src="./assets/img/center.png" alt="No Preservatives" class="attribute-badge img-fluid"> -->
-          <!-- <p class="small fw-bold mt-2 text-dark">No Preservatives</p> -->
+          
         </div>
 
       </div>
@@ -1299,7 +1800,7 @@
                 <span class="fw-bold text-dark">Rs. 65.00</span>
                 <span class="original-price">Rs. 80.00</span>
               </div>
-              <div class="dropdown">
+              <!-- <div class="dropdown">
                 <button class="btn btn-outline-secondary btn-sm dropdown-toggle py-0 px-2" type="button" data-bs-toggle="dropdown" style="font-size: 12px;">
                   100 g
                 </button>
@@ -1308,7 +1809,13 @@
                   <li><a class="dropdown-item py-1" href="#" style="font-size: 12px;">200 g</a></li>
                   <li><a class="dropdown-item py-1" href="#" style="font-size: 12px;">500 g</a></li>
                 </ul>
-              </div>
+              </div> -->
+              <div style="width: 75px;">
+                                <select class="form-select form-select-sm">
+                                    <option selected="">500 g</option>
+                                    <option value="1">1 Ltr</option>
+                                </select>
+                            </div>
             </div>
 
             <!-- Action Buttons -->
@@ -1354,10 +1861,17 @@
                 <span class="original-price">Rs. 80.00</span>
               </div>
               <div class="dropdown">
-                <button class="btn btn-outline-secondary btn-sm dropdown-toggle py-0 px-2" type="button" data-bs-toggle="dropdown" style="font-size: 12px;">100 g</button>
-                <ul class="dropdown-menu">
+                <!-- <button class="btn btn-outline-secondary btn-sm dropdown-toggle py-0 px-2" type="button" data-bs-toggle="dropdown" style="font-size: 12px;">100 g</button> -->
+                <!-- <ul class="dropdown-menu">
                   <li><a class="dropdown-item py-1" href="#" style="font-size: 12px;">100 g</a></li>
-                </ul>
+                </ul> -->
+
+                <div style="width: 75px;">
+                                <select class="form-select form-select-sm">
+                                    <option selected="">500 g</option>
+                                    <option value="1">1 Ltr</option>
+                                </select>
+                            </div>
               </div>
             </div>
             <div class="row g-1 mt-2">
@@ -1391,12 +1905,18 @@
                 <span class="fw-bold text-dark">Rs. 65.00</span>
                 <span class="original-price">Rs. 80.00</span>
               </div>
-              <div class="dropdown">
+              <div style="width: 75px;">
+                                <select class="form-select form-select-sm">
+                                    <option selected="">500 g</option>
+                                    <option value="1">1 Ltr</option>
+                                </select>
+                            </div>
+              <!-- <div class="dropdown">
                 <button class="btn btn-outline-secondary btn-sm dropdown-toggle py-0 px-2" type="button" data-bs-toggle="dropdown" style="font-size: 12px;">100 g</button>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item py-1" href="#" style="font-size: 12px;">100 g</a></li>
                 </ul>
-              </div>
+              </div> -->
             </div>
             <div class="row g-1 mt-2">
               <div class="col-6"><button class="btn btn-danger btn-sm w-100 py-1" style="font-size: 11px; background-color: #ef233c; border-color: #ef233c;"><i class="bi bi-cart-fill me-1"></i> Add to Cart</button></div>
@@ -1429,12 +1949,18 @@
                 <span class="fw-bold text-dark">Rs. 65.00</span>
                 <span class="original-price">Rs. 80.00</span>
               </div>
-              <div class="dropdown">
+              <!-- <div class="dropdown">
                 <button class="btn btn-outline-secondary btn-sm dropdown-toggle py-0 px-2" type="button" data-bs-toggle="dropdown" style="font-size: 12px;">100 g</button>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item py-1" href="#" style="font-size: 12px;">100 g</a></li>
                 </ul>
-              </div>
+              </div> -->
+              <div style="width: 75px;">
+                                <select class="form-select form-select-sm">
+                                    <option selected="">500 g</option>
+                                    <option value="1">1 Ltr</option>
+                                </select>
+                            </div>
             </div>
             <div class="row g-1 mt-2">
               <div class="col-6"><button class="btn btn-danger btn-sm w-100 py-1" style="font-size: 11px; background-color: #ef233c; border-color: #ef233c;"><i class="bi bi-cart-fill me-1"></i> Add to Cart</button></div>
@@ -1689,7 +2215,13 @@
                 <span class="fw-bold text-dark">Rs. 30.60</span>
                 <span class="original-price">Rs. 38.00</span>
               </div>
-              <div class="dropdown">
+                <div style="width: 75px;">
+                <select class="form-select form-select-sm">
+              <option selected>500 g</option>
+              <option value="1">1 Ltr</option>
+              </select>
+              </div>
+              <!-- <div class="dropdown">
                 <button class="btn btn-outline-secondary btn-sm dropdown-toggle py-0 px-2" type="button" data-bs-toggle="dropdown" style="font-size: 12px;">
                   50 g
                 </button>
@@ -1697,7 +2229,7 @@
                   <li><a class="dropdown-item py-1" href="#" style="font-size: 12px;">50 g</a></li>
                   <li><a class="dropdown-item py-1" href="#" style="font-size: 12px;">100 g</a></li>
                 </ul>
-              </div>
+              </div> -->
             </div>
 
             <!-- Action Buttons -->
@@ -1742,12 +2274,18 @@
                 <span class="fw-bold text-dark">Rs. 30.60</span>
                 <span class="original-price">Rs. 38.00</span>
               </div>
-              <div class="dropdown">
+                <div style="width: 75px;">
+                <select class="form-select form-select-sm">
+              <option selected>500 g</option>
+              <option value="1">1 Ltr</option>
+              </select>
+              </div>
+              <!-- <div class="dropdown">
                 <button class="btn btn-outline-secondary btn-sm dropdown-toggle py-0 px-2" type="button" data-bs-toggle="dropdown" style="font-size: 12px;">50 g</button>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item py-1" href="#" style="font-size: 12px;">50 g</a></li>
                 </ul>
-              </div>
+              </div> -->
             </div>
             <div class="row g-1 mt-2">
               <div class="col-6"><button class="btn btn-danger btn-sm w-100 py-1" style="font-size: 11px; background-color: #ef233c; border-color: #ef233c;"><i class="bi bi-cart-fill me-1"></i> Add to Cart</button></div>
@@ -1780,12 +2318,18 @@
                 <span class="fw-bold text-dark">Rs. 30.60</span>
                 <span class="original-price">Rs. 38.00</span>
               </div>
-              <div class="dropdown">
+                <div style="width: 75px;">
+                <select class="form-select form-select-sm">
+              <option selected>500 g</option>
+              <option value="1">1 Ltr</option>
+              </select>
+              </div>
+              <!-- <div class="dropdown">
                 <button class="btn btn-outline-secondary btn-sm dropdown-toggle py-0 px-2" type="button" data-bs-toggle="dropdown" style="font-size: 12px;">50 g</button>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item py-1" href="#" style="font-size: 12px;">50 g</a></li>
                 </ul>
-              </div>
+              </div> -->
             </div>
             <div class="row g-1 mt-2">
               <div class="col-6"><button class="btn btn-danger btn-sm w-100 py-1" style="font-size: 11px; background-color: #ef233c; border-color: #ef233c;"><i class="bi bi-cart-fill me-1"></i> Add to Cart</button></div>
@@ -1818,12 +2362,18 @@
                 <span class="fw-bold text-dark">Rs. 30.60</span>
                 <span class="original-price">Rs. 38.00</span>
               </div>
-              <div class="dropdown">
+                <div style="width: 75px;">
+                <select class="form-select form-select-sm">
+              <option selected>500 g</option>
+              <option value="1">1 Ltr</option>
+              </select>
+              </div>
+              <!-- <div class="dropdown">
                 <button class="btn btn-outline-secondary btn-sm dropdown-toggle py-0 px-2" type="button" data-bs-toggle="dropdown" style="font-size: 12px;">50 g</button>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item py-1" href="#" style="font-size: 12px;">50 g</a></li>
                 </ul>
-              </div>
+              </div> -->
             </div>
             <div class="row g-1 mt-2">
               <div class="col-6"><button class="btn btn-danger btn-sm w-100 py-1" style="font-size: 11px; background-color: #ef233c; border-color: #ef233c;"><i class="bi bi-cart-fill me-1"></i> Add to Cart</button></div>
@@ -1841,7 +2391,7 @@
   <section class="quality-section text-center">
     <div class="container">
       
-      <!-- Section Heading -->
+   
       <h2 class="quality-heading">
         We Believe in higher standards of quality
       </h2>
@@ -1851,13 +2401,17 @@
         Quality Control and Quality Assurance department at Hamdard ensure the right quality of raw material and strictly controls the processes with modern technologies in order to manufacture the efficacious products
       </p>
 
-      <!-- Certification Logos Row -->
+    
       <div class="row justify-content-center align-items-center g-4">
-        
+          <div class="cert-row">
+      <img src="./assets/img/GMP.svg"        alt="GMP Quality Product"             class="cert-logo">
+      <img src="./assets/img/Foof_Safety_System.svg"  alt="DNV Food Safety System ISO 22000" class="cert-logo">
+      <img src="./assets/img/FDA.svg"        alt="FDA"                             class="cert-logo">
+      <img src="./assets/img/system-icon.svg"   alt="DNV Quality System ISO 9001"     class="cert-logo">
+    </div>
         <!-- GMP Logo -->
-        <div class="col-6 ">
-          <img src="./assets/img/last iocn.png" alt="GMP Quality Product" class="cert-logo img-fluid">
-        </div>
+       
+        
 
        
 
@@ -1869,30 +2423,13 @@
 
 
 
+   
+     <script src=" 	https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  
+  
+     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="./assets/js/script.js"></script>
 <script>
-const names=['Roof Afza','Spices','Beverages','Honey','Fresh Spices','Health Care'];
-document.getElementById('range').innerHTML=names.map(n=>`<div class="col-4 col-md-2"><div class="rg"><div class="im"></div><span>${n}</span><button>Shop Now</button></div></div>`).join('');
-
-const prod={bt:'<div class="bt"></div>',pink:'<div class="bt pink"></div>',green:'<div class="bt green"></div>',box:'<div class="bx"><i></i><i></i><i></i></div>',big:'<div class="bx big"><i></i></div>'};
-const card=(bg,p,n,pr,o)=>`<div class="col-6 col-md-3"><div class="pc">
-<div class="pi" style="background:${bg}"><span class="veg"></span><span class="tag">10% OFF</span><i class="bi bi-heart heart"></i>${prod[p]}</div>
-<div class="pb"><div class="pm"><span>Hamdard</span><span>★★★★☆</span></div>
-<div class="pn">${n}</div>
-<div class="pp"><span>Rs. ${pr} <s>Rs. ${o}</s></span><span class="sel">1 Ltr ▾</span></div>
-<div class="pbt"><button><i class="bi bi-cart3"></i> Add to Cart</button><button><i class="bi bi-bag"></i> Buy Now</button></div></div></div></div>`;
-const sec=(t,bg,p,items)=>`<div class="h"><h2>${t}</h2><a class="va" href="#">View All</a></div><div class="row g-3">${items.map(i=>card(bg,p,i[0],i[1],i[2])).join('')}</div>`;
-const four=(a,b,c)=>[[a+' 1 Ltr',b,c],[a+' 500 ml',b-40,c-40],[a+' 2 Ltr',b+60,c+60],[a+' 5 Ltr',b+200,c+200]];
-const spice=(a)=>[[a+' 100g',85,95],[a+' 200g',150,165],[a+' 500g',340,380],[a+' 1 Kg',620,690]];
-
-document.getElementById('s1').innerHTML=
- sec('Best Sellers','#fbbf24','bt',four('Hamdard Refined Edible Oil',180,200))+
- sec('Best Combos','#fbbf24','box',[['Hamdard Spice Combo Pack of 3',250,290],['Hamdard Masala Combo Pack of 3',260,300],['Hamdard Family Combo Pack',320,370],['Hamdard Festival Combo Pack',410,470]])+
- sec('Roof Afza','#fbd3d8','pink',four('Hamdard Roof Afza',180,200))+
- sec('Beverages','#8fd48f','green',four('Hamdard Sharbat Rooh Afza',160,180));
-document.getElementById('s2').innerHTML=
- sec('Khaalis Blended Spices','#f4e2b0','big',spice('Khaalis Garam Masala'))+
- sec('Khaalis Powdered Spices','#f4e2b0','big',spice('Khaalis Red Chilli Powder'))+
- sec('Khaalis Whole Spices','#e8a56b','big',spice('Khaalis Jeera Whole'));
 </script>
 </body>
 </html>

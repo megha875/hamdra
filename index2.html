@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamdard Store</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.cdnfonts.com/css/riffic-free" rel="stylesheet">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #fff;
+        }
+
+        :root {
+            --red: #e3202b;
+            --dred: #b3121b;
+            --gold: #f6b81c;
+        }
+
+        /* Top Bar */
+        .top-announcement-bar {
+            background-color: #e31e25;
+            color: #ffffff;
+            font-size: 11px;
+            padding: 5px 0;
+            font-weight: 500;
+        }
+
+        .header-main {
+            padding: 10px 0;
+            background: #ffffff;
+        }
+
+        .brand-main-logo {
+            height: 38px;
+        }
+
+        /* Card Styling */
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            background: #fff;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            height: 100%;
+        }
+
+        .sellers .product-top-bg {
+            background-color: #FAC229;
+            position: relative;
+            padding: 25px 15px 15px 15px;
+            text-align: center;
+        }
+
+        .product-img {
+            height: 160px;
+            object-fit: contain;
+            max-width: 100%;
+        }
+
+        .badge-veg {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 14px;
+            height: 14px;
+            border: 2px solid #009933;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+        }
+
+        .badge-veg::after {
+            content: "";
+            width: 6px;
+            height: 6px;
+            background: #009933;
+            border-radius: 50%;
+        }
+
+        .badge-discount {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #ff3333;
+            color: #fff;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+
+        .wishlist-icon {
+            position: absolute;
+            top: 35px;
+            right: 10px;
+            background: #fff;
+            border-radius: 50%;
+            width: 26px;
+            height: 26px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            cursor: pointer;
+            font-size: 12px;
+            color: #555;
+        }
+
+        .product-details {
+            padding: 12px;
+        }
+
+        .category-text {
+            font-size: 10px;
+            color: #6c757d;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .rating-text {
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .product-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 6px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .current-price {
+            font-size: 14px;
+            font-weight: 700;
+            color: #000;
+        }
+
+        .old-price {
+            font-size: 10px;
+            color: #868e96;
+            text-decoration: line-through;
+        }
+
+        /* --- BEST SELLERS SLIDER STYLES --- */
+        .product-slider-wrapper {
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .product-slider {
+            display: flex;
+            gap: 10px;
+            scroll-behavior: smooth;
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+
+        .product-slider::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Mobile & Tablet View: 2 Cards */
+        .product-card-item {
+            flex: 0 0 calc(50% - 5px);
+            max-width: calc(50% - 5px);
+        }
+
+        /* Mobile Slider Buttons Styling & Z-index */
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #000;
+            color: #fff;
+            border: none;
+            width: 32px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 20;
+            cursor: pointer;
+            border-radius: 4px;
+            opacity: 0.9;
+        }
+
+        .slider-btn:hover {
+            opacity: 1;
+        }
+
+        .prev-btn { left: -5px; }
+        .next-btn { right: -5px; }
+
+        /* Desktop View: 4 Cards and Hide Buttons */
+        @media (min-width: 992px) {
+            .product-card-item {
+                flex: 0 0 calc(25% - 8px);
+                max-width: calc(25% - 8px);
+            }
+            .slider-btn {
+                display: none !important;
+            }
+        }
+
+        /* 4 Dots Styling */
+        .dots-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            margin-top: 20px;
+        }
+
+        .slider-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #d1d5db;
+            border-radius: 50%;
+            cursor: pointer;
+            border: none;
+            padding: 0;
+            transition: all 0.4s ease;
+        }
+
+        .slider-dot.active {
+            background-color: #e30613;
+            width: 22px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+  <div class="top-announcement-bar">
+    <div class="container-fluid px-3">
+      <div class="d-flex justify-content-between align-items-center text-center">
+        <div><i class="bi bi-truck me-1"></i> Free Shipping for orders above ₹499 across India</div>
+        <div class="d-none d-lg-block"><i class="bi bi-shield-check me-1"></i> Authentic Hamdard Products</div>
+      </div>
+    </div>
+  </div>
+
+  <header class="header-main border-bottom mb-3">
+    <div class="container px-3">
+      <div class="row align-items-center">
+        <div class="col-6 col-lg-3">
+          <img src="./assets/img/logo.png" alt="Hamdard Logo" class="brand-main-logo">
+        </div>
+        <div class="col-6 col-lg-9 text-end">
+          <span class="fw-bold" style="font-size: 14px;">Hamdard Store</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Best Sellers Slider Section -->
+  <div class="sellers">
+      <div class="container my-5 position-relative">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+              <h3 class="fw-bold m-0" style="font-size: 22px;">Best Sellers</h3>
+              <button class="btn btn-light border btn-sm px-3" style="font-size: 12px; font-weight: 500;">View All ></button>
+          </div>
+          
+          <!-- Mobile & Tablet Navigation Buttons -->
+          <button class="slider-btn prev-btn" id="bestSellersPrev" aria-label="Previous"><i class="bi bi-chevron-left"></i></button>
+          <button class="slider-btn next-btn" id="bestSellersNext" aria-label="Next"><i class="bi bi-chevron-right"></i></button>
+
+          <div class="product-slider-wrapper">
+              <div class="product-slider" id="bestSellersSlider">
+                  
+                  <!-- Card 1 -->
+                  <div class="product-card-item">
+                      <div class="product-card">
+                          <div class="product-top-bg">
+                              <div class="badge-veg"></div>
+                              <span class="badge-discount">20% OFF</span>
+                              <div class="wishlist-icon"><i class="bi bi-heart"></i></div>
+                              <img src="assets/img/sellers1.png" alt="Product" class="product-img">
+                          </div>
+                          <div class="product-details">
+                              <div class="d-flex justify-content-between align-items-center mb-1">
+                                  <span class="category-text">EDIBLE OIL</span>
+                                  <span class="rating-text"><span class="text-warning">★</span> 4.9 <span class="text-muted">(102)</span></span>
+                              </div>
+                              <div class="product-title" title="Hamdard Kachi Ghani Mustard Oil">Hamdard Kachi Ghani Mustard Oil</div>
+                              <div class="d-flex justify-content-between align-items-center mb-2">
+                                  <div>
+                                      <span class="current-price">Rs. 420.00</span>
+                                      <span class="old-price ms-1">Rs. 520.00</span>
+                                  </div>
+                                  <div style="width: 70px;">
+                                      <select class="form-select form-select-sm px-1 py-0" style="font-size: 10px;">
+                                          <option selected>750 ml</option>
+                                          <option value="1">1 Ltr</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              <div class="row g-1 mt-2">
+                                  <div class="col-6"><button class="btn btn-danger btn-sm w-100 py-1" style="font-size: 10px; background-color: #ef233c; border-color: #ef233c;"><i class="bi bi-cart-fill me-1"></i> Add to Cart</button></div>
+                                  <div class="col-6"><button class="btn btn-danger btn-sm w-100 py-1" style="font-size: 10px; background-color: #ef233c; border-color: #ef233c;"><i class="bi bi-lightning-fill me-1"></i> Buy now</button></div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <!-- Card 2 -->
+                  <div class="product-card-item">
+                      <div class="product-card">
+                          <div class="product-top-bg">
+                              <div class="badge-veg"></div>
+                              <span class="badge-discount">20% OFF</span>
+                              <div class="wishlist-icon"><i class="bi bi-heart"></i></div>
+                              <img src="assets/img/sellers1.png" alt="Product" class="product-img">
+                          </div>
+                          <div class="product-details">
+                              <div class="d-flex justify-content-between align-items-center mb-1">
+                                  <span class="category-text">EDIBLE OIL</span>
+                                  <span class="rating-text"><span class="text-warning">★</span> 4.9 <span class="text-muted">(102)</span></span>
+                              </div>
+                              <div class="product-title" title="Hamdard Kachi Ghani Mustard Oil">Hamdard Kachi Ghani Mustard Oil</div>
+                              <div class="d-flex justify-content-between align-items-center mb-2">
+                                  <div>
+                                      <span class="current-price">Rs. 420.00</span>
+                                      <span class="old-price ms-1">Rs. 520.00</span>
+                                  </div>
+                                  <div style="width: 70px;">
+                                      <select class="form-select form-select-sm px-1 py-0" style="font-size: 10px;">
+                                          <option selected>750 ml</option>
+                                          <option value="1">1 Ltr</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              <div class="row g-1 mt-2">
+                                  <div class="col-6"><button class="btn btn-danger btn-sm w-100 py-1" style="font-size: 10px; background-color: #ef233c; border-color: #ef233c;"><i class="bi bi-cart-fill me-1"></i> Add to Cart</button></div>
+                                  <div class="col-6"><button class="btn btn-danger btn-sm w-100 py-1" style="font-size: 10px; background-color: #ef233c; border-color: #ef233c;"><i class="bi bi-lightning-fill me-1"></i> Buy now</button></div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <!-- Card 3 -->
+                  <div class="product-card-item">
+                      <div class="product-card">
+                          <div class="product-top-bg">
+                              <div class="badge-veg"></div>
+                              <span class="badge-discount">20% OFF</span>
+                              <div class="wishlist-icon"><i class="bi bi-heart"></i></div>
+                              <img src="./assets/img/sellers1.png" alt="Product" class="product-img">
+                          </div>
+                          <div class="product-details">
+                              <div class="d-flex justify-content-between align-items-center mb-1">
+                                  <span class="category-text">EDIBLE OIL</span>
+                                  <span class="rating-text"><span class="text-warning">★</span> 4.9 <span class="text-muted">(102)</span></span>
+                              </div>
+                              <div class="product-title" title="Hamdard Kachi Ghani Mustard Oil">Hamdard Kachi Ghani Mustard Oil</div>
+                              <div class="d-flex justify-content-between align-items-center mb-2">
+                                  <div>
+                                      <span class="current-price">Rs. 420.00</span>
+                                      <span class="old-price ms-1">Rs. 520.00</span>
+                                  </div>
+                                  <div style="width: 70px;">
+                                      <select class="form-select form-select-sm px-1 py-0" style="font-size: 10px;">
+                                          <option selected>750 ml</option>
+                                          <option value="1">1 Ltr</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              <div class="row g-1 mt-2">
+                                  <div class="col-6"><button class="btn btn-danger btn-sm w-100 py-1" style="font-size: 10px; background-color: #ef233c; border-color: #ef233c;"><i class="bi bi-cart-fill me-1"></i> Add to Cart</button></div>
+                                  <div class="col-6"><button class="btn btn-danger btn-sm w-100 py-1" style="font-size: 10px; background-color: #ef233c; border-color: #ef233c;"><i class="bi bi-lightning-fill me-1"></i> Buy now</button></div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <!-- Card 4 -->
+                  <div class="product-card-item">
+                      <div class="product-card">
+                          <div class="product-top-bg">
+                              <div class="badge-veg"></div>
+                              <span class="badge-discount">20% OFF</span>
+                              <div class="wishlist-icon"><i class="bi bi-heart"></i></div>
+                              <img src="./assets/img/sellers1.png" alt="Product" class="product-img">
+                          </div>
+                          <div class="product-details">
+                              <div class="d-flex justify-content-between align-items-center mb-1">
+                                  <span class="category-text">EDIBLE OIL</span>
+                                  <span class="rating-text"><span class="text-warning">★</span> 4.9 <span class="text-muted">(102)</span></span>
+                              </div>
+                              <div class="product-title" title="Hamdard Kachi Ghani Mustard Oil">Hamdard Kachi Ghani Mustard Oil</div>
+                              <div class="d-flex justify-content-between align-items-center mb-2">
+                                  <div>
+                                      <span class="current-price">Rs. 420.00</span>
+                                      <span class="old-price ms-1">Rs. 520.00</span>
+                                  </div>
+                                  <div style="width: 70px;">
+                                      <select class="form-select form-select-sm px-1 py-0" style="font-size: 10px;">
+                                          <option selected>750 ml</option>
+                                          <option value="1">1 Ltr</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              <div class="row g-1 mt-2">
+                                  <div class="col-6"><button class="btn btn-danger btn-sm w-100 py-1" style="font-size: 10px; background-color: #ef233c; border-color: #ef233c;"><i class="bi bi-cart-fill me-1"></i> Add to Cart</button></div>
+                                  <div class="col-6"><button class="btn btn-danger btn-sm w-100 py-1" style="font-size: 10px; background-color: #ef233c; border-color: #ef233c;"><i class="bi bi-lightning-fill me-1"></i> Buy now</button></div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <!-- Card 5 -->
+                  <div class="product-card-item">
+                      <div class="product-card">
+                          <div class="product-top-bg">
+                              <div class="badge-veg"></div>
+                              <span class="badge-discount">20% OFF</span>
+                              <div class="wishlist-icon"><i class="bi bi-heart"></i></div>
+                              <img src="./assets/img/sellers1.png" alt="Product" class="product-img">
+                          </div>
+                          <div class="product-details">
+                              <div class="d-flex justify-content-between align-items-center mb-1">
+                                  <span class="category-text">EDIBLE OIL</span>
+                                  <span class="rating-text"><span class="text-warning">★</span> 4.9 <span class="text-muted">(102)</span></span>
+                              </div>
+                              <div class="product-title" title="Hamdard Kachi Ghani Mustard Oil">Hamdard Kachi Ghani Mustard Oil</div>
+                              <div class="d-flex justify-content-between align-items-center mb-2">
+                                  <div>
+                                      <span class="current-price">Rs. 420.00</span>
+                                      <span class="old-price ms-1">Rs. 520.00</span>
+                                  </div>
+                                  <div style="width: 70px;">
+                                      <select class="form-select form-select-sm px-1 py-0" style="font-size: 10px;">
+                                          <option selected>750 ml</option>
+                                          <option value="1">1 Ltr</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              <div class="row g-1 mt-2">
+                                  <div class="col-6"><button class="btn btn-danger btn-sm w-100 py-1" style="font-size: 10px; background-color: #ef233c; border-color: #ef233c;"><i class="bi bi-cart-fill me-1"></i> Add to Cart</button></div>
+                                  <div class="col-6"><button class="btn btn-danger btn-sm w-100 py-1" style="font-size: 10px; background-color: #ef233c; border-color: #ef233c;"><i class="bi bi-lightning-fill me-1"></i> Buy now</button></div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+              </div>
+          </div>
+
+          <!-- Exactly 4 Dots Container -->
+          <div class="dots-wrapper d-none d-lg-flex" id="dotsWrapper">
+              <button class="slider-dot active" data-index="0" aria-label="Slide 1"></button>
+              <button class="slider-dot" data-index="1" aria-label="Slide 2"></button>
+              <button class="slider-dot" data-index="2" aria-label="Slide 3"></button>
+              <button class="slider-dot" data-index="3" aria-label="Slide 4"></button>
+          </div>
+      </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const slider = document.getElementById('bestSellersSlider');
+        const prevBtn = document.getElementById('bestSellersPrev');
+        const nextBtn = document.getElementById('bestSellersNext');
+        const dots = document.querySelectorAll('.slider-dot');
+
+        if (slider) {
+            const getScrollAmount = () => {
+                const card = slider.querySelector('.product-card-item');
+                return card ? card.offsetWidth + 10 : 200;
+            };
+
+            // Mobile & Tablet Buttons Functionality
+            if (prevBtn && nextBtn) {
+                nextBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    slider.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+                });
+                prevBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    slider.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+                });
+            }
+
+            // Desktop Auto-Slider & Dots Logic
+            let currentDotIndex = 0;
+            const totalDots = dots.length;
+            let autoSlideInterval = null;
+
+            const scrollToDotIndex = (index) => {
+                currentDotIndex = index;
+                
+                // Agar aakhri dot hai, toh bilkul end tak scroll karo taaki 5th card bhi dikhe
+                let scrollDistance;
+                if (index === totalDots - 1) {
+                    scrollDistance = slider.scrollWidth - slider.clientWidth;
+                } else {
+                    const maxScroll = slider.scrollWidth - slider.clientWidth;
+                    scrollDistance = (maxScroll / (totalDots - 1)) * index;
+                }
+
+                slider.scrollTo({ left: scrollDistance, behavior: 'smooth' });
+                updateDotsActiveState(index);
+            };
+
+            const updateDotsActiveState = (activeIndex) => {
+                dots.forEach((dot, idx) => {
+                    if (idx === activeIndex) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                    }
+                });
+            };
+
+            dots.forEach((dot, idx) => {
+                dot.addEventListener('click', () => {
+                    scrollToDotIndex(idx);
+                    resetAutoSlide();
+                });
+            });
+
+            const startAutoSlide = () => {
+                if (window.innerWidth >= 992 && !autoSlideInterval) {
+                    autoSlideInterval = setInterval(() => {
+                        currentDotIndex = (currentDotIndex + 1) % totalDots;
+                        scrollToDotIndex(currentDotIndex);
+                    }, 2500);
+                }
+            };
+
+            const resetAutoSlide = () => {
+                clearInterval(autoSlideInterval);
+                autoSlideInterval = null;
+                startAutoSlide();
+            };
+
+            startAutoSlide();
+
+            slider.parentElement.addEventListener('mouseenter', () => {
+                if (window.innerWidth >= 992) {
+                    clearInterval(autoSlideInterval);
+                    autoSlideInterval = null;
+                }
+            });
+
+            slider.parentElement.addEventListener('mouseleave', () => {
+                if (window.innerWidth >= 992) {
+                    startAutoSlide();
+                }
+            });
+        }
+    });
+</script>
+</body>
+</html>

@@ -2680,3 +2680,14 @@ color:#EE2931;
   box-shadow: none !important;
   background: transparent !important;
 }
+
+
+
+.form-select{
+  padding-top:8px;
+    padding-left:15px;
+    padding-bottom: px;
+    padding-right: 15px;
+    font-size: 10px;
+    font-weight: 400;
+ }

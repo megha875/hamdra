@@ -572,16 +572,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   
 
-    const swiper = new Swiper('.banner-swiper', {
-    loop: true,
-    speed: 800,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-      pauseOnMouseEnter: true
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-  });
+  //   const swiper = new Swiper('.banner-swiper', {
+  //   loop: true,
+  //   speed: 800,
+  //   autoplay: {
+  //     delay: 3000,
+  //     disableOnInteraction: false,
+  //     pauseOnMouseEnter: true
+  //   },
+  //   pagination: {
+  //     el: '.swiper-pagination',
+  //     clickable: true,
+  //   },
+  // });

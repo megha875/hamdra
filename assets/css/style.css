@@ -2539,7 +2539,8 @@ color:#EE2931;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  /* border: 6px dashed #ffcc00; */
+  border-top: 4px dotted #ffcc00;
+    border-bottom: 4px dotted #ffcc00;
   /* border-radius: 8px; */
   /* overflow: hidden; */
   color: #fff;
@@ -2553,6 +2554,8 @@ color:#EE2931;
 @media (max-width: 767.98px) {
   .banner-container {
     padding: 25px 20px 45px 20px !important;
+      border: 4px dotted #ffcc00;
+   
   }
 
     .auto-swiper .product-title, .auto-swiper .product-body .product-title {
@@ -2639,4 +2642,41 @@ color:#EE2931;
   }
 
 
-  
+  #customDots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+#customDots .custom-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#customDots .custom-dot.active {
+  background-color: #dc3545; /* Bootstrap danger / red color jo aapke theme me hai */
+  width: 12px;
+  border-radius: 5px;
+}
+
+.card .product-card{
+  border: none !important;
+  background-color: transparent !important;
+}
+
+.card .product-card  {
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.our.card {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}

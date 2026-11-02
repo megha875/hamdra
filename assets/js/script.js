@@ -482,46 +482,85 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
     // our product
-     document.addEventListener("DOMContentLoaded", function () {
-      const dots = document.querySelectorAll("#customDots .custom-dot");
+    //  document.addEventListener("DOMContentLoaded", function () {
+    //   const dots = document.querySelectorAll("#customDots .custom-dot");
 
-      var swiper = new Swiper(".productRangeSwiper", {
-        slidesPerView: 2,
-        spaceBetween: 16,
-        loop: true,
-        speed: 700,
-        autoplay: {
-          delay: 1800,
-          disableOnInteraction: false,
-        },
-        breakpoints: {
-          576: { slidesPerView: 3, spaceBetween: 16 },
-          768: { slidesPerView: 4, spaceBetween: 18 },
-          992: { slidesPerView: 6, spaceBetween: 18 }
-        },
-        on: {
-          slideChange: function () {
-            // Calculate active index inside 0 to 4 range so red dot never disappears
-            let activeIndex = this.realIndex % 5;
-            dots.forEach((dot, idx) => {
-              if (idx === activeIndex) {
-                dot.classList.add("active");
-              } else {
-                dot.classList.remove("active");
-              }
-            });
+    //   var swiper = new Swiper(".productRangeSwiper", {
+    //     slidesPerView: 2,
+    //     spaceBetween: 16,
+    //     loop: true,
+    //     speed: 700,
+    //     autoplay: {
+    //       delay: 1800,
+    //       disableOnInteraction: false,
+    //     },
+    //     breakpoints: {
+    //       576: { slidesPerView: 3, spaceBetween: 16 },
+    //       768: { slidesPerView: 4, spaceBetween: 18 },
+    //       992: { slidesPerView: 6, spaceBetween: 18 }
+    //     },
+    //     on: {
+    //       slideChange: function () {
+    //         // Calculate active index inside 0 to 4 range so red dot never disappears
+    //         let activeIndex = this.realIndex % 5;
+    //         dots.forEach((dot, idx) => {
+    //           if (idx === activeIndex) {
+    //             dot.classList.add("active");
+    //           } else {
+    //             dot.classList.remove("active");
+    //           }
+    //         });
+    //       }
+    //     }
+    //   });
+
+    //   // Click event for dots
+    //   dots.forEach((dot, index) => {
+    //     dot.addEventListener("click", function () {
+    //       swiper.slideToLoop(index);
+    //     });
+    //   });
+    // });
+document.addEventListener("DOMContentLoaded", function () {
+  const dots = document.querySelectorAll("#customDots .custom-dot");
+
+  var swiper = new Swiper(".productRangeSwiper", {
+    slidesPerView: 2,
+    slidesPerGroup: 1, // Ek baar me ek hi card move hoga
+    spaceBetween: 16,
+    loop: true,
+    speed: 400, // Fast transition speed
+    autoplay: {
+      delay: 1500, // Autoplay delay time
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      576: { slidesPerView: 3, spaceBetween: 16 },
+      768: { slidesPerView: 4, spaceBetween: 18 },
+      992: { slidesPerView: 5, spaceBetween: 18 }
+    },
+    on: {
+      slideChange: function () {
+        // Total 6 dots ke sath index map karne ke liye
+        let activeIndex = this.realIndex % dots.length;
+        dots.forEach((dot, idx) => {
+          if (idx === activeIndex) {
+            dot.classList.add("active");
+          } else {
+            dot.classList.remove("active");
           }
-        }
-      });
-
-      // Click event for dots
-      dots.forEach((dot, index) => {
-        dot.addEventListener("click", function () {
-          swiper.slideToLoop(index);
         });
-      });
-    });
+      }
+    }
+  });
 
+  // Click event for custom dots
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", function () {
+      swiper.slideToLoop(index);
+    });
+  });
+});
 
     // Keep only the first product slider section.
     const sellerSections = document.querySelectorAll('.best-sellers-section');

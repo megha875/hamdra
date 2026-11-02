@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Asap+Sharp:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.cdnfonts.com/css/riffic-free');
 @import url('https://fonts.googleapis.com/css2?family=Asap+Sharp:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
@@ -319,7 +318,8 @@ color:#EE2931;
     }
     .slider-dot.active {
       background-color: #ff2a2a;
-      width: 22px;
+      width: 16px;
+      height:  8px;
       border-radius: 10px;
     }
 
@@ -738,7 +738,7 @@ color:#EE2931;
       border: none;
       outline: none;
       box-shadow: none !important;
-      font-size: 12px;
+      font-size: 10px;
       color: #777;
     }
 
@@ -1282,7 +1282,7 @@ color:#EE2931;
 
         .slider-dot.active {
             background-color: #e30613;
-            width: 22px;
+            width: 8px;
             border-radius: 10px;
         }
 
@@ -1354,7 +1354,7 @@ color:#EE2931;
       border: none;
       outline: none;
       box-shadow: none !important;
-      font-size: 14px;
+      font-size: 12px;
       width: 100%;
       color: var(--text-dark);
     }
@@ -1409,7 +1409,8 @@ color:#EE2931;
 
     /* ================= DESKTOP NAVIGATION BAR ================= */
     .nav-bar-container {
-      background-color: #fafafa;
+      background-color: #fff9f9;
+     
       border-bottom: 1px solid #eeeeee;
       padding: 6px 0;
     }
@@ -1715,8 +1716,8 @@ color:#EE2931;
     .features-section {
       background-color: #fff9f9;
       padding: 16px 0;
-      border-top: 2px solid #e31e25;
-      border-bottom: 1px solid #f2dede;
+      /* border-top: 2px solid #e31e25; */
+      /* border-bottom: 1px solid #f2dede; */
     }
 
     .feature-box {
@@ -1915,3 +1916,726 @@ color:#EE2931;
       height: 9px;
     }
      /* Our Product Section  */
+/* =========================================================
+   MOBILE PRODUCT CARD (Best Sellers + baaki sliders)
+   2 cards ek row mein, Add to Cart + Buy Now same design + icon
+   ========================================================= */
+@media (max-width: 767.98px) {
+
+  /* Slider spacing */
+  .auto-swiper { padding: 4px 2px 60px; }
+
+  /* Card */
+  .auto-swiper .product-card {
+    border: 1px solid #e3e3e3;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Image area */
+  .auto-swiper .product-top-bg {
+    padding: 26px 8px 8px;
+  }
+  .auto-swiper .product-img {
+    height: 110px;
+    max-height: 110px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+  }
+  .auto-swiper .badge-veg {
+    top: 8px;
+    left: 8px;
+    width: 12px;
+    height: 12px;
+  }
+  .auto-swiper .badge-discount {
+    top: 8px;
+    right: 8px;
+    font-size: 9px;
+    padding: 2px 6px;
+  }
+  .auto-swiper .wishlist-icon {
+    top: 30px;
+    right: 8px;
+    width: 24px;
+    height: 24px;
+    font-size: 11px;
+  }
+
+  /* Text area */
+  .auto-swiper .product-details {
+    padding: 8px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .auto-swiper .category-text { font-size: 8px; }
+  .auto-swiper .rating-text   { font-size: 9px; }
+  .auto-swiper .product-title {
+    font-size: 11px;
+    margin-bottom: 4px;
+  }
+  .auto-swiper .current-price { font-size: 12px; }
+  .auto-swiper .old-price     { font-size: 9px; }
+  .auto-swiper .form-select-sm {
+    font-size: 9px;
+    padding: 2px 16px 2px 4px;
+    background-position: right 4px center;
+    background-size: 8px;
+  }
+
+  /* ---- Add to Cart + Buy Now : dono ek jaisi design ---- */
+  .auto-swiper .product-details .row.g-1 {
+    margin-top: auto !important;
+    padding-top: 6px;
+    --bs-gutter-x: 6px;
+  }
+  .auto-swiper .product-details .row.g-1 .btn,
+  .auto-swiper .product-details .btn-custom-red {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    width: 100%;
+    padding: 6px 2px !important;
+    font-size: 9.5px !important;
+    font-weight: 600;
+    line-height: 1.1;
+    white-space: nowrap;
+    color: #fff;
+    background-color: #ef233c !important;
+    border: 1px solid #ef233c !important;
+    border-radius: 5px;
+  }
+  .auto-swiper .product-details .row.g-1 .btn i,
+  .auto-swiper .product-details .btn-custom-red i {
+    font-size: 11px;
+    margin: 0 !important;
+    line-height: 1;
+  }
+  .auto-swiper .product-details .row.g-1 .btn:active,
+  .auto-swiper .product-details .btn-custom-red:active {
+    background-color: #d11a30 !important;
+    border-color: #d11a30 !important;
+  }
+
+  /* Slider arrows (screenshot jaise chhote black buttons) */
+  .auto-slider-btn {
+    width: 22px;
+    height: 36px;
+    font-size: 12px;
+  }
+}
+
+/* =========================================================
+   MOBILE: Spices / Powdered / Whole cards (.product-body markup)
+   ========================================================= */
+@media (max-width: 767.98px) {
+
+  .auto-swiper .product-top-bg > .d-flex {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    z-index: 2;
+  }
+  .auto-swiper .product-top-bg .veg-icon {
+    width: 12px;
+    height: 12px;
+  }
+  .auto-swiper .product-top-bg .veg-dot {
+    width: 5px;
+    height: 5px;
+  }
+  .auto-swiper .product-top-bg .my-3 {
+    margin: 0 !important;
+  }
+  .auto-swiper .product-top-bg .product-img.img-fluid {
+    height: 110px;
+    width: auto;
+    max-width: 100%;
+  }
+
+  .auto-swiper .product-body {
+    padding: 8px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .auto-swiper .product-body .text-warning { font-size: 9px !important; }
+  .auto-swiper .product-body .product-title {
+    font-size: 11px;
+    margin-bottom: 4px;
+  }
+  .auto-swiper .product-body .price-section { font-size: 12px; }
+  .auto-swiper .product-body .price-section .fw-bold { font-size: 12px; }
+  .auto-swiper .product-body .original-price {
+    font-size: 9px;
+    margin-left: 2px;
+  }
+  .auto-swiper .product-body .form-select-sm {
+    font-size: 9px;
+    padding: 2px 16px 2px 4px;
+    background-position: right 4px center;
+    background-size: 8px;
+  }
+
+  /* Buttons: same design as Best Sellers */
+  .auto-swiper .product-body .row.g-1 {
+    margin-top: auto !important;
+    padding-top: 6px;
+    --bs-gutter-x: 6px;
+  }
+  .auto-swiper .product-body .row.g-1 .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    width: 100%;
+    padding: 6px 2px !important;
+    font-size: 9.5px !important;
+    font-weight: 600;
+    line-height: 1.1;
+    white-space: nowrap;
+    color: #fff;
+    background-color: #ef233c !important;
+    border: 1px solid #ef233c !important;
+    border-radius: 5px;
+  }
+  .auto-swiper .product-body .row.g-1 .btn i {
+    font-size: 11px;
+    margin: 0 !important;
+    line-height: 1;
+  }
+
+  /* Wishlist heart: sab sections mein same jagah */
+  .auto-swiper .product-top-bg .wishlist-icon {
+    top: 30px;
+    right: 8px;
+  }
+}
+
+/* =========================================================
+   CERTIFICATE LOGOS (GMP, DNV, FDA, DNV) - ek hi line mein
+   ========================================================= */
+.cert-row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+}
+
+@media (max-width: 767.98px) {
+  .cert-row {
+    gap: 6px;
+    padding: 0 4px;
+  }
+  .cert-row .cert-logo {
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 24%;
+    max-height: none;
+    height: auto;
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   OUR PRODUCT RANGE - grey box, bada title, View More neeche edge par
+   ========================================================= */
+.our .product-img-container {
+  margin-bottom: 52px;          /* box + bahar latakte button ke liye jagah */
+}
+.our .product-badge {
+  position: absolute;
+  bottom: -26px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 82%;
+  background: #f5f5f5;
+  border-radius: 10px;
+  padding: 12px 10px 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  z-index: 2;
+}
+.our .product-badge .product-title {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0;
+  color: #111;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.our .product-badge .btn-view-more {
+  position: absolute;
+  left: 50%;
+  bottom: -13px;                /* box ke neeche edge par */
+  transform: translateX(-50%);
+  background-color: #e8202a;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.2;
+  padding: 5px 22px;
+  border: none;
+  border-radius: 50px;
+  white-space: nowrap;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+}
+.our .product-badge .btn-view-more:hover {
+  background-color: #cf1a24;
+  color: #fff;
+}
+
+/* =========================================================
+   DESKTOP NAVBAR - All Categories & Track Order ek line mein
+   ========================================================= */
+.nav-bar-container .btn-all-categories,
+.nav-bar-container .btn-track-order {
+  white-space: nowrap;          /* text do line mein na toote */
+  flex-shrink: 0;               /* button dabke chhota na ho */
+  width: auto;
+  line-height: 1.2;
+}
+.nav-bar-container .btn-all-categories span,
+.nav-bar-container .btn-track-order span {
+  white-space: nowrap;
+}
+.nav-bar-container .custom-dropdown-wrap {
+  flex-shrink: 0;
+}
+/* beech ke links jagah ke hisaab se adjust honge */
+.nav-bar-container .d-flex.align-items-center.gap-1 {
+  flex: 1 1 auto;
+  min-width: 0;
+  justify-content: center;
+}
+
+/* Chhoti laptop screen par thoda compact, taaki sab ek line mein aaye */
+@media (min-width: 992px) and (max-width: 1399.98px) {
+  /* .nav-bar-container .container-fluid {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  } */
+  .nav-bar-container .btn-all-categories,
+  .nav-bar-container .btn-track-order {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+  .nav-bar-container .category-nav-link {
+    font-size: 12.5px;
+    padding: 4px 5px;
+    gap: 4px;
+  }
+}
+
+/* =========================================================
+   MOBILE CARD - dark border + bade fonts (sab slider cards)
+   ========================================================= */
+@media (max-width: 767.98px) {
+
+  /* Border */
+  .auto-swiper .product-card {
+    border: 1px solid #222;
+    border-radius: 6px;
+    box-shadow: none;
+  }
+
+  /* Image thodi badi */
+  .auto-swiper .product-top-bg { padding: 28px 8px 8px; }
+  .auto-swiper .product-img,
+  .auto-swiper .product-top-bg .product-img.img-fluid {
+    height: 120px;
+    max-height: 120px;
+  }
+
+  /* Text area */
+  .auto-swiper .product-details,
+  .auto-swiper .product-body { padding: 10px 9px; }
+
+  .auto-swiper .category-text { font-size: 10px; letter-spacing: 0.4px; }
+  .auto-swiper .rating-text,
+  .auto-swiper .product-body .text-warning { font-size: 10px !important; }
+
+  .auto-swiper .product-title,
+  .auto-swiper .product-body .product-title {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: 6px;
+    white-space: normal;                 /* lamba naam 2 line mein aaye */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 2.5em;                   /* sab cards ki height barabar */
+  }
+
+  .auto-swiper .current-price,
+  .auto-swiper .product-body .price-section .fw-bold { font-size: 14px; }
+  .auto-swiper .old-price,
+  .auto-swiper .product-body .original-price { font-size: 10px; }
+
+  .auto-swiper .product-details > .d-flex > div[style*="width"],
+  .auto-swiper .product-body .d-flex > div[style*="width"] { width: 78px !important; }
+  .auto-swiper .form-select-sm {
+    font-size: 11px;
+    padding: 3px 18px 3px 6px;
+    border: 1px solid #222;
+    border-radius: 4px;
+  }
+
+  /* Buttons */
+  .auto-swiper .product-details .row.g-1 .btn,
+  .auto-swiper .product-body .row.g-1 .btn {
+    /* font-size: 10.5px !important; */
+    padding: 7px 2px !important;
+    /* gap: 4px; */
+  }
+  .auto-swiper .product-details .row.g-1 .btn i,
+  .auto-swiper .product-body .row.g-1 .btn i { font-size: 11px; }
+}
+
+/* =========================================================
+   DESKTOP CARD - dark border (mobile jaisa)
+   ========================================================= */
+@media (min-width: 768px) {
+  .auto-swiper .product-card {
+    border: 1px solid #222;
+    border-radius: 6px;
+    box-shadow: none;
+  }
+  .auto-swiper .form-select-sm {
+    border: 1px solid #222;
+    border-radius: 4px;
+  }
+}
+
+/* =========================================================
+   IMAGE ke neeche border (image aur details ke beech line)
+   ========================================================= */
+.auto-swiper .product-top-bg {
+  border-bottom: 1px solid #222;
+}
+
+
+
+/* .mobile-banner {
+  position: relative;
+  width: 100%;
+  line-height: 0;
+}
+
+.mobile-banner-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+.mobile-banner-shop {
+  position: absolute;
+  left: 36%;
+  width: 28%;
+  top: 91%;
+  height: 6.5%;
+  border-radius: 6px;
+}
+
+
+@media (max-width: 767.98px) {
+  #autoFestivalCarousel .carousel-indicators {
+    bottom: 6px;
+    margin-bottom: 0;
+  }
+} */
+
+
+.banner-container {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border: 6px dashed #ffcc00;
+      border-radius: 8px;
+      overflow: hidden;
+      color: #fff;
+      padding: 30px 20px 45px 20px; 
+      min-height: 420px;
+    }
+
+   
+
+
+    .logo-img {
+      max-width: 120px;
+      height: auto;
+    }
+
+    .banner-title {
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 2.5rem;
+      line-height: 1.1;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    }
+
+    .banner-title span {
+      color: #ffeb3b;
+      display: block;
+    }
+
+    .banner-desc {
+      font-size: 0.85rem;
+      color: #ffffff;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      max-width: 480px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    }
+
+
+    .btn-shop {
+      background-color: #ffffff;
+      color: #d32f2f;
+      font-weight: 700;
+      padding: 10px 30px;
+      border-radius: 6px;
+      border: none;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-shop:hover {
+      background-color: #ffeb3b;
+      color: #b30000;
+    }
+
+    /* Offer Badge Image Style */
+    .offer-badge-img {
+      max-width: 198px;
+      height: 157px;
+      filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.4));
+    }
+
+   
+    .products-img {
+      max-width: 100%;
+      
+      filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.4));
+    }
+
+    /* Pagination Dots Inside Banner Container at Bottom */
+    .banner-swiper .swiper-pagination {
+      bottom: 15px !important;
+      z-index: 10;
+    }
+
+    .swiper-pagination-bullet {
+      background: #ffffff;
+      opacity: 0.6;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: #ffeb3b;
+      opacity: 1;
+      width: 8px!important;
+      border-radius: 10px;
+    }
+   .slide-bg-1 {
+        background-image:url('../img/banner\ slider.png');
+      }
+
+      .slide-bg-2 {
+        background-image:url('../img/banner\ slider.png');
+      }
+        .offer-badge-img {
+      max-width: 120px;
+     height: auto;
+     margin-top:-10px;
+     
+    }
+   
+    @media (max-width: 767.98px) {
+      .banner-container {
+        text-align: center;
+        padding: 25px 15px 45px 15px;
+      }
+
+      .banner-title {
+        font-size: 1.8rem;
+      }
+
+      .banner-desc {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .offer-badge-img {
+        max-width: 110px;
+        margin: 10px auto;
+      }
+    }
+
+
+
+ 
+
+   
+    @media (max-width: 767.98px) {
+      .banner-container {
+        text-align: center;
+        padding: 25px 15px 45px 15px;
+      }
+
+      
+      .slide-bg-1 {
+        background-image:url('../img/mobile\ image.png');
+        height:599px;
+      }
+
+      .slide-bg-2 {
+        background-image:url('../img/mobile\ image.png');
+          height:599px;
+      }
+
+      .banner-title {
+        font-size: 1.3rem;
+      }
+
+      .banner-desc {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .offer-badge-img {
+        max-width: 110px;
+        margin: 10px auto;
+        margin-top:-49px;
+      }
+      .btn-shop {
+         margin-top:217px !important;
+      }
+          .banner-desc {
+        font-size: 11px;
+          }
+       
+    }
+
+.banner-container {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 6px dashed #ffcc00;
+  border-radius: 8px;
+  overflow: hidden;
+  color: #fff;
+  /* Left side me aur zyada space ke liye padding-left ko 60px kar diya hai */
+  padding: 30px 20px 45px 60px; 
+  min-height: 420px;
+  box-sizing: border-box;
+}
+
+/* Mobile view ke liye padding normal rakhein */
+@media (max-width: 767.98px) {
+  .banner-container {
+    padding: 25px 20px 45px 20px !important;
+  }
+
+    .auto-swiper .product-title, .auto-swiper .product-body .product-title {
+        font-size: 10px;
+        font-weight: 300;
+    }
+}
+
+
+
+
+
+
+
+.old-price {
+    font-size: 11px;
+    text-decoration: line-through;
+    color: #adb5bd;
+}
+
+@media (max-width: 576px) {
+    /* Price row ko column mein convert kar denge mobile par taaki overlap na ho */
+    .product-details .d-flex.justify-content-between.align-items-center.mb-2 {
+        align-items: flex-start !important;
+    }
+
+    /* Price container ko vertical (stack) kar do */
+    .product-details .d-flex > div:first-child {
+        display: flex;
+        flex-direction: column; /* Current price ke neeche old price aa jayega */
+        align-items: flex-start;
+        line-height: 1.2;
+    }
+
+    .current-price {
+        font-size: 11px !important;
+        font-weight: 700;
+    }
+
+    .old-price {
+        font-size: 9px !important;
+        margin-left: 0 !important; /* side margin hata di */
+    }
+
+    /* Select dropdown ki width aur padding perfect set ki */
+    .product-details select.form-select-sm {
+        width: 65px !important;
+        font-size: 9px !important;
+        padding: 2px 4px !important;
+        height: 24px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Buttons ko mobile par properly fit karne ke liye */
+    .btn-custom-action {
+        font-size: 7.5px !important; /* font size thoda aur chhota kiya */
+        padding: 4px 1px !important;  /* padding adjust ki */
+        white-space: nowrap;
+    }
+    
+    /* Button ke andar ke icons aur text ki spacing */
+    .btn-custom-action i {
+        margin-right: 2px !important;
+        font-size: 8px;
+    }
+    .quality-heading {
+    font-size: 16px;
+    }
+    .quality-description {
+    font-size: 7px;
+    font-weight: 500;
+    }
+}
+
+
+
+
+@media (max-width: 767.98px) {
+    .auto-slider-btn {
+      
+        margin-top: -70px;
+    }
+  }
+
+
+  

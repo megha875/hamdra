@@ -2366,8 +2366,8 @@ color:#EE2931;
       background-position: center;
       background-repeat: no-repeat;
       /* border: 6px dashed #ffcc00; */
-      border-radius: 8px;
-      overflow: hidden;
+      /* border-radius: 8px; */
+      /* overflow: hidden; */
       color: #fff;
       padding: 30px 20px 45px 20px; 
       min-height: 420px;
@@ -2451,7 +2451,7 @@ color:#EE2931;
       background: #ffeb3b;
       opacity: 1;
       width: 8px!important;
-      border-radius: 10px;
+      /* border-radius: 10px; */
     }
    .slide-bg-1 {
         background-image:url('../img/banner\ slider.png');
@@ -2468,7 +2468,7 @@ color:#EE2931;
     }
    
     @media (max-width: 767.98px) {
-      .banner-container {
+     .banner .banner-container {
         text-align: center;
         padding: 25px 15px 45px 15px;
       }
@@ -2494,7 +2494,7 @@ color:#EE2931;
 
    
     @media (max-width: 767.98px) {
-      .banner-container {
+     .banner .banner-container {
         text-align: center;
         padding: 25px 15px 45px 15px;
       }
@@ -2539,13 +2539,13 @@ color:#EE2931;
   background-position: center;
   background-repeat: no-repeat;
   /* border: 6px dashed #ffcc00; */
-  border-radius: 8px;
-  overflow: hidden;
+  /* border-radius: 8px; */
+  /* overflow: hidden; */
   color: #fff;
   /* Left side me aur zyada space ke liye padding-left ko 60px kar diya hai */
   padding: 30px 20px 45px 60px; 
   min-height: 420px;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 
 /* Mobile view ke liye padding normal rakhein */

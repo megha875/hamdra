@@ -1370,7 +1370,7 @@ color:#EE2931;
       border-radius: 20px;
       padding: 3px 22px;
       font-size: 14px;
-      font-weight: 600;
+      /* font-weight: 600; */
       border: none;
     }
 
@@ -2745,7 +2745,7 @@ color:#EE2931;
   .banner .banner-container.slide-bg-1,
   .banner .banner-container.slide-bg-2 {
     position: relative;
-    background-image: url('../img/banner slider.png');
+    background-image: url('../img/New\ Project.png');
     background-size: 100% 100%;          /* poori image, 4 side border ke saath */
     background-position: center;
     background-repeat: no-repeat;
@@ -2788,8 +2788,8 @@ color:#EE2931;
   }
   .banner .banner-container .col-lg-6 > .d-flex { margin: 0 !important; }
   .banner .offer-badge-img {
-    width: clamp(110px, 15.5vw, 258px);
-    max-width: 100%;
+    /* width: clamp(110px, 15.5vw, 258px);
+    max-width: 100%; */
     height: auto;
     margin: 0 !important;
   }
@@ -2947,7 +2947,7 @@ color:#EE2931;
   gap: 6px;
   padding: 0;
   font-family: 'Inter', 'Poppins', sans-serif;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 500;
   line-height: 1;
   color: #000;
@@ -3120,4 +3120,10 @@ color:#EE2931;
 }
 .custom-dropdown-wrap{
   margin-left: -4px !important;
+}
+
+.offer-badge-img {
+  position: relative;
+  top: -115px; /* Is value ko aap apne hisaab se adjust kar sakte hain */
+  left:-25px;
 }

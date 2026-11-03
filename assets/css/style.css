@@ -2016,7 +2016,6 @@ color:#EE2931;
     font-size: 11px;
     margin: 0 !important;
     line-height: 1;
-    transform: translateY(-1px);
   }
   .auto-swiper .product-details .row.g-1 .btn:active,
   .auto-swiper .product-details .btn-custom-red:active {
@@ -2299,7 +2298,7 @@ color:#EE2931;
   .auto-swiper .product-details .row.g-1 .btn,
   .auto-swiper .product-body .row.g-1 .btn {
     /* font-size: 10.5px !important; */
-    padding: 8px 2px 6px !important;
+    padding: 7px 2px !important;
     /* gap: 4px; */
   }
   .auto-swiper .product-details .row.g-1 .btn i,
@@ -2734,6 +2733,71 @@ color:#EE2931;
  }
 
 /* ==========================================================
+   DESKTOP / TABLET BANNER FIX (min-width: 768px)
+   banner slider.png = 2170 x 725. Border image ke andar hai, isliye
+   container ka ratio image jaisa + sab size vw se scale hota hai,
+   taaki content kabhi container se bahar na jaye aur border cut na ho.
+   ========================================================== */
+@media (min-width: 768px) {
+
+  .banner .banner-container,
+  .banner .banner-container.slide-bg-1,
+  .banner .banner-container.slide-bg-2 {
+    position: relative;
+    background-image: url('../img/banner slider.png');
+    background-size: 100% 100%;          /* poori image, 4 side border ke saath */
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    aspect-ratio: 2170 / 725;
+    height: auto;
+    min-height: 0 !important;
+    padding: 2.6vw 3vw 2.6vw 5vw !important;
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    text-align: left;
+  }
+
+  .banner .banner-container::after { content: none; }   /* mobile ki CSS border band */
+
+  .banner .banner-container .row { width: 100%; margin: 0; }
+
+  /* Left text column */
+  .banner .logo-img { max-width: none; width: clamp(70px, 7.4vw, 120px); }
+  .banner .banner-title {
+    font-size: clamp(1.9rem, 4.3vw, 4.6rem);
+    line-height: 1.1;
+  }
+  .banner .banner-title span { display: block; white-space: nowrap; }
+  .banner .banner-desc {
+    font-size: clamp(10px, 1.05vw, 14px);
+    max-width: 36vw;
+    margin: .6vw 0 1.4vw;
+  }
+  .banner .btn-shop {
+    padding: clamp(6px, .7vw, 10px) clamp(18px, 2.2vw, 30px);
+    font-size: clamp(11px, 1vw, 14px);
+  }
+
+  /* Offer badge: image ke upar-beech mein, products ke left */
+  .banner .banner-container .col-lg-6 {
+    align-self: flex-start;
+    padding-top: 3.5vw;
+  }
+  .banner .banner-container .col-lg-6 > .d-flex { margin: 0 !important; }
+  .banner .offer-badge-img {
+    width: clamp(110px, 15.5vw, 258px);
+    max-width: 100%;
+    height: auto;
+    margin: 0 !important;
+  }
+
+  .banner-swiper { overflow: hidden; }
+  .banner-swiper .swiper-slide { height: auto; }
+}
+
+/* ==========================================================
    MOBILE BANNER FIX (max-width: 767.98px)
    mobile image.png = 786 x 1136 (portrait), isliye ratio 786/1136
    ========================================================== */
@@ -2753,7 +2817,7 @@ color:#EE2931;
     aspect-ratio: 786 / 1136;
     height: auto !important;
     min-height: 0 !important;
-    padding: 24px 22px 0 22px !important;
+    padding: 20px 20px 0 20px !important;
     text-align: center;
     overflow: hidden;
     display: block;
@@ -2781,25 +2845,24 @@ color:#EE2931;
   .banner .banner-container .row > * { padding-left: 0; padding-right: 0; }
 
   /* Text upar wale red/orange hisse mein */
-  .banner .logo-img { max-width: 92px; }
-  .banner .banner-title { font-size: 1.55rem; line-height: 1.1; }
+  .banner .logo-img { max-width: 78px; }
+  .banner .banner-title { font-size: 1.4rem; line-height: 1.1; }
   .banner .banner-desc {
-    font-size: 11px;
-    line-height: 1.4;
-    max-width: 300px;
-    margin: 8px auto 0;
+    font-size: 10.5px;
+    line-height: 1.35;
+    max-width: 320px;
+    margin: 6px auto 0;
   }
 
-  /* Offer badge: top right corner (products ke upar nahi aayega) */
+  /* Offer badge: paragraph ke neeche, center (flow mein) */
   .banner .banner-container .position-relative { position: static !important; }
+  .banner .banner-container .col-lg-6 { margin-top: 0 !important; }
+  .banner .banner-container .col-lg-6 > .d-flex { margin: 4px 0 0 !important; }
   .banner .offer-badge-img {
-    position: absolute;
-    top: 22px;
-    right: 14px;
-    max-width: 84px;
+    position: static;
+    max-width: 74px;
     height: auto;
-    margin: 0;
-    z-index: 6;
+    margin: 0 auto !important;
   }
 
   /* Shop Now: neeche platform ke niche, center */

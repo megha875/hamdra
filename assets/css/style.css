@@ -2360,7 +2360,45 @@ color:#EE2931;
   }
 } */
 
+/* Desktop: poori image (top/bottom border ke saath) dikhegi */
+@media (min-width: 768px) {
+  .banner-container {
+    width: 100%;
+    aspect-ratio: 1351 / 427;      /* apni image ka width / height */
+    height: auto;                  /* fixed height hatao */
+    min-height: 0;
+    display: flex;
+    align-items: center;
+    background-size: 100% 100%;    /* cover nahi */
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 20px 0;               /* content border se na takraye */
+    overflow: hidden;
+  }
 
+  .banner-container .row {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+/* Mobile: content stack hota hai, isliye ratio nahi chalega */
+@media (max-width: 767.98px) {
+  .banner-container {
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+    padding: 30px 15px;
+  }
+}
+
+.slide-bg-1 {
+  background-image: url('./assets/img/banner-bg.png'); /* apni image ka path */
+}
+.banner-swiper,
+.banner-swiper .swiper-slide {
+  height: auto;
+}
 .banner.banner-container {
       position: relative;
       background-size: cover;
@@ -2385,7 +2423,7 @@ color:#EE2931;
     .banner-title {
       color: #ffffff;
       font-weight: 800;
-      font-size: 3.5rem;
+      font-size: 3.7rem;
       line-height: 1.1;
       text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
     }
@@ -2396,12 +2434,13 @@ color:#EE2931;
     }
 
     .banner-desc {
-      font-size: 0.85rem;
+      font-size: 14px;
       color: #ffffff;
+      font-weight: 400;
       margin-top: 10px;
       margin-bottom: 20px;
       max-width: 480px;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+      /* text-shadow: 1px 1px 3px rgba(0,0,0,0.6); */
     }
 
 
@@ -2463,9 +2502,9 @@ color:#EE2931;
         background-image:url('../img/banner\ slider.png');
       }
         .offer-badge-img {
-      max-width: 220px;
+      max-width: 258px;
      height: auto;
-     margin-top:-64px;
+     margin-top:-101px;
      
     }
    
@@ -2495,7 +2534,7 @@ color:#EE2931;
  
 
    
-    @media (max-width: 767.98px) {
+    /* @media (max-width: 767.98px) {
      .banner .banner-container {
         text-align: center;
         padding: 25px 15px 45px 15px;
@@ -2533,20 +2572,21 @@ color:#EE2931;
         font-size: 11px;
           }
        
-    }
+    } */
 
 .banner-container {
   position: relative;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border-top: 4px dotted #ffcc00;
-    border-bottom: 4px dotted #ffcc00;
+  /* border-top: 6px dotted #ffcc00;
+    border-bottom: 6px dotted #ffcc00; */
   /* border-radius: 8px; */
   /* overflow: hidden; */
   color: #fff;
   /* Left side me aur zyada space ke liye padding-left ko 60px kar diya hai */
-  padding: 30px 20px 45px 60px; 
+  /* padding: 30px 20px 45px 60px;  */
+  padding: 15px 20px 20px 60px;
   min-height: 420px;
   /* box-sizing: border-box; */
 }
@@ -2555,7 +2595,7 @@ color:#EE2931;
 @media (max-width: 767.98px) {
   .banner-container {
     padding: 25px 20px 45px 20px !important;
-      border: 4px dotted #ffcc00;
+      /* border: 6px dotted #ffcc00; */
    
   }
 
@@ -2692,3 +2732,91 @@ color:#EE2931;
     font-size: 10px;
     font-weight: 400;
  }
+
+/* ==========================================================
+   MOBILE BANNER FIX (max-width: 767.98px)
+   mobile image.png = 786 x 1136 (portrait), isliye ratio 786/1136
+   ========================================================== */
+@media (max-width: 767.98px) {
+
+  .banner .banner-container,
+  .banner .banner-container.slide-bg-1,
+  .banner .banner-container.slide-bg-2 {
+    position: relative;
+    background-image: url('../img/mobile image.png');
+    background-size: 100% 100%;          /* image kategi nahi, ratio same hai */
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto;
+    aspect-ratio: 786 / 1136;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 24px 22px 0 22px !important;
+    text-align: center;
+    overflow: hidden;
+    display: block;
+  }
+
+  /* Dotted lights border: sab 4 side, container ke edge par */
+  .banner .banner-container::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    pointer-events: none;
+    background-image:
+      radial-gradient(circle, #ffe082 2.4px, transparent 3.2px),
+      radial-gradient(circle, #ffe082 2.4px, transparent 3.2px),
+      radial-gradient(circle, #ffe082 2.4px, transparent 3.2px),
+      radial-gradient(circle, #ffe082 2.4px, transparent 3.2px);
+    background-size: 12px 12px;
+    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+    background-position: 0 0, 0 100%, 0 0, 100% 0;
+    filter: drop-shadow(0 0 3px rgba(255, 190, 0, .9));
+  }
+
+  .banner .banner-container .row { margin: 0; }
+  .banner .banner-container .row > * { padding-left: 0; padding-right: 0; }
+
+  /* Text upar wale red/orange hisse mein */
+  .banner .logo-img { max-width: 92px; }
+  .banner .banner-title { font-size: 1.55rem; line-height: 1.1; }
+  .banner .banner-desc {
+    font-size: 11px;
+    line-height: 1.4;
+    max-width: 300px;
+    margin: 8px auto 0;
+  }
+
+  /* Offer badge: top right corner (products ke upar nahi aayega) */
+  .banner .banner-container .position-relative { position: static !important; }
+  .banner .offer-badge-img {
+    position: absolute;
+    top: 22px;
+    right: 14px;
+    max-width: 84px;
+    height: auto;
+    margin: 0;
+    z-index: 6;
+  }
+
+  /* Shop Now: neeche platform ke niche, center */
+  .banner .banner-container .col-12.d-md-none {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 5.5%;
+    margin: 0 !important;
+    z-index: 6;
+  }
+  .banner .btn-shop {
+    margin-top: 0 !important;
+    padding: 8px 26px;
+    font-size: 13px;
+  }
+
+  .banner-swiper { width: 100%; overflow: hidden; }
+  .banner-swiper .swiper-slide { width: 100% !important; height: auto; }
+}

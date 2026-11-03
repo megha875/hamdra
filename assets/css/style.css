@@ -703,7 +703,7 @@ color:#EE2931;
       background-color: #e31e25;
       color: #ffffff;
       font-size: 11px;
-      padding: 5px 0;
+      /* padding: 5px 0; */
       font-weight: 500;
     }
 
@@ -1346,8 +1346,9 @@ color:#EE2931;
       position: relative;
       border: 1px solid var(--border-color);
       border-radius: 30px;
-      padding: 3px 4px 3px 18px;
+      padding: 1px 2px 2px 8px;
       background-color: #fff;
+      height:36px;
     }
 
     .search-input {
@@ -1367,7 +1368,7 @@ color:#EE2931;
       background-color: var(--primary-red);
       color: #fff;
       border-radius: 20px;
-      padding: 6px 24px;
+      padding: 3px 22px;
       font-size: 14px;
       font-weight: 600;
       border: none;
@@ -2882,4 +2883,241 @@ color:#EE2931;
 
   .banner-swiper { width: 100%; overflow: hidden; }
   .banner-swiper .swiper-slide { width: 100% !important; height: auto; }
+}
+
+/* ==========================================================
+   DESKTOP NAVBAR - Figma pixel match (frame ~1363 x 49)
+   Measured: All Categories 105x27 | Track Order 98x29 | divider 1x18
+   Badge 37x13 | content 112px -> 1246px (max-width 1140px, centered)
+   ========================================================== */
+.nav-bar-container {
+  height: 49px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(180deg, #ffffff 0%, #f8e8e8 100%);
+  border-bottom: 0;
+}
+.nav-bar-container > .container-fluid {
+  width: 100%;
+  max-width: 1140px;
+  padding: 0 !important;
+  margin: 0 auto;
+}
+.nav-bar-container .nav-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* All Categories button */
+.nav-bar-container .btn-all-categories {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 27px;
+  padding: 0 10px;
+  background: #eb0000;
+  color: #fff;
+  font-family: 'Inter', 'Poppins', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1;
+  border: 0;
+  border-radius: 4px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.nav-bar-container .btn-all-categories i { font-size: 12px; }
+.nav-bar-container .btn-all-categories .fa-chevron-down { font-size: 8px !important; margin: 0 !important; }
+
+/* Middle links group */
+.nav-bar-container .nav-links-group {
+  flex: 1 1 auto;
+  min-width: 0;
+  margin: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-bar-container .category-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  font-family: 'Inter', 'Poppins', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1;
+  color: #000;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.nav-bar-container .category-nav-link:hover { color: #eb0000; }
+.nav-bar-container .nav-img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+.nav-bar-container .nav-divider {
+  width: 1px;
+  height: 18px;
+  background: #dbd3d3;
+  flex-shrink: 0;
+}
+
+/* Offers + "Upto 30%" badge */
+.nav-bar-container .offers-badge-container { position: relative; display: block; margin: 0; }
+.nav-bar-container .tag-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 37px;
+  height: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eb0000;
+  color: #fff;
+  font-family: 'Inter', 'Poppins', sans-serif;
+  font-size: 7px;
+  font-weight: 500;
+  line-height: 1;
+  border-radius: 7px;
+  padding: 0;
+}
+
+/* Track Order button */
+.nav-bar-container .btn-track-order {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 29px;
+  padding: 0 14px;
+  background: #eb0000;
+  color: #fff;
+  font-family: 'Inter', 'Poppins', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1;
+  border: 0;
+  border-radius: 6px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+.nav-bar-container .btn-track-order i { font-size: 12px; }
+
+/* Chhoti laptop screen: pura nav ek line mein aaye */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .nav-bar-container > .container-fluid { padding: 0 16px !important; }
+  .nav-bar-container .nav-links-group { margin: 0 12px; }
+  .nav-bar-container .category-nav-link { font-size: 11px; gap: 4px; }
+  .nav-bar-container .nav-img { width: 14px; height: 14px; }
+}
+
+.main-header {
+   
+    padding-left: 70px;
+    padding-right: 97px;
+}
+.flex-custom {
+  flex-grow: 1;
+  margin-left: 3.5rem;
+  margin-right: 1.5rem;
+}
+
+.top-bar{
+    padding-left: 46px;
+    padding-right: 46px;
+}
+@media (max-width: 991.98px) {
+  .main-header {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .flex-custom {
+    flex-grow: 1;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .top-bar {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.top-announcement-bar {
+  background-color: #e31e25;
+  width: 100%;
+}
+
+.top-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+/* Har ek item ke left aur right mein space ke liye */
+.top-bar-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex: 1;
+  text-align: center;
+  white-space: nowrap;
+  padding-left: 25px;  /* Left side space */
+  padding-right: 25px; /* Right side space */
+}
+
+.top-bar-icon {
+  font-size: 13px;
+}
+
+.top-bar-divider {
+  width: 1px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.top-bar-inner{
+  padding-left:53px;
+}
+
+@media (max-width: 991.98px) {
+  .top-bar-inner {
+    overflow-x: auto;
+    justify-content: flex-start;
+  }
+  .top-bar-item {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* Mobile & Tablet view (max-width: 991.98px) */
+@media (max-width: 991.98px) {
+  .top-bar-inner {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    overflow-x: auto;
+    justify-content: flex-start;
+  }
+}
+
+.top-announcement-bar span{
+  font-size: 10px;
+}
+.custom-dropdown-wrap{
+  margin-left: -4px !important;
 }

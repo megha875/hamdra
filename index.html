@@ -20,8 +20,8 @@
 
 
  <!-- Top Announcement Bar -->
-  <div class="top-bar">
-    <div class="container-fluid px-3 px-lg-5">
+  <!-- <div class="top-bar">
+    <div class="container-fluid px-3 px-lg-4">
       <div class="d-none d-lg-flex justify-content-between align-items-center text-center">
         <div class="flex-fill"><i class="fa-solid fa-truck-fast me-2"></i> Free Shipping for orders above ₹499 across India</div>
         <div class="top-bar-divider"></div>
@@ -39,32 +39,61 @@
         <i class="fa-solid fa-chevron-right fs-6"></i>
       </div>
     </div>
-  </div>
+  </div> -->
+  <header class="header-wrapper d-flex flex-column w-100">
+<div class="top-announcement-bar">
+  <div class="container-fluid ps-3 px-lg-3">
+    <div class="top-bar-inner">
+      
+      <div class="top-bar-item">
+        <i class="fa-solid fa-truck-fast top-bar-icon"></i>
+        <span>Free Shipping for orders above ₹499 across India</span>
+      </div>
+      <div class="top-bar-divider"></div>
 
+      <div class="top-bar-item">
+        <i class="fa-solid fa-leaf top-bar-icon"></i>
+        <span>Free Hamdard Khaalis Biryani Masala 10g with every order</span>
+      </div>
+      <div class="top-bar-divider"></div>
+
+      <div class="top-bar-item">
+        <i class="fa-solid fa-tag top-bar-icon"></i>
+        <span>Authentic Hamdard Products</span>
+      </div>
+      <div class="top-bar-divider"></div>
+
+      <div class="top-bar-item">
+        <span>Trusted Since 1906</span>
+      </div>
+
+    </div>
+  </div>
+</div>
   <!-- Main Header -->
   <header class="main-header">
-    <div class="container-fluid px-3 px-lg-5">
+    <div class="container-fluid ps-4 px-lg-7">
       
       <!-- DESKTOP HEADER -->
       <div class="d-none d-lg-flex align-items-center justify-content-between gap-3">
         <a href="#"><img src="./assets/img/logo.png" alt="My Hamdard Store" class="brand-logo" onerror="this.src='https://via.placeholder.com/200x50?text=MyHamdardStore.com'"></a>
 
-        <div class="flex-grow-1 mx-3" style="max-width: 620px;">
-          <form action="/search" method="GET" class="search-container d-flex align-items-center">
-            <i class="fa-solid fa-magnifying-glass text-muted me-2 ms-1 fs-5"></i>
-            <input type="text" class="search-input" placeholder="Search for products, categories or brands...">
-            <div style="width: 1px; height: 24px; background-color: #ddd; margin: 0 8px;"></div>
-            <button type="submit" class="search-btn">Search</button>
-          </form>
-        </div>
-
+        
+        <div class="flex-custom flex-grow-1 "> <!-- yahan ms-4 ya mx-4 ki jagah ms-2 ya ms-1 kar dein -->
+    <form action="/search" method="GET" class="search-container d-flex align-items-center">
+      <i class="fa-solid fa-magnifying-glass text-muted me-2 ms-1 fs-5"></i>
+      <input type="text" class="search-input" placeholder="Search for products, categories or brands...">
+      <div style="width: 1px; height: 24px; background-color: #ddd; margin: 0 8px;"></div>
+      <button type="submit" class="search-btn">Search</button>
+    </form>
+  </div>
         <!-- Pincode & City Dropdown (Desktop) -->
         <div class="custom-dropdown-wrap">
           <div class="header-action-item" id="desktopPinBtn">
             <i class="fa-solid fa-location-dot fs-5"></i>
             <div class="lh-sm">
-              <span class="d-block text-muted fw-normal" style="font-size: 10px;">Hello</span>
-              <span>Check your Pincode <i class="fa-solid fa-chevron-down" style="font-size: 10px;"></i></span>
+              <span class="d-block text-muted fw-normal" style="font-size: 8px;">Hello</span>
+              <span class=""style="font-size: 10px;">Check your Pincode <i class="fa-solid fa-chevron-down" style="font-size: 8px;"></i></span>
             </div>
           </div>
           <div class="custom-dropdown-menu pincode-dropdown-box" id="desktopPinDropdown">
@@ -86,7 +115,7 @@
         <div class="custom-dropdown-wrap">
           <a href="#" class="header-action-item" id="desktopAccountBtn">
             <i class="fa-regular fa-user fs-5"></i>
-            <span>Account <i class="fa-solid fa-chevron-down" style="font-size: 10px;"></i></span>
+            <span style="font-size: 10px;">Account <i class="fa-solid fa-chevron-down" style="font-size: 10px;"></i></span>
           </a>
           <div class="custom-dropdown-menu" id="desktopAccountDropdown">
             <a href="#" class="custom-dropdown-item"><i class="fa-regular fa-user me-2"></i> My Profile</a>
@@ -114,7 +143,7 @@
             <i class="fa-solid fa-cart-shopping fs-5"></i>
             <span class="cart-badge">0</span>
           </div>
-          <span>Cart</span>
+          <span  style="font-size: 10px;">Cart</span>
         </a>
 
         <div class="header-vertical-line"></div>
@@ -146,7 +175,7 @@
             <a href="#" class="mobile-header-icon-box position-relative">
               <i class="fa-solid fa-cart-shopping"></i>
               <span class="cart-badge" style="top: -4px; right: -4px;">0</span>
-              <span>Cart</span>
+              <span style="font-size: 10px;">Cart</span>
             </a>
           </div>
         </div>
@@ -164,11 +193,11 @@
   </header>
 
   <!-- DESKTOP CATEGORIES NAVBAR -->
-  <nav class="nav-bar-container d-none d-lg-block">
+  <!-- <nav class="nav-bar-container d-none d-lg-block">
     <div class="container-fluid px-3 px-lg-5">
       <div class="d-flex align-items-center justify-content-between">
         
-        <!-- All Categories Dropdown -->
+       
         <div class="custom-dropdown-wrap">
           <button class="btn-all-categories d-flex align-items-center gap-2" id="desktopCatBtn">
             <i class="fa-solid fa-border-all"></i>
@@ -186,28 +215,28 @@
           </div>
         </div>
 
-        <div class="d-flex align-items-center gap-1">
+        <div class=" d-flex gap-1" style="justify-content: inherit;" id="desktopCatDropdown">
           <div class="offers-badge-container ms-2">
             <span class="tag-badge">Upto 30%</span>
-            <a href="#" class="category-nav-link"><i class="fa-solid fa-fire text-dark"></i> Offers</a>
+            <a href="#" class="category-nav-link"><img src="./assets/img/be.png" alt="Beverages" class="nav-img">   Offers</a>
           </div>
-          <div class="nav-divider"></div>
-          <a href="#" class="category-nav-link"><i class="fa-solid fa-glass-water"></i> Beverages</a>
-          <div class="nav-divider"></div>
-          <a href="#" class="category-nav-link"><i class="fa-solid fa-leaf"></i> Spices</a>
-          <div class="nav-divider"></div>
-          <a href="#" class="category-nav-link"><i class="fa-solid fa-bottle-droplet"></i> Edible Oil</a>
-          <div class="nav-divider"></div>
-          <a href="#" class="category-nav-link"><i class="fa-solid fa-jar"></i> Honey</a>
-          <div class="nav-divider"></div>
-          <a href="#" class="category-nav-link"><i class="fa-solid fa-utensils"></i> Ready to cook</a>
-          <div class="nav-divider"></div>
-          <a href="#" class="category-nav-link"><i class="fa-solid fa-heart-pulse"></i> Health Care</a>
-          <div class="nav-divider"></div>
-          <a href="#" class="category-nav-link"><i class="fa-solid fa-bag-shopping"></i> Combos</a>
-          <div class="nav-divider"></div>
-          <a href="#" class="category-nav-link"><i class="fa-solid fa-phone"></i> Contact</a>
-        </div>
+       
+        <div class="nav-divider"></div>
+<a href="#" class="category-nav-link"><img src="./assets/img/Group (6).png" alt="Spices" class="nav-img"> Beverages</a>
+<div class="nav-divider"></div>
+<a href="#" class="category-nav-link"><img src="./assets/img/Vector (7).png" alt="Edible Oil" class="nav-img"> Spices</a>
+<div class="nav-divider"></div>
+<a href="#" class="category-nav-link"><img src="./assets/img/Group (7).png" alt="Honey" class="nav-img"> Edible Oil</a>
+<div class="nav-divider"></div>
+<a href="#" class="category-nav-link"><img src="./assets/img/Group (8).png" alt="Honey" class="nav-img"> Honey</a>
+<div class="nav-divider"></div>
+<a href="#" class="category-nav-link"><img src="./assets/img/Group 44 (1).png" alt="Ready to cook" class="nav-img"> Ready to cook</a>
+<div class="nav-divider"></div>
+<a href="#" class="category-nav-link"><img src="./assets/img/Vector (8).png" alt="Health Care" class="nav-img"> Health Care</a>
+<div class="nav-divider"></div>
+<a href="#" class="category-nav-link"><img src="./assets/img/Group (9).png" alt="Combos" class="nav-img"> Combos</a>
+<div class="nav-divider"></div>
+<a href="#" class="category-nav-link"><img src="./assets/img/Group (9).png" alt="Contact" class="nav-img"> Contact</a>
 
         <a href="#" class="btn-track-order d-flex align-items-center gap-2">
           <i class="fa-solid fa-box-archive"></i>
@@ -215,8 +244,64 @@
         </a>
       </div>
     </div>
-  </nav>
+  </nav> -->
+<!-- DESKTOP CATEGORIES NAVBAR (Figma match) -->
+<nav class="nav-bar-container d-none d-lg-flex">
+  <div class="container-fluid">
+    <div class="nav-row">
 
+      <!-- All Categories -->
+      <div class="custom-dropdown-wrap">
+        <button class="btn-all-categories" id="desktopCatBtn">
+          <i class="fa-solid fa-border-all"></i>
+          <span>All Categories</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="custom-dropdown-menu" id="desktopCatDropdown">
+          <a href="#" class="custom-dropdown-item"><i class="fa-solid fa-glass-water me-2 text-danger"></i> Beverages</a>
+          <a href="#" class="custom-dropdown-item"><i class="fa-solid fa-leaf me-2 text-danger"></i> Spices</a>
+          <a href="#" class="custom-dropdown-item"><i class="fa-solid fa-bottle-droplet me-2 text-danger"></i> Edible Oil</a>
+          <a href="#" class="custom-dropdown-item"><i class="fa-solid fa-jar me-2 text-danger"></i> Honey</a>
+          <a href="#" class="custom-dropdown-item"><i class="fa-solid fa-hat-wizard me-2 text-danger"></i> Ready to cook</a>
+          <a href="#" class="custom-dropdown-item"><i class="fa-solid fa-heart-pulse me-2 text-danger"></i> Health Care</a>
+          <a href="#" class="custom-dropdown-item"><i class="fa-solid fa-bag-shopping me-2 text-danger"></i> Combos</a>
+        </div>
+      </div>
+
+      <!-- Links (id duplicate hata diya, group ab sahi band hota hai) -->
+      <div class="nav-links-group">
+        <div class="offers-badge-container">
+          <span class="tag-badge">Upto 30%</span>
+          <a href="#" class="category-nav-link"><img src="./assets/img/be.png" alt="" class="nav-img"> Offers</a>
+        </div>
+        <div class="nav-divider"></div>
+        <a href="#" class="category-nav-link"><img src="./assets/img/Group (6).png" alt="" class="nav-img"> Beverages</a>
+        <div class="nav-divider"></div>
+        <a href="#" class="category-nav-link"><img src="./assets/img/Vector (7).png" alt="" class="nav-img"> Spices</a>
+        <div class="nav-divider"></div>
+        <a href="#" class="category-nav-link"><img src="./assets/img/Group (7).png" alt="" class="nav-img"> Edible Oil</a>
+        <div class="nav-divider"></div>
+        <a href="#" class="category-nav-link"><img src="./assets/img/Group (8).png" alt="" class="nav-img"> Honey</a>
+        <div class="nav-divider"></div>
+        <a href="#" class="category-nav-link"><img src="./assets/img/Group 44 (1).png" alt="" class="nav-img"> Ready to cook</a>
+        <div class="nav-divider"></div>
+        <a href="#" class="category-nav-link"><img src="./assets/img/Vector (8).png" alt="" class="nav-img"> Health Care</a>
+        <div class="nav-divider"></div>
+        <a href="#" class="category-nav-link"><img src="./assets/img/Group (9).png" alt="" class="nav-img"> Combos</a>
+        <div class="nav-divider"></div>
+        <a href="#" class="category-nav-link"><img src="./assets/img/Group (9).png" alt="" class="nav-img"> Contact</a>
+        <div class="nav-divider"></div>
+      </div>
+
+      <!-- Track Order -->
+      <a href="#" class="btn-track-order">
+        <i class="fa-solid fa-box-archive"></i>
+        <span>Track Order</span>
+      </a>
+
+    </div>
+  </div>
+</nav>
   <!-- MOBILE SIDEBAR OVERLAY & DRAWER -->
   <div class="drawer-overlay" id="drawerOverlay"></div>
 
@@ -329,7 +414,7 @@
     </div>
   </div>
 
-
+</header>
 
  
 

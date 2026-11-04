@@ -546,19 +546,21 @@ color:#EE2931;
     .quality-section {
       background-color: #f9f9f9; /* Light neutral section background */
       padding: 60px 20px;
+      margin-top:41px;
     }
 
     .quality-heading {
-      font-size: 24px;
+      font-size: 28px;
       font-weight: 700;
       color: #000000;
       margin-bottom: 16px;
     }
 
     .quality-description {
-      font-size: 15px;
+      padding-top:16px;
+      font-size: 19px;
       color: #333333;
-      max-width: 850px;
+      /* max-width: 850px; */
       margin: 0 auto 40px auto;
       line-height: 1.6;
     }
@@ -2818,7 +2820,7 @@ color:#EE2931;
   .banner .banner-container.slide-bg-1,
   .banner .banner-container.slide-bg-2 {
     position: relative;
-    background-image: url('../img/mobile image.png');
+    background-image: url('../img/Mobile\ view.jpg');
     background-size: 100% 100%;          
     background-position: center;
     background-repeat: no-repeat;
@@ -2835,7 +2837,7 @@ color:#EE2931;
   }
 
   /* Dotted lights border: sab 4 side, container ke edge par */
-  .banner .banner-container::after {
+  /* .banner .banner-container::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -2850,16 +2852,16 @@ color:#EE2931;
     background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
     background-position: 0 0, 0 100%, 0 0, 100% 0;
     filter: drop-shadow(0 0 3px rgba(255, 190, 0, .9));
-  }
+  } */
 
   .banner .banner-container .row { margin: 0; }
   .banner .banner-container .row > * { padding-left: 0; padding-right: 0; }
 
   /* Text upar wale red/orange hisse mein */
   .banner .logo-img { max-width: 78px; }
-  .banner .banner-title { font-size: 1.4rem; line-height: 1.1; }
+  .banner .banner-title { font-size: 1.7rem; line-height: 1.1; padding-top:30px;}
   .banner .banner-desc {
-    font-size: 10.5px;
+    font-size: 10px;
     line-height: 1.35;
     max-width: 320px;
     margin: 6px auto 0;
@@ -3154,4 +3156,11 @@ color:#EE2931;
 }
 .our h2 {
   font-size: 28px;
+}
+
+/* Mobile par chota 15% OFF badge image hide - sirf tablet/desktop par dikhega */
+@media (max-width: 767.98px) {
+  .banner .offer-badge-img {
+    display: none !important;
+  }
 }

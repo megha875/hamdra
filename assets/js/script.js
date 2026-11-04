@@ -624,3 +624,19 @@ document.addEventListener("DOMContentLoaded", function () {
       clickable: true,
     },
   });
+
+
+  (function () {
+  var items = document.querySelectorAll('.top-announcement-bar .top-bar-item');
+  var btn = document.querySelector('.top-bar-next');
+  if (!items.length || !btn) return;
+  var i = 0, timer;
+  function show(n) {
+    items[i].classList.remove('is-active');
+    i = (n + items.length) % items.length;
+    items[i].classList.add('is-active');
+  }
+  function start() { clearInterval(timer); timer = setInterval(function () { show(i + 1); }, 3500); }
+  btn.addEventListener('click', function () { show(i + 1); start(); });
+  start();
+})();

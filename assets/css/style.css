@@ -3108,7 +3108,7 @@ color:#EE2931;
 
 @media (max-width: 991.98px) {
   .top-bar-inner {
-    overflow-x: auto;
+    /* overflow-x: auto; */
     justify-content: flex-start;
   }
   .top-bar-item {
@@ -3122,7 +3122,7 @@ color:#EE2931;
   .top-bar-inner {
     padding-left: 0px !important;
     padding-right: 0px !important;
-    overflow-x: auto;
+    /* overflow-x: auto; */
     justify-content: flex-start;
   }
 }
@@ -3162,5 +3162,34 @@ color:#EE2931;
 @media (max-width: 767.98px) {
   .banner .offer-badge-img {
     display: none !important;
+  }
+}
+/* Mobile/tablet par top announcement bar ka bottom scrollbar hide (swipe chalta rahega) */
+@media (max-width: 991.98px) {
+  .top-bar-inner {
+    scrollbar-width: none;        /* Firefox */
+    -ms-overflow-style: none;     /* old Edge/IE */
+  }
+  .top-bar-inner::-webkit-scrollbar {
+    display: none;                /* Chrome, Safari, Android */
+    width: 0;
+    height: 0;
+  }
+}
+
+/* Mobile par chota 15% OFF badge image hide - sirf tablet/desktop par dikhega */
+@media (max-width: 767.98px) {
+  .banner .offer-badge-img {
+    display: none !important;
+  }
+}
+
+/* Mobile par top announcement bar ka font bada */
+@media (max-width: 767.98px) {
+  .top-announcement-bar .top-bar-item span {
+    font-size: 15px;
+  }
+  .top-announcement-bar .top-bar-icon {
+    font-size: 16px;
   }
 }

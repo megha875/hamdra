@@ -542,9 +542,13 @@ color:#EE2931;
       transform: scale(1.05);
     }
 
-  /* .quality{
+  .quality{
       background: #f9f9f9;
-  }  */
+      padding-top:20px;
+      padding-bottom: 20px;
+      margin-top:20px;
+      
+  } 
      
     .quality-section {
       background-color: #f9f9f9; 
@@ -556,15 +560,16 @@ color:#EE2931;
       font-size: 28px;
       font-weight: 700;
       color: #000000;
+       padding-top:17px;
       margin-bottom: 16px;
     }
 
     .quality-description {
       padding-top:16px;
-      font-size: 19px;
+      font-size: 15px;
       color: #333333;
-      /* max-width: 850px; */
-      /* margin: 0 auto 40px auto; */
+      max-width: 850px; 
+     margin: 0 auto 40px auto;
       line-height: 1.6;
     }
 

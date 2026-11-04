@@ -3040,11 +3040,7 @@ color:#EE2931;
   .nav-bar-container .nav-img { width: 14px; height: 14px; }
 }
 
-.main-header {
-   
-    padding-left: 70px;
-    padding-right: 97px;
-}
+
 .flex-custom {
   flex-grow: 1;
   margin-left: 3.5rem;
@@ -3074,8 +3070,8 @@ color:#EE2931;
 }
 @media (min-width: 992px) {
   .top-announcement-bar .top-bar-inner {
-    padding-left: 80px !important;
-    padding-right: 90px !important;
+    /* padding-left: 80px !important;
+    padding-right: 90px !important; */
     justify-content: space-between;
   }
   .top-announcement-bar .top-bar-item {
@@ -3098,7 +3094,7 @@ color:#EE2931;
   font-family: Arial, sans-serif;
   font-size: 11px;
   font-weight: 500;
-  padding-left:53px;
+  /* padding-left:53px; */
 }
 
 /* Har ek item ke left aur right mein space ke liye */
@@ -3261,7 +3257,7 @@ color:#EE2931;
   to   { opacity: 1; transform: translateX(0); }
 }
 @media (min-width: 992px) {
-.features-section{
+/* .features-section{
     padding-left: 70px;
    padding-right: 97px;
 }
@@ -3292,7 +3288,7 @@ color:#EE2931;
 .powdered {
     padding-left: 70px;
    padding-right: 97px;
-}
+} */
 /* .top-announcement-bar{
     padding-left: -70px !important;
    padding-right: -97px !important;
@@ -3303,3 +3299,4 @@ color:#EE2931;
    padding-right: 97px;
 } */
 }
+
